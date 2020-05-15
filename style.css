@@ -1,0 +1,507 @@
+        body, html{
+            height: auto;
+            width: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        @media only screen and (min-width: 1201px){
+            #menuButton, #navBar, #buttonContainer{
+                display: none;
+            }
+    
+            /*Navigation bar styling up to 1200px*/
+            #navigationBar{
+                width: 100%;
+                background-color: black;
+                display: flex;
+                justify-content: space-around;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 3;
+            }
+    
+            .links{
+                color: white;
+                text-decoration: none;
+                font-size: 2em;
+            }
+            
+            section{
+                width: 100%;
+            }
+
+            #heroImage{
+                width: 100%;
+                height: 35em;
+                display: block;
+                position: relative;
+                margin: auto;
+            }
+
+            #home h3{
+                padding-bottom: 5em;
+            }
+
+            #myPic{
+                width: 20em;
+                height: 20em;
+                border-radius: 50%;
+                display: block;
+                position: relative;
+                margin: auto;
+                transform: translateY(-60%);
+            }
+
+            #homeText{
+                width: 90%;
+                display: block;
+                position: relative;
+                margin: auto;
+                text-align: center;
+                transform: translateY(-75%);
+            }
+
+            h1, h2, h3{
+                display: inline;
+            }
+
+            h1{
+                font-size: 5em;
+            }
+
+            h2, h3{
+                font-size: 4em;
+                color: rgb(85, 85, 85)
+            }
+
+            #about{
+                font-size: 3em;
+                color: rgb(85, 85, 85);
+            }
+            
+            #about p{
+                width: 80%;
+                poSition: RELATIVE;
+                margin: auto;
+                padding: 1em;
+                text-align: center;
+            }
+
+            .link{
+                text-decoration: none;
+                color: black;
+            }
+
+            #projects{
+                display: grid;
+                grid-template-areas: 
+                'title title title'
+                'img1 img2 img3'
+                'desc1 desc2 desc3';
+                padding-top: 2em;
+            }
+
+            #projects a img{
+                width: 100%;
+                height: 20em;
+                position: relative;
+                display: block;
+                margin: 1em 2.3em;
+                border-radius: 10px;
+            }
+
+            #projects p{
+                margin-top: 0;
+                text-transform: uppercase;
+                color: grey;
+            }
+
+            #title{
+                grid-area: title;
+                text-align: center;
+                font-size: 5em;
+                margin-bottom: 0;
+                padding-top: 2em;
+            }
+
+            #area1{
+                grid-area: img1;
+                width: 90%;                
+            }
+
+            #description1{
+                grid-area: desc1;
+                text-align: center;
+                font-size: 2em;
+            }
+
+            #area2{
+                grid-area: img2;
+                width: 90%; 
+            }
+
+            #description2{
+                grid-area: desc2;
+                text-align: center;
+                font-size: 2em;
+            }
+
+            #area3{
+                grid-area: img3;
+                width: 90%; 
+            }
+
+            #description3{
+                grid-area: desc3;
+                text-align: center;
+                font-size: 2em;
+            }
+
+            #contact{
+                font-size: 5em;
+                text-align: center;
+                color: grey;
+                padding-top: 2em;
+            }
+
+            #contact p{
+                width: 70%;
+                margin: auto;
+                padding-bottom: 1.5em;
+            }
+    }
+    
+
+        @media only screen and (min-width: 751px) and (max-width: 1200px){
+
+        #menuButton, #navBar, #buttonContainer{
+            display: none;
+        }
+
+        /*Navigation bar styling up to 1200px*/
+        #navigationBar{
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .links{
+            color: white;
+            text-decoration: none;
+            font-size: 2em;
+        }
+
+        .grid-areas a img{
+            width: 100%;
+            height: 20em;
+            position: relative;
+            z-index: 0;
+        }
+
+        #myPic{
+            width: 15em;
+            height: 15em;
+            border-radius: 50%;
+            position: relative; 
+            display: block;
+            margin: auto;
+            transform: translateY(-50%);
+        }
+
+        #homeText{
+            width: 90%;
+            display: block;
+            position: relative;
+            margin: auto;
+            text-align: center;
+            transform: translateY(-50%);
+        }
+
+        #heroImage{
+            width: 100%;
+            height: 40em;
+        }
+
+        #home h1 , #home h2, #home h3{
+            display: inline;
+        }
+
+        h1{
+            font-size: 4em;
+            color: black;
+        }
+
+        h2, h3{
+            font-size: 3em;
+            color: grey
+        }
+
+        #about p{
+            color: grey;
+            font-size: 2.5em;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 1em;
+        }
+
+        .link{
+            color: black;
+            text-decoration: none;
+        }
+
+        #projects{
+            display: grid;
+            grid-template-areas: 
+            'title title'
+            'img1 img2'
+            'desc1 desc2'
+            'img3 img3'
+            'desc3 desc3';
+            color: grey;
+        }
+
+        #projects a img{
+            width: 100%;
+            height: 20em;
+            position: relative;
+            display: block;
+            margin: 1em 2.3em;
+            border-radius: 10px;
+        }
+
+        #projects p{
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+        
+        #title{
+            grid-area: title;
+            text-align: center;
+            font-size: 5em;
+            margin-bottom: 0;
+        }
+
+        #area1{
+            grid-area: img1;
+            width: 90%;  
+            text-align: center;
+        }
+
+        #description1{
+            grid-area: desc1;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #area2{
+            grid-area: img2;
+            width: 90%; 
+        }
+
+        #description2{
+            grid-area: desc2;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #area3{
+            grid-area: img3;
+            width: 50%;
+            position: relative;
+            margin: auto;
+            padding: 0;
+        }
+
+        #area3 a img{
+            margin: 0;
+        }
+
+        #description3{
+            grid-area: desc3;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #contact{
+            font-size: 5em;
+            text-align: center;
+            color: grey;
+            margin-top: 3em;
+        }
+
+        #contact p{
+            width: 80%;
+            margin: auto;
+        }
+
+    }
+
+               
+        /*mobile navigation styling*/
+        @media only screen and (max-width: 750px){
+        body{
+            background-color: black;
+            color: white;
+        }
+
+        .icons{
+            width: 4em;
+            height: 4em;
+            display: block;
+            margin: auto;
+        }
+
+        #menuButton{
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding-top: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            outline: transparent;
+            z-index: 5;
+        }
+
+            #menuButton img{
+            width: 4em;
+            height: 5em;
+            display: block;
+            width: 5em;
+        }
+
+        #buttonContainer{
+            margin: 0;
+            background-color: black;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            width: 5em;
+            z-index: 5;
+        }
+
+        .buttonContainerClosed{
+            margin: 0;
+            background-color: black;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            border-radius: 10px;
+            width: 5em;
+            z-index: 5;
+        }
+
+        #navBar a{
+            text-decoration: none;
+            text-align: center;
+            background-color: transparent;
+            color: white;
+
+        }
+        #navBar{
+            background-color: black;
+            width: 5em;
+            bottom: 7.7%;
+            right: 0;
+            position: fixed;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+            transition: all .5s ease-in-out;
+            padding-top: .5em;
+            z-index: 3;            
+        }
+
+        .buttons_out{
+            transition: all .5s ease-in;
+            transform: translateY(150%);
+        }
+
+        .noShow, #navigationBar{
+            display: none;
+        }
+
+        #heroImage{
+            display: none;
+        }
+
+        #myPic{
+            width: 15em;
+            height: 15em;
+            border-radius: 50%;
+            position: relative; 
+            display: block;
+            margin: auto;
+            transform: translateY(0%);
+        }
+
+        #home, #projects{
+            padding: 3em;
+        }
+
+        .grid-areas a img{
+            width: 100%;
+            height: 20em;
+            position: relative;
+            z-index: 0;
+        }
+
+        #home h1 , #home h2, #home h3{
+            display: inline;
+        }
+
+        h1{
+            font-size: 4em;
+            color: yellow
+        }
+
+        h2, h3{
+            font-size: 3em;
+            color: grey
+        }
+
+        #home{
+            margin-top: 2em;
+            text-align: center;
+        }
+
+        #about{
+            padding: 3em;
+        }
+
+        #about p{
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .link{
+            text-decoration: none;
+            color: yellow;
+        }
+
+        #projects p{
+            font-size: 3em;
+            text-align: center;
+            margin-top: 0em;
+        }
+
+        #contact{
+            font-size: 3em;
+            text-align: center;
+            padding: 1em;
+        }
+    }   
+        
