@@ -273,7 +273,7 @@
             height: 20em;
             position: relative;
             display: block;
-            margin: 1em 2.3em;
+            margin: 1em;
             border-radius: 10px;
         }
 
@@ -334,7 +334,7 @@
             font-size: 5em;
             text-align: center;
             color: grey;
-            margin-top: 3em;
+            margin-top: 1em;
         }
 
         #contact p{
@@ -449,7 +449,7 @@
         }
 
         #home, #projects{
-            padding: 3em;
+            padding: 1em;
         }
 
         .grid-areas a img{
