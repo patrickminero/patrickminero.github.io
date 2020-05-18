@@ -1,11 +1,52 @@
 const addButton = document.querySelector('.addButton');
 const removeButton = document.querySelector('.removeButton');
-const completeButton = document.querySelector('.completeButton');
+const completeButton = document.getElementsByClassName('.completeButton');
 const editButton = document.querySelector('.editButton');
 const taskContainer = document.querySelector('.taskDiv');
 let input = document.querySelector('input');
+const completeDiv = document.querySelector('.completeDiv');
+const completeInputDiv = document.querySelector('.completeInputDiv');
+
+let inputField = '';
 
 
+class completeItem{
+    constructor(itemName){
+        this.createDiv(itemName);
+    }
+
+    createDiv(itemName){
+        let input = document.createElement('input');
+        input.value = itemName;
+        input.disabled = true;
+        input.classList.add('inputField');
+        input.type = "text";
+
+        let itemContainer = document.createElement('div');
+        itemContainer.classList.add('completeInputDiv');
+
+        let removeButton = document.createElement('button');
+        removeButton.classList.add('removeButton');
+        removeButton.innerHTML = '<i class="fas fa-minus"></i>';
+
+        completeDiv.appendChild(itemContainer);
+        itemContainer.appendChild(input);
+        itemContainer.appendChild(removeButton);
+        
+        removeButton.addEventListener('click', ()=> this.remove(itemContainer));
+        
+    }
+    remove(item){
+        completeDiv.removeChild(item);
+    }
+
+   };
+
+   function complete(element){
+    new completeItem(element);
+}
+
+   
 class item{
     constructor(itemName){
         this.createDiv(itemName);
@@ -42,6 +83,8 @@ class item{
         
         editButton.addEventListener('click', ()=> this.edit(input));
         removeButton.addEventListener('click', ()=> this.remove(itemContainer));
+        completeButton.addEventListener('click', ()=> complete(itemName));
+        completeButton.addEventListener('click', ()=> this.remove(itemContainer));
     }
 
    edit(input){
@@ -59,6 +102,7 @@ function addItem(){
        if(input.value != ""){
            new item(input.value);
            input.value = "";
+           inputField = input.value;
        }
 };
 
@@ -68,3 +112,9 @@ window.addEventListener('keydown', (e) => {
         addItem();
     }
 })
+
+
+
+
+
+    

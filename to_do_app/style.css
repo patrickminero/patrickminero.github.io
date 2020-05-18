@@ -43,18 +43,18 @@ header h1{
     margin-bottom: 2em;
 }
 
-.taskDiv{
+.taskDiv, .completeDiv{
     background-color: #FFC2C7;
     border-radius: 10px;
     position: relative;
     margin: auto;
     display: block;
-    width: 80%;
+    width: 30em;
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
-.taskDiv button{
+.taskDiv button, .completeDiv button{
     margin: .3em;
     border: 2px solid black;
     border-radius: 5em;
@@ -80,4 +80,37 @@ header h1{
 button:hover, input:hover{
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.completed h1, .pending{
+    padding-top: 1em;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px white;
+}
+
+.completedTask{
+    background-color: white;
+    width: 15em;
+    margin: .3em;
+    border-radius: 10em;
+}
+    
+
+.completeDiv input{
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 1em;
+    text-decoration-line: line-through;
+    text-align: center;
+    background-color: rgb(182, 245, 182);
+}
+
+
+@media only screen and (max-width: 550px){
+    .inputField{
+        width: 10em;
+    }
 }
