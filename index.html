@@ -6,164 +6,71 @@
     <title>Patrick Minero - Customer Service Professional and Computer Programming Student</title>
     <meta name="description" content="After many years in the service industry I decided to travel the world. Now 2 year later I am learning Computer Programming and looking for a new challenge in beautiful barcelona"></head>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
     <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    
-    <!--mobile navigation bar-->
-    <nav id="navBar">
-        <a href="#home" class="buttons"><img src="media/internet.png"class="icons">Home</a>
-        <a href="#about" class="buttons"><img src="media/info.png" class="icons">About</a>
-        <a href="#projects" class="buttons"><img src="media/business-and-finance.png" class="icons">Projects</a>
-        <a href="#contact" class="buttons"><img src="media/contact.png" class="icons">Contact</a>
-    </nav>
-    <div id="buttonContainer">
-        <button onclick="toggleMenu()" id="menuButton"><img id="buttonImage" src="media/menu-white-18dp.svg"></button>
+
+    <div id="flagDiv" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="0" data-aos-mirror="true">
+        <a class="flag" href="Index.html" > 
+            <img src="media/uk_flag.png" class="flag">
+        </a>
+        <a class="flag" href="inicio.html"> 
+            <img src="media/spain-flag.png" class="flag">
+        </a>
+        <a class="flag" href="#"> 
+            <img src="media/italy_flag.png" class="flag">
+        </a>
     </div>
 
-    <nav id="navigationBar">
-        <a href="#home" class="links">Home</a>
-        <a href="#about" class="links">About</a>
-        <a href="#projects" class="links">Projects</a>
-        <a href="#contact" class="links">Contact</a>
-    </nav>
-
-    <section id="home">
-        <img src="media/vitor-monteiro-jiAv24Lc3T0-unsplash-min.jpg" id="heroImage">
-        <img src="media/Patrick_minero.jpg" id="myPic" alt="Patrick Minero" title="Patrick Minero"
-        data-aos="fade"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="2000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
-        <div id="homeText"
-        data-aos="fade"
-    data-aos-offset="0"
-    data-aos-delay="500"
-    data-aos-duration="2000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
-        <h2>Hi! I'm </h2><h1>Patrick Minero </h1><h2>I'm a </h2><h1>Customer Service Professional </h1><h2>and I am learning computer programming.</h2>
+       <section id="home" data-aos="fade-in" data-aos-duration="1500" data-aos-easing="ease-in-out">
+        
+        <div id="homeText">
+            <img src="media/Patrick_minero.jpg" id="myPic" alt="Patrick Minero" title="Patrick Minero" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true">
+            <h3>Hi! I'm </h3><h1>Patrick Minero </h1>
+            <h3>I'm a </h3><h2>Customer Service Professional </h2><h3>learning Web Development.</h3>
         </div>
     </section>
     
-    <section id="about"
-    data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="1000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
-        <p>I recently moved to Spain after living and working in the San Francisco Bay Area for over 10 years</p>
-        <p>I worked all my life in food service industry. As I grow older the need for a change, a better life and family helped me in my decision to improve my skills.</p>
-        <p>Like many other I struggled with the idea of Where to begin? What language to learn?, What sources? Go back to college or a bootcamp?</p>
-        <p>After days of research I decided to go with <a href="https://www.codecademy.com/" class="link">Codecademy.</a>, along with some great resources like <a href="https://stackoverflow.com/" class="link">Stack Overflow</a>, <a href="https://developer.mozilla.org/en-US/" class="link">MDN web docs</a> and <a href="https://www.w3schools.com/default.asp" class="link">W3Schools</a></p>
+    <section id="about" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="400">
+        <p>I recently moved to Barcelona after living and working in the San Francisco Bay Area for over 10 years. I worked all my life in food service and as I grew older the need for a change, a better life, family made me take charge and learn new professional skills.</p>
+        <p>Like many other I struggled with many concerns. Where to begin? What language to learn first? Where to good reliable sources? Should I go back to college or enroll on a bootcamp?</p>
+        <p>After days of research, I decided to go ahead and try <a href="https://www.codecademy.com/" class="link">Codecademy</a>, is a great inexpensive, learn at your own pace online course. Along with some great resources like <a href="https://stackoverflow.com/" class="link">Stack Overflow</a>, <a href="https://developer.mozilla.org/en-US/" class="link">MDN web docs</a> and <a href="https://www.w3schools.com/default.asp" class="link">W3Schools</a></p>
     </section>
     
     <section id="projects">
-        <p id="title"
-        data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="1000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">Projects</p>
+        <p id="title" data-aos="fade-up" data-aos-mirror="false" data-aos-duration="1500" data-aos-easing="ease-in-out">Projects</p>
 
-        <div id="area1" class="grid-areas"
-        data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="1000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
+        <div id="area1" class="grid-areas" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="200">
             <a href="https://mineropatricio.github.io/home/media/projects_media/projects/grid_layout/index.html" target="_blank">
-                <img src="media/blog_thumbnail-min.jpg"></a>
+                <img src="media/blog_thumbnail-min.jpg" alt="personal blog thumbnail"></a>
+                <p>Personal Blog</p>
         </div>
-        <div id="description1" class="grid-areas"
-        data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="500"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
-            <p>Personal Travel Blog</p>
-            <p>A recolection of images and stories from my one year around 20 countries voluntering in family farms.</p>
-        </div>
-        <div id="area2" class="grid-areas"
-        data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="1000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
+
+        <div id="area2" class="grid-areas" data-aos-mirror="true" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="200">
             <a href="https://mineropatricio.github.io/home/index.html">
-                <img src="media/milti-page-website-min.jpg"></a></div>
-        <div id="description2" class="grid-areas"
-        data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="500"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
-            <p>Multi-page Personal Website</p>
-            <p>A more detailed personal website with a multiple pages projects for projects with bigger content.</p>
-        </div>
-        <div id="area3" class="grid-areas"
-        data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="1000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
+                <img src="media/milti-page-website-min.jpg" alt="business website thumbnail"></a>
+                <p>Business Website</p>
+            </div>
+
+        <div id="area3" class="grid-areas" data-aos-mirror="true" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-out">
             <a href="to_do_app/index.html" target="_blank">
-                <img alt="to do app" src="media/to_do_app-min.jpg"></a></div>
-        <div id="description3" class="grid-areas"
-        data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="500"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
-            <p>To do App</p>
-            <p>Simple To Do App to practice what I have learned so far.</p>
+                <img alt="to do app thumbnail" src="media/to_do_app-min.jpg"></a>
+                <p>To do List</p>
         </div>
     </section>
     
-    <section id="contact"
-    data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="500"
-    data-aos-duration="1000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="true">
-        <p>Do you like what you see?</p>
-        <p>Do you have any questions or recommendations?</p>
-        <p>Send me an <a href="mailto:patrickminerovalencia@gmail.com" target="_blank" class="link">email</a>.</p>
-    </section>
+    <footer>
+        <div class="contact">
+            <a href="mailto:patrickminerovalencia@gmail.com"><img src="media/gmail_logo.png" alt="gmail logo">Email</a>
+            <a href="www.linkedin.com/in/patrick-minero-valencia"><img src="media/linkedin_logo.png" alt="linkedin logo">LinkedIn</a>
+            <a href="media/Resume_Patrick_Minero_Updated.pdf" target="_blank"><img src="media/resume_logo.png" alt="resume logo">Resume</a>
+        </div>
+    </footer>
 
-    <script>
-        //mobile navigation bar script
-        function toggleMenu(){
-            document.getElementById("navBar").classList.toggle("buttons_out");
-            document.getElementById("buttonContainer").classList.toggle("buttonContainerClosed");
-        }
-
-    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
