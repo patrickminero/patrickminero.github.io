@@ -7,6 +7,64 @@ body, html{
     background-color: #F41F4E;
 }
 
+.buttons-div{
+    width: 25%;
+    display: block;
+    margin: 3em auto auto auto;
+    text-align: center;
+}
+
+.buttons-div button{
+    margin: 1em;
+}
+
+.grey-and-white{
+    width: 3.1em;
+    height: 3.1em;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    z-index: 2;
+    background: linear-gradient(to right, grey 50%, white 50%);
+    outline: none;
+    border: 3px solid black;
+}
+
+.red-and-yellow{
+    width: 3.1em;
+    height: 3.1em;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    z-index: 2;
+    background: linear-gradient(to right, red 50%, yellow 50%);
+    outline: none;
+    border: 3px solid black;
+}
+
+.green-and-blue{
+    width: 3.1em;
+    height: 3.1em;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    z-index: 2;
+    background: linear-gradient(to right, blue 50%, green 50%);
+    outline: none;
+    border: 3px solid black;
+}
+.black-and-pink{
+    width: 3.1em;
+    height: 3.1em;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    z-index: 2;
+    background: linear-gradient(to right, black 50%, #F41F4E 50%);
+    outline: none;
+    border: 3px solid black;
+}
+
 #main{
     margin: auto;
     width: 100%;
@@ -21,8 +79,6 @@ header h1{
     text-align: center;
     text-shadow: 3px 3px white;
 }
-
-
 
 .inputDiv button, .inputDiv input{
     margin: .3em;
@@ -75,6 +131,7 @@ header h1{
     background-color: white;
     color: black;
     margin-bottom: 2em;
+    outline: none;
 }
 
 button:hover, input:hover{

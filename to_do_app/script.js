@@ -113,8 +113,87 @@ window.addEventListener('keydown', (e) => {
     }
 })
 
-
-
-
+const greyWhite = document.querySelector(".grey-and-white");
+const redYellow = document.querySelector(".red-and-yellow");
+const blueGreen = document.querySelector(".green-and-blue");
+const blackPink = document.querySelector(".black-and-pink");
+const body = document.querySelector('body');
+const html =  document.querySelector('html');
+const h1 = document.querySelectorAll('h1');
+const inputDiv = document.querySelector('.inputDiv');
+const taskDiv = document.querySelectorAll(".taskDiv");
+const completedDiv =  document.querySelectorAll('.completeDiv');
+const completedInput = document.querySelectorAll('.completeDiv input');
 
     
+
+greyWhite.addEventListener('click', ()=>{
+    body.style.backgroundColor = "grey";
+    html.style.backgroundColor = "grey";
+    h1.forEach(element => {
+        element.style.color = "white";
+        element.style.textShadow = "3px 3px black";
+    });
+    taskDiv.forEach(element => {
+        element.style.backgroundColor = "white";
+    });
+    completedDiv.forEach(element => {
+        element.style.backgroundColor = "white";
+    });
+
+    inputDiv.style.backgroundColor = "white";
+
+});
+
+redYellow.addEventListener('click', ()=>{
+    body.style.backgroundColor = "red";
+    html.style.backgroundColor = "red";
+    h1.forEach(element => {
+        element.style.color = "yellow";
+        element.style.textShadow = "3px 3px black";
+    });
+
+    taskDiv.forEach(element => {
+        element.style.backgroundColor = "yellow";
+    });
+    completedDiv.forEach(element => {
+        element.style.backgroundColor = "yellow";
+    });
+
+    inputDiv.style.backgroundColor = "yellow";
+});
+
+blueGreen.addEventListener('click', ()=>{
+    body.style.backgroundColor = "blue";
+    html.style.backgroundColor = "blue";
+    h1.forEach(element => {
+        element.style.color = "green";
+        element.style.textShadow = "3px 3px black";
+    });
+
+    taskDiv.forEach(element => {
+        element.style.backgroundColor = "green";
+    });
+    completedDiv.forEach(element => {
+        element.style.backgroundColor = "green";
+    });
+
+    inputDiv.style.backgroundColor = "green";
+});
+
+blackPink.addEventListener('click', ()=>{
+    body.style.backgroundColor = "#F41F4E";
+    html.style.backgroundColor = "#F41F4E";
+    h1.forEach(element => {
+        element.style.color = "black";
+        element.style.textShadow = "3px 3px white";
+    });
+    taskDiv.forEach(element => {
+        element.style.backgroundColor = "#FFC2C7";
+    });
+    completedDiv.forEach(element => {
+        element.style.backgroundColor = "#FFC2C7";
+    });
+
+    inputDiv.style.backgroundColor = "#FFC2C7";
+});
