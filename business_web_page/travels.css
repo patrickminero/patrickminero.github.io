@@ -27,16 +27,11 @@ outline: none;
 padding: 0 0.2em;
 }
 
-.continent-menu button:hover{
-background-color: white;
-color: black;
-border-radius: 25px;
-}
-
 .sub-menu{
 display: block;
 background-color: black;
 position: absolute;
+top: 130%;
 width: 100%;
 opacity: 0;
 transform: translateX(-100%);
@@ -45,6 +40,7 @@ transition: all 500ms ease-in;
 
 .sub-menu-closed{
 display: block;
+top: 130%;
 background-color: black;
 opacity: 1;
 transform: translateX(0%);
@@ -59,11 +55,6 @@ display: block;
 font-size: 1.5em;
 text-align: center;
 padding: .25em;
-}
-
-.sub-menu a:hover{
-background-color: white;
-color: black;
 }
 
 .continent-menu a{
@@ -152,16 +143,12 @@ outline: none;
 padding: 0 0.2em;
 }
 
-.continent-menu button:hover{
-background-color: white;
-color: black;
-}
-
 .sub-menu{
 display: block;
 background-color: black;
 position: absolute;
 width: 100%;
+top: 130%;
 opacity: 0;
 transform: translateX(-100%);
 transition: all 500ms ease-in;
@@ -169,6 +156,7 @@ transition: all 500ms ease-in;
 
 .sub-menu-closed{
 display: block;
+top: 130%;
 background-color: black;
 opacity: 1;
 transform: translateX(0%);
@@ -183,11 +171,6 @@ display: block;
 font-size: 1.5em;
 text-align: center;
 padding: .25em;
-}
-
-.sub-menu a:hover{
-background-color: white;
-color: black;
 }
 
 .continent-menu a{
@@ -275,16 +258,12 @@ outline: none;
 padding: 0 0.2em;
 }
 
-.continent-menu button:hover{
-background-color: white;
-color: black;
-}
-
 .sub-menu{
 display: block;
 background-color: black;
 position: absolute;
 width: 100%;
+top: 130%;
 opacity: 0;
 transform: translateX(-100%);
 transition: all 500ms ease-in;
@@ -294,10 +273,10 @@ transition: all 500ms ease-in;
 display: block;
 background-color: black;
 opacity: 1;
+top: 150%;
 transform: translateX(0%);
 transition: all 500ms ease-in;
 }
-
 
 .sub-menu a{
 text-decoration: none;
@@ -306,11 +285,6 @@ display: block;
 font-size: 1.5em;
 text-align: center;
 padding: .25em;
-}
-
-.sub-menu a:hover{
-background-color: white;
-color: black;
 }
 
 .continent-menu a{
@@ -398,17 +372,13 @@ outline: none;
 padding: 0 0.2em;
 }
 
-.continent-menu button:hover{
-background-color: white;
-color: black;
-}
-
 .sub-menu{
 display: block;
 background-color: black;
 position: absolute;
 width: 100%;
 opacity: 0;
+top: 130%;
 transform: translateX(-100%);
 transition: all 500ms ease-in;
 }
@@ -417,6 +387,7 @@ transition: all 500ms ease-in;
 display: block;
 background-color: black;
 opacity: 1;
+top: 130%;
 transform: translateX(0%);
 transition: all 500ms ease-in;
 }
@@ -429,11 +400,6 @@ display: block;
 font-size: 1.5em;
 text-align: center;
 padding: .25em;
-}
-
-.sub-menu a:hover{
-background-color: white;
-color: black;
 }
 
 .continent-menu a{
@@ -522,12 +488,6 @@ outline: none;
 padding: 0em 0.2em;
 }
 
-.continent-menu button:hover{
-background-color: white;
-color: black;
-border-radius: 25px;
-}
-
 .sub-menu{
 display: block;
 background-color: black;
@@ -554,12 +514,6 @@ display: block;
 font-size: 1.5em;
 text-align: center;
 padding: .25em;
-}
-
-.sub-menu a:hover{
-background-color: white;
-color: black;
-border-radius: 25px;
 }
 
 .continent-menu a{
@@ -699,7 +653,7 @@ padding-top: 9em;
 width: 80%;
 display: block;
 margin: auto;
-height: 50em;
+height: auto;
 padding-top: 1em;
 }
 
