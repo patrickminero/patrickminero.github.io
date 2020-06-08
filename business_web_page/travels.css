@@ -1,0 +1,746 @@
+
+@media only screen and (max-width: 450px){
+#navBar{
+width: 100%;
+position: absolute;
+height: 2em;
+margin-top: 3.3em;
+}
+
+.continent-menu{
+background-color: black;
+display: flex;
+position: fixed;
+justify-content: space-between;
+width: 100%;
+}
+
+.continent-menu button{
+width: auto;
+height: 2em;
+font-size: 1em;
+text-align: center;
+background-color: black;
+border: none;
+color: white;
+outline: none;
+padding: 0 0.2em;
+}
+
+.continent-menu button:hover{
+background-color: white;
+color: black;
+border-radius: 25px;
+}
+
+.sub-menu{
+display: block;
+background-color: black;
+position: absolute;
+width: 100%;
+opacity: 0;
+transform: translateX(-100%);
+transition: all 500ms ease-in;
+}
+
+.sub-menu-closed{
+display: block;
+background-color: black;
+opacity: 1;
+transform: translateX(0%);
+transition: all 500ms ease-in;
+}
+
+
+.sub-menu a{
+text-decoration: none;
+color: white;
+display: block;
+font-size: 1.5em;
+text-align: center;
+padding: .25em;
+}
+
+.sub-menu a:hover{
+background-color: white;
+color: black;
+}
+
+.continent-menu a{
+text-decoration: none;
+color: white;
+font-size: 1.2em;    
+}
+
+.travels-home-section{
+padding-top: 7em;
+}
+
+.travels-home-section img{
+width: 100%;
+padding-top: 1em;
+}
+
+.travels-title{
+text-align: center;
+text-transform: uppercase;
+font-size: 1.7em;
+}
+
+.travels-home-section h2{
+font-size: 1.5em;
+padding-top: 1em;
+text-align: center;
+text-transform: uppercase;
+}
+
+.travels-home-section p{
+font-size: 1em;
+text-align: justify;
+width: 90%;
+margin: auto;
+padding-top: 1em;
+}
+
+.travels-home-section h3{
+font-size: 1.5em;
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 1em;
+}
+
+.travels-home-section ul{
+width: 80%;
+margin: auto;
+list-style-type: none;
+}
+
+.travels-home-section ul li{
+text-transform: capitalize;
+font-size: 1em;
+text-align: center  ;
+}
+}
+
+
+@media only screen and (min-width: 451px){
+#navBar{
+width: 100%;
+position: absolute;
+height: 2em;
+margin-top: 3.3em;
+}
+
+.continent-menu{
+background-color: black;
+display: flex;
+position: fixed;
+justify-content: space-between;
+width: 100%;
+}
+
+.continent-menu button{
+width: auto;
+height: 2em;
+font-size: 1.3em;
+text-align: center;
+background-color: black;
+border: none;
+color: white;
+outline: none;
+padding: 0 0.2em;
+}
+
+.continent-menu button:hover{
+background-color: white;
+color: black;
+}
+
+.sub-menu{
+display: block;
+background-color: black;
+position: absolute;
+width: 100%;
+opacity: 0;
+transform: translateX(-100%);
+transition: all 500ms ease-in;
+}
+
+.sub-menu-closed{
+display: block;
+background-color: black;
+opacity: 1;
+transform: translateX(0%);
+transition: all 500ms ease-in;
+}
+
+
+.sub-menu a{
+text-decoration: none;
+color: white;
+display: block;
+font-size: 1.5em;
+text-align: center;
+padding: .25em;
+}
+
+.sub-menu a:hover{
+background-color: white;
+color: black;
+}
+
+.continent-menu a{
+text-decoration: none;
+color: white;
+font-size: 1.2em;    
+}
+
+.travels-home-section{
+padding-top: 7em;
+}
+
+.travels-home-section img{
+width: 100%;
+padding-top: 1em;
+}
+
+.travels-title{
+text-align: center;
+text-transform: uppercase;
+font-size: 2em;
+}
+
+.travels-home-section h2{
+font-size: 1.5em;
+padding-top: 1em;
+text-align: center;
+text-transform: uppercase;
+}
+
+.travels-home-section p{
+font-size: 1em;
+text-align: justify;
+width: 90%;
+margin: auto;
+padding-top: 1em;
+}
+
+.travels-home-section h3{
+font-size: 1.5em;
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 1em;
+}
+
+.travels-home-section ul{
+width: 80%;
+margin: auto;
+list-style-type: none;
+}
+
+.travels-home-section ul li{
+text-transform: capitalize;
+font-size: 1em;
+text-align: center  ;
+}
+}
+
+@media only screen and (min-width: 551px){
+#navBar{
+width: 100%;
+position: absolute;
+height: 2em;
+margin-top: 3.3em;
+}
+
+.continent-menu{
+background-color: black;
+display: flex;
+position: fixed;
+justify-content: space-between;
+width: 100%;
+}
+
+.continent-menu button{
+width: auto;
+height: 2em;
+font-size: 1.5em;
+text-align: center;
+background-color: black;
+border: none;
+color: white;
+outline: none;
+padding: 0 0.2em;
+}
+
+.continent-menu button:hover{
+background-color: white;
+color: black;
+}
+
+.sub-menu{
+display: block;
+background-color: black;
+position: absolute;
+width: 100%;
+opacity: 0;
+transform: translateX(-100%);
+transition: all 500ms ease-in;
+}
+
+.sub-menu-closed{
+display: block;
+background-color: black;
+opacity: 1;
+transform: translateX(0%);
+transition: all 500ms ease-in;
+}
+
+
+.sub-menu a{
+text-decoration: none;
+color: white;
+display: block;
+font-size: 1.5em;
+text-align: center;
+padding: .25em;
+}
+
+.sub-menu a:hover{
+background-color: white;
+color: black;
+}
+
+.continent-menu a{
+text-decoration: none;
+color: white;
+font-size: 1.2em;    
+}
+
+.travels-home-section{
+padding-top: 7em;
+}
+
+.travels-home-section img{
+width: 100%;
+padding-top: 1em;
+}
+
+.travels-title{
+text-align: center;
+text-transform: uppercase;
+font-size: 2.5em;
+}
+
+.travels-home-section h2{
+font-size: 1.5em;
+padding-top: 1em;
+text-align: center;
+text-transform: uppercase;
+}
+
+.travels-home-section p{
+font-size: 1.5em;
+text-align: justify;
+width: 90%;
+margin: auto;
+padding-top: 1em;
+}
+
+.travels-home-section h3{
+font-size: 1.5em;
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 1em;
+}
+
+.travels-home-section ul{
+width: 80%;
+margin: auto;
+list-style-type: none;
+}
+
+.travels-home-section ul li{
+text-transform: capitalize;
+font-size: 1em;
+text-align: center  ;
+}
+}
+
+@media only screen and (min-width: 651px){
+#navBar{
+width: 100%;
+position: absolute;
+height: 2em;
+margin-top: 4.6em;
+}
+
+.continent-menu{
+background-color: black;
+display: flex;
+position: fixed;
+justify-content: space-between;
+width: 100%;
+}
+
+.continent-menu button{
+width: auto;
+height: 2em;
+font-size: 1.7em;
+text-align: center;
+background-color: black;
+border: none;
+color: white;
+outline: none;
+padding: 0 0.2em;
+}
+
+.continent-menu button:hover{
+background-color: white;
+color: black;
+}
+
+.sub-menu{
+display: block;
+background-color: black;
+position: absolute;
+width: 100%;
+opacity: 0;
+transform: translateX(-100%);
+transition: all 500ms ease-in;
+}
+
+.sub-menu-closed{
+display: block;
+background-color: black;
+opacity: 1;
+transform: translateX(0%);
+transition: all 500ms ease-in;
+}
+
+
+.sub-menu a{
+text-decoration: none;
+color: white;
+display: block;
+font-size: 1.5em;
+text-align: center;
+padding: .25em;
+}
+
+.sub-menu a:hover{
+background-color: white;
+color: black;
+}
+
+.continent-menu a{
+text-decoration: none;
+color: white;
+font-size: 1.2em;    
+}
+
+.travels-home-section{
+padding-top: 9em;
+}
+
+.travels-home-section img{
+width: 100%;
+padding-top: 1em;
+}
+
+.travels-title{
+text-align: center;
+text-transform: uppercase;
+font-size: 3em;
+}
+
+.travels-home-section h2{
+font-size: 1.5em;
+padding-top: 1em;
+text-align: center;
+text-transform: uppercase;
+}
+
+.travels-home-section p{
+font-size: 1.5em;
+text-align: justify;
+width: 90%;
+margin: auto;
+padding-top: 1em;
+}
+
+.travels-home-section h3{
+font-size: 1.5em;
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 1em;
+}
+
+.travels-home-section ul{
+width: 80%;
+margin: auto;
+list-style-type: none;
+}
+
+.travels-home-section ul li{
+text-transform: capitalize;
+font-size: 1.5em;
+text-align: center  ;
+}
+}
+
+
+@media only screen and (min-width: 751px){
+#navBar{
+width: 100%;
+position: absolute;
+height: 2.5em;
+margin-top: 5em;
+}
+
+.continent-menu{
+background-color: black;
+display: flex;
+position: fixed;
+justify-content: space-around;
+width: 100%;
+}
+
+.continent-menu button{
+width: auto;
+height: 2em;
+font-size: 1.7em;
+text-align: center;
+background-color: black;
+border: none;
+color: white;
+outline: none;
+padding: 0em 0.2em;
+}
+
+.continent-menu button:hover{
+background-color: white;
+color: black;
+border-radius: 25px;
+}
+
+.sub-menu{
+display: block;
+background-color: black;
+position: absolute;
+width: 100%;
+opacity: 0;
+transform: translateX(-100%);
+transition: all 500ms ease-in;
+}
+
+.sub-menu-closed{
+display: block;
+background-color: black;
+opacity: 1;
+transform: translateX(0%);
+transition: all 500ms ease-in;
+}
+
+
+.sub-menu a{
+text-decoration: none;
+color: white;
+display: block;
+font-size: 1.5em;
+text-align: center;
+padding: .25em;
+}
+
+.sub-menu a:hover{
+background-color: white;
+color: black;
+border-radius: 25px;
+}
+
+.continent-menu a{
+text-decoration: none;
+color: white;
+font-size: 1.2em;    
+}
+
+.travels-home-section{
+padding-top: 9em;
+}
+
+.travels-home-section img{
+width: 100%;
+padding-top: 1em;
+}
+
+.travels-title{
+text-align: center;
+text-transform: uppercase;
+font-size: 3em;
+}
+
+.travels-home-section h2{
+font-size: 1.5em;
+padding-top: 1em;
+text-align: center;
+text-transform: uppercase;
+}
+
+.travels-home-section p{
+font-size: 2em;
+text-align: justify;
+width: 90%;
+margin: auto;
+padding-top: 1em;
+}
+
+.travels-home-section h3{
+font-size: 2.5em;
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 1em;
+}
+
+.travels-home-section ul{
+width: 80%;
+margin: auto;
+list-style-type: none;
+}
+
+.travels-home-section ul li{
+text-transform: capitalize;
+font-size: 2em;
+text-align: center  ;
+}
+}
+
+@media only screen and (min-width: 1201px){
+#navBar{
+width: 100%;
+position: absolute;
+height: 2em;
+margin-top: 5em;
+}
+
+.continent-menu{
+background-color: black;
+display: flex;
+position: fixed;
+justify-content: space-around;
+width: 100%;
+}
+
+.continent-menu button{
+width: auto;
+height: 2em;
+font-size: 1.7em;
+text-align: center;
+background-color: black;
+border: none;
+color: white;
+outline: none;
+padding: 0em 0.2em;
+}
+
+.continent-menu button:hover{
+background-color: white;
+color: black;
+}
+
+.sub-menu{
+display: block;
+background-color: black;
+position: absolute;
+width: 100%;
+opacity: 0;
+transform: translateX(-100%);
+transition: all 500ms ease-in;
+}
+
+.sub-menu-closed{
+display: block;
+background-color: black;
+opacity: 1;
+transform: translateX(0%);
+transition: all 500ms ease-in;
+}
+
+
+.sub-menu a{
+text-decoration: none;
+color: white;
+display: block;
+font-size: 1.5em;
+text-align: center;
+padding: .25em;
+}
+
+.sub-menu a:hover{
+background-color: white;
+color: black;
+}
+
+.continent-menu a{
+text-decoration: none;
+color: white;
+font-size: 1.2em;    
+}
+
+.travels-home-section{
+padding-top: 9em;
+}
+
+.travels-home-section img{
+width: 80%;
+display: block;
+margin: auto;
+height: 50em;
+padding-top: 1em;
+}
+
+.travels-title{
+text-align: center;
+text-transform: uppercase;
+font-size: 5em;
+}
+
+.travels-home-section h2{
+font-size: 3em;
+padding-top: 1em;
+text-align: center;
+text-transform: uppercase;
+}
+
+.travels-home-section p{
+font-size: 2em;
+text-align: justify;
+width: 80%;
+margin: auto;
+padding-top: 1em;
+}
+
+.travels-home-section h3{
+font-size: 2.5em;
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 1em;
+}
+
+.travels-home-section ul{
+width: 80%;
+margin: auto;
+list-style-type: none;
+}
+
+.travels-home-section ul li{
+text-transform: capitalize;
+font-size: 2em;
+text-align: center  ;
+}
+}

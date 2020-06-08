@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Budget Migrant</title>
+    <meta name="description" content="A year long travel around 25 countries on a tight budget.">
+    <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body> 
+    
+    <header class="header"> 
+        <h1 class='title' onclick="closeMenuBtn()">Budget Migrant</h1>
+        <button id="button" onclick="menuToggle()"><i class="fas fa-bars fa-3x"></i></button>
+        <div class="home" id="menu">
+            <ul class="home-menu">
+                <a href="Index.html" class="link">Home</a>
+                <a href="about.html" class="link">About</a>
+                <a href="travels.html" class="link">My travels</a>
+                <a href="gallery.html" class="link">Gallery</a>
+            </ul>
+        </div>
+    </header>
+    
+    <section id=home-section onclick="closeMenuBtn()">
+    <img src="media/faro_portugal.jpg" alt="Cabo Santa Maria, Faro, Portugal" class="hero-image">
+    
+    <div class="description-div">
+        <h2 class=home-description>Memories of my vacation year travelling, voluntering and relocating to another country on a strict financial plan.</h2>
+    </div>
+</section> 
+    
+    <section class="about" onclick="closeMenuBtn()">
+        <div class="descriptions" id="area1">
+            <img src="media/rome-from-above-min.jpg" alt="" class="description-images">
+            <h2 class="description-text">Travel booking tips</h2>
+            <p class="description-text">Travel agency or online? What websites to use? Should I have a set route or go with the flow? I asked myself these and many more questions for months before I started travelling and I always found mixed reviews.</p>
+        </div>
+        
+        <div class="descriptions" id="area2">
+            <img src="media/winebox_fasade_front.jpg" alt="WineBox Hotel, Valparaiso" class="description-images">
+            <h2 class="description-text">Hotel, hostel or AirBnB?</h2>
+            <p class="description-text">Hostels are great for budget travelling especially in places like Europe or North America. In cheaper areas I splurged in a comfy bed and private bathroom. The pros and cons of hostels, hotels and AirBnB stays.</p>
+        </div>
+        <div class="descriptions" id="area3">
+            <img src="media/patrick_minero_lake_tahoe.jpg" alt="" class="description-images">
+            <h2 class="description-text">Safety advice!</h2>
+            <p class="description-text">Solo travelling safety tips. When travelling in diverse regions, you always have to keep an eye out, it’s common sense. Of course there were places where I thought I wasn’t safe.</p>
+        </div>
+        <div class="descriptions" id="area4">
+            <img src="media/sicilian-restaurant-min.jpg" alt="" class="description-images">
+            <h2 class="description-text">Where to eat?</h2>
+            <p class="description-text">Can I afford that restaurant or should I go to the market? Is this really what locals eat or a tourist trap? When travelling for a long time budget is king and I always asked myself what everyday food is to the local community.</p>
+        </div>
+        <div class="descriptions" id="area5">
+            <img src="media/whiskey-destillery-taiwan-min.jpg" alt="" class="description-images">
+            <h2 class="description-text">Places to drink</h2>
+            <p class="description-text">After walking all day with 40+ pounds on your back, a beer sounds magnificent. What if I can’t pay pub prices? Can I drink in the streets or in a park? What about craft beer, local wine or a fancy cocktail?</p>
+        </div>
+        <div class="descriptions" id="area6">
+            <img src="media/latte-art-min.jpg" alt="" class="description-images">
+            <h2 class="description-text">Best coffee in town</h2>
+            <p class="description-text">My favorite topic!!! As a former barista from the San Francisco Bay Area, I am a little spoiled on what coffee to drink. I always googled specialty coffee roasters in the area and made an effort on tasting as many as I could.</p>
+        </div>
+    </section>
+    
+    <footer onclick="closeMenuBtn()">
+        <div class="link-div">
+            <ul>
+                <a href="Index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="travels.html">My travels</a>
+                <a href="gallery.html">Gallery</a>
+            </ul>
+        </div>
+        <div id="social-media" class="social-media-div">
+            <a href="https://www.instagram.com/budgetmigrant/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/patrick-minero-valencia" ><i class="fab fa-linkedin"></i></a>
+            <a href="https://wwww.mailto:patrickminerovalencia@gmail.com"><i class="fas fa-envelope-open-text"></i></a> 
+            <a href="https://www.patreon.com" ><i class="fab fa-patreon"></i></a>
+        </div>
+        <p>Coded with <span><i class="fas fa-heart"></i></span> in Barcelona</p>
+    </footer>
+
+    <script>
+        ScrollOut({
+  /* options */
+            targets:"img, h2, p, header",
+            once: true
+});
+    </script>
+</body>
+</html>

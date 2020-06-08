@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - budget Migrant</title>
+    <meta name="description" content="What made me leave everything and travel">
+    <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class='title' onclick="closeMenuBtn()">Budget Migrant</h1>
+        <button id="button" onclick="menuToggle()"><i class="fas fa-bars fa-3x"></i></button>
+        <div class="home" id="menu">
+            <ul class="home-menu">
+                <a href="Index.html" class="link">Home</a>
+                <a href="about.html" class="link">About</a>
+                <a href="travels.html" class="link">My travels</a>
+                <a href="gallery.html" class="link">Gallery</a>
+            </ul>
+    </div>
+    </header>
+    <section class="about-section">
+        <img src="media/europe/big-photos/patrick-minero-beach.jpg" alt="">
+
+        <div class="about-div"> 
+            <p>Hi! My name is Patrick. This blog it’s going to be about my experiences from my year long 
+                travels around 4 continents and also about my experience about living in 4 different countries. 
+                And just like most of the other travel bloggers I was at a point in my life when my daily 
+                routine had taken over, working 5 days a week and barely making ends meet, I decided it was enough.</p>
+        </div>
+        
+        <div class="about-div">
+            <p>I started reading blogs, books, watched YouTube trying to get ideas on how I was going to change my life. 
+                I wanted to go back to school but the only way that would have happened is by taking a student loan and 
+                I had no on-demand skills, so my choices were limited. After a couple of months of research I decided 
+                to live the comfort of my daily routine and took a second job to save money and decided I deserved a 
+                vacation, a long vacation.</p>
+            
+        </div>
+        <img src="media/barista-making-coffee.jpg" alt="me pouring a beer at work">
+        <div class="about-div">
+            <p>So there I was, working 14 hours, 5 days a week and the other times I was not working I was researching 
+                how to stretch my budget. Where would I go first? Europe was my safe choice obviously but when you’re 
+                a migrant living in California, international travel is a bit different.</p>
+        </div>
+        <img src="media/san_francisco_from_berkeley.jpg" alt="sunset in san francisco, ca view from berkeley, ca">
+        <div class="about-div">
+            <p>I am a Salvadoran Native, I moved to California back in 2008 escaping the increasing violence against
+                young males by the street gangs. Going back to El Salvador after 10 years was scary to think about but 
+                I am really happy I went, I got to see my family and friends and of course eating pupusas.</p>
+        </div>    
+        
+        <div class="about-div">
+            <p>This was the beginning of my trip! From my home in California, passing through to 20 countries, volunteering in family farms to finally 
+                settle down in beautiful Barcelona. You will read about all the maneuvering, immigration issues, and all 
+                the things I did trying to stretch my budget</p>
+            </div>
+            <img src="media/arc-de-triumph-barcelona.jpg" alt="arc de triumph barcelona">
+    </section>
+    <footer onclick="closeMenuBtn()">
+        <div class="link-div">
+            <ul>
+                <a href="Index.html" class="link">Home</a>
+                <a href="about.html" class="link">About</a>
+                <a href="travels.html" class="link">My travels</a>
+                <a href="gallery.html" class="link">Gallery</a>
+            </ul>
+        </div>
+        <div id="social-media" class="social-media-div">
+            <a href="#" class="link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="link"><i class="fas fa-envelope-open-text"></i></a> 
+            <a href="#" class="link"><i class="fab fa-patreon"></i></a>
+        </div>
+        <p>Coded with <span><i class="fas fa-heart"></i></span> in Barcelona</p>
+    </footer>
+
+    <script>
+        ScrollOut({
+  /* options */
+            targets:"img, h2, p, header"
+});
+    </script>
+</body>
+</html>
