@@ -1,199 +1,172 @@
-const addButton = document.querySelector('.addButton');
-const removeButton = document.querySelector('.removeButton');
-const completeButton = document.getElementsByClassName('.completeButton');
-const editButton = document.querySelector('.editButton');
-const taskContainer = document.querySelector('.taskDiv');
-let input = document.querySelector('input');
-const completeDiv = document.querySelector('.completeDiv');
-const completeInputDiv = document.querySelector('.completeInputDiv');
+//Date display
+let dateInput = document.querySelector("#date");
 
-let inputField = '';
+let date = new Date();
+let dayMonth = date.getDate();
+let day = date.getDay();
+let month =  date.getMonth();
+let year = date.getFullYear();
+const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const monthsYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+dateInput.innerHTML = `${week[day]} ${monthsYear[month]} ${dayMonth}, ${year}`;
+
+//image background
+
+let images = ["media/a-r-t-paola-3UtETZuWR0U-unsplash.jpg", "media/chase-clark-dGqWUPPesrQ-unsplash.jpg",
+"media/drew-beamer-Vc1pJfvoQvY-unsplash.jpg", "media/fab-lentz-mRMQwK513hY-unsplash.jpg", 
+"media/felicia-buitenwerf-cBb94xhYAXw-unsplash.jpg", "media/jordan-whitfield-sm3Ub_IJKQg-unsplash.jpg",
+"media/prateek-katyal-6jYnKXVxOjc-unsplash.jpg", "media/randalyn-hill-Z1HXJQ2aWIA-unsplash.jpg", "media/s-o-c-i-a-l-c-u-t-6iYb1BWWbV0-unsplash.jpg"];
+let random  = Math.floor(Math.random() * 9);
+let header = document.getElementById("header");
+header.style.backgroundImage = 'url(' + images[random] + ')';
+
+//task adding 
+
+const list =  document.getElementById('list');
+const addButton = document.querySelector('#plus');
+const pendingButton =  document.getElementsByClassName('pending');
+const trashButton = document.querySelector('#trash');
+let input = document.querySelector('.input');
+let taskList = [];
+let counter = 0;
 
 
-class completeItem{
-    constructor(itemName){
-        this.createDiv(itemName);
+class newTask{
+    constructor(taskName){
+        this.createTask(taskName);
     }
 
-    createDiv(itemName){
-        let input = document.createElement('input');
-        input.value = itemName;
-        input.disabled = true;
-        input.classList.add('inputField');
-        input.type = "text";
+    createTask(taskName){
+        let task = document.createElement('p');
+        task.innerHTML = input.value;
+        task.classList.add('pending-task');
 
-        let itemContainer = document.createElement('div');
-        itemContainer.classList.add('completeInputDiv');
+        let pending = document.createElement('button');
+        pending.classList.add('pending');
+        pending.innerHTML = '<i class="material-icons">radio_button_unchecked</i>';
 
-        let removeButton = document.createElement('button');
-        removeButton.classList.add('removeButton');
-        removeButton.innerHTML = '<i class="fas fa-minus"></i>';
+        let trash = document.createElement('button');
+        trash.classList.add('trash');
+        trash.innerHTML = '<i class="material-icons">delete</i>';
 
-        completeDiv.appendChild(itemContainer);
-        itemContainer.appendChild(input);
-        itemContainer.appendChild(removeButton);
-        
-        removeButton.addEventListener('click', ()=> this.remove(itemContainer));
-        
-    }
+        let listItem = document.createElement('li');
+
+        let complete = document.createElement('button');
+        complete.classList.add('finished');
+        complete.innerHTML = '<i class="fas fa-check-circle"></i>';
+
+        list.appendChild(listItem);
+        listItem.appendChild(pending);
+        listItem.appendChild(task);
+        listItem.appendChild(trash);
+
+
+        trash.addEventListener('click', ()=> this.remove(listItem));
+            
+        pending.addEventListener('click', ()=> this.changeClass(task, pending));
+    }    
+
+    changeClass(element, element2){
+        element.classList.toggle('complete-task');
+        if(element2.innerHTML === '<i class="material-icons">radio_button_unchecked</i>'){
+            element2.innerHTML = '<i class="material-icons green">check_circle</i>'
+        }else{
+            element2.innerHTML = '<i class="material-icons">radio_button_unchecked</i>'
+        };
+    };
+
     remove(item){
-        completeDiv.removeChild(item);
+        list.removeChild(item);
+    }
+}
+/*saving and recreating items from local storage*/
+
+class recreateTask{
+    constructor(element){
+        this.createTask(element);
     }
 
-   };
+    createTask(element){
+        let task = document.createElement('p');
+        task.innerHTML = element;
+        task.classList.add('pending-task');
 
-   function complete(element){
-    new completeItem(element);
+        let pending = document.createElement('button');
+        pending.classList.add('pending');
+        pending.innerHTML = '<i class="material-icons">radio_button_unchecked</i>';
+
+        let trash = document.createElement('button');
+        trash.classList.add('trash');
+        trash.innerHTML = '<i class="material-icons">delete</i>';
+
+        let listItem = document.createElement('li');
+
+        let complete = document.createElement('button');
+        complete.classList.add('finished');
+        complete.innerHTML = '<i class="fas fa-check-circle"></i>';
+
+        list.appendChild(listItem);
+        listItem.appendChild(pending);
+        listItem.appendChild(task);
+        listItem.appendChild(trash);
+
+
+        trash.addEventListener('click', ()=> this.remove(listItem));   
+        pending.addEventListener('click', ()=> this.changeClass(task, pending));
+    }    
+
+    changeClass(element, element2){
+        element.classList.toggle('complete-task');
+        if(element2.innerHTML === '<i class="material-icons">radio_button_unchecked</i>'){
+            element2.innerHTML = '<i class="material-icons green">check_circle</i>'
+        }else{
+            element2.innerHTML = '<i class="material-icons">radio_button_unchecked</i>'
+        };
+    };
+    remove(item){
+        list.removeChild(item);
+    }
 }
 
-   
-class item{
-    constructor(itemName){
-        this.createDiv(itemName);
-    }
+function createTask(){
+    if(input.value != ""){
+        new newTask(input.value);
+        let task = {
+            name: input.value,
+            position: counter++,
+            completed: false,
+        }
+        taskList.push(task);
+        localStorage.setItem("List Items", JSON.stringify(taskList));
+        input.value = "";
+    }else{
+        alert('You have to write something dude!');
+    }}
 
-    createDiv(itemName){
-        let input = document.createElement('input');
-        input.value = itemName;
-        input.disabled = true;
-        input.classList.add('inputField');
-        input.type = "text";
+addButton.addEventListener('click', createTask);
+    window.addEventListener('keydown', (e) => {
+        if(e.which == 13){
+            createTask();
+        }
+    });
 
-        let itemContainer = document.createElement('div');
-        itemContainer.classList.add('item');
-
-        let editButton = document.createElement('button');
-        editButton.classList.add('editButton');
-        editButton.innerHTML = '<i class="far fa-edit">';
-
-        let removeButton = document.createElement('button');
-        removeButton.classList.add('removeButton');
-        removeButton.innerHTML = '<i class="fas fa-minus"></i>';
-
-        let completeButton = document.createElement('button');
-        completeButton.classList.add('completeButton');
-        completeButton.innerHTML = '<i class="fas fa-check"></i>';
-
-        taskContainer.appendChild(itemContainer);
-
-        itemContainer.appendChild(input);
-        itemContainer.appendChild(editButton);
-        itemContainer.appendChild(removeButton);
-        itemContainer.appendChild(completeButton);
-        
-        editButton.addEventListener('click', ()=> this.edit(input));
-        removeButton.addEventListener('click', ()=> this.remove(itemContainer));
-        completeButton.addEventListener('click', ()=> complete(itemName));
-        completeButton.addEventListener('click', ()=> this.remove(itemContainer));
-    }
-
-   edit(input){
-       input.disabled = !input.disabled;
-   }
-
-   remove(item){
-       taskContainer.removeChild(item);
-   }
-};
-
-
-
-function addItem(){
-       if(input.value != ""){
-           new item(input.value);
-           input.value = "";
-           inputField = input.value;
-       }
-};
-
-addButton.addEventListener('click', addItem);
-window.addEventListener('keydown', (e) => {
-    if(e.which == 13){
-        addItem();
-    }
-})
-
-const greyWhite = document.querySelector(".grey-and-white");
-const redYellow = document.querySelector(".red-and-yellow");
-const blueGreen = document.querySelector(".green-and-blue");
-const blackPink = document.querySelector(".black-and-pink");
-const body = document.querySelector('body');
-const html =  document.querySelector('html');
-const h1 = document.querySelectorAll('h1');
-const inputDiv = document.querySelector('.inputDiv');
-const taskDiv = document.querySelectorAll(".taskDiv");
-const completedDiv =  document.querySelectorAll('.completeDiv');
-const completedInput = document.querySelectorAll('.completeDiv input');
-
+    let returnCounter = 0;
+    let returnedItems = JSON.parse(localStorage.getItem("List Items"));
+    window.addEventListener('load', restoreItem(returnedItems));
     
+    function restoreItem(array){
 
-greyWhite.addEventListener('click', ()=>{
-    body.style.backgroundColor = "grey";
-    html.style.backgroundColor = "grey";
-    h1.forEach(element => {
-        element.style.color = "white";
-        element.style.textShadow = "3px 3px black";
-    });
-    taskDiv.forEach(element => {
-        element.style.backgroundColor = "white";
-    });
-    completedDiv.forEach(element => {
-        element.style.backgroundColor = "white";
-    });
-
-    inputDiv.style.backgroundColor = "white";
-
-});
-
-redYellow.addEventListener('click', ()=>{
-    body.style.backgroundColor = "red";
-    html.style.backgroundColor = "red";
-    h1.forEach(element => {
-        element.style.color = "yellow";
-        element.style.textShadow = "3px 3px black";
-    });
-
-    taskDiv.forEach(element => {
-        element.style.backgroundColor = "yellow";
-    });
-    completedDiv.forEach(element => {
-        element.style.backgroundColor = "yellow";
-    });
-
-    inputDiv.style.backgroundColor = "yellow";
-});
-
-blueGreen.addEventListener('click', ()=>{
-    body.style.backgroundColor = "blue";
-    html.style.backgroundColor = "blue";
-    h1.forEach(element => {
-        element.style.color = "green";
-        element.style.textShadow = "3px 3px black";
-    });
-
-    taskDiv.forEach(element => {
-        element.style.backgroundColor = "green";
-    });
-    completedDiv.forEach(element => {
-        element.style.backgroundColor = "green";
-    });
-
-    inputDiv.style.backgroundColor = "green";
-});
-
-blackPink.addEventListener('click', ()=>{
-    body.style.backgroundColor = "#F41F4E";
-    html.style.backgroundColor = "#F41F4E";
-    h1.forEach(element => {
-        element.style.color = "black";
-        element.style.textShadow = "3px 3px white";
-    });
-    taskDiv.forEach(element => {
-        element.style.backgroundColor = "#FFC2C7";
-    });
-    completedDiv.forEach(element => {
-        element.style.backgroundColor = "#FFC2C7";
-    });
-
-    inputDiv.style.backgroundColor = "#FFC2C7";
-});
+        if(array !==  null){array.forEach(element => {
+            new recreateTask(element.name);
+            taskList.push(element);
+        })}else{
+            alert('Nothing in your list yet Champ!')
+        };
+        }
+    
+/* reset button*/
+function resetScreen(){
+    localStorage.clear();
+    location.reload();
+}

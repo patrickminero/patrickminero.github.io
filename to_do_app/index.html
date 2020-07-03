@@ -3,41 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do App</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>To Do App - Patrick Minero</title>
 </head>
 <body>
-    <div class="buttons-div">
-        <button class="grey-and-white"></button>
-        <button class="red-and-yellow"></button>
-        <button class="green-and-blue"></button>
-        <button class="black-and-pink"></button> 
-    </div>   
-    <header><h1>To Do Web App</h1></header>
-    <div id="main">
-        
-        <div class="inputDiv">
-            <input class="input" type="text" placeholder="What should I do today?">
-            <button class="addButton"><i class="fas fa-plus"></i></button>
+    <div id="to-do-div">
+        <div id="header">
+            <i id="reset" class="fas fa-redo-alt" onclick="resetScreen()"></i>
+            <p id="date">Today's Date</p>
+       </div>
+       <div id="content-div">
+            <ul id="list">
+                <li>
+                   
+                </li>
+            </ul> 
         </div>
-
-        <h1 class="pending">Pending Tasks</h1>
-        <div class="taskDiv">
-            
-            
-            
-        </div>
+        <div class="input-div">
+            <input type="text" placeholder="What will I acomplish today?" class="input">
+            <button id="plus" onclick="createTask()"><i  class="fas fa-plus-circle"></i></button>
+        </div> 
     </div>
 
-    <div class="completed">
-        <h1>Completed Tasks</h1>
-        <div class="completeDiv">
-            
-        </div>
-    </div>
-    </div>
 
+    
     <script src="script.js"></script>
 </body>
 </html>

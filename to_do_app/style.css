@@ -1,173 +1,160 @@
-body, html{
-    width: 100%;
-    height: auto;
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F41F4E;
+    font-family: 'PT Sans', sans-serif;
 }
 
-.buttons-div{
-    width: 25%;
+#to-do-div{
+    width: 500px;
+    height: 800px;
     display: block;
-    margin: 3em auto auto auto;
-    text-align: center;
+    margin: 4em auto;
+    border-radius: 25px;
+    background: rgba(136, 243, 243, 0.822);
 }
 
-.buttons-div button{
-    margin: 1em;
-}
-
-.grey-and-white{
-    width: 3.1em;
-    height: 3.1em;
-    padding: 0;
-    margin: 0;
-    border-radius: 50%;
-    z-index: 2;
-    background: linear-gradient(to right, grey 50%, white 50%);
-    outline: none;
-    border: 3px solid black;
-}
-
-.red-and-yellow{
-    width: 3.1em;
-    height: 3.1em;
-    padding: 0;
-    margin: 0;
-    border-radius: 50%;
-    z-index: 2;
-    background: linear-gradient(to right, red 50%, yellow 50%);
-    outline: none;
-    border: 3px solid black;
-}
-
-.green-and-blue{
-    width: 3.1em;
-    height: 3.1em;
-    padding: 0;
-    margin: 0;
-    border-radius: 50%;
-    z-index: 2;
-    background: linear-gradient(to right, blue 50%, green 50%);
-    outline: none;
-    border: 3px solid black;
-}
-.black-and-pink{
-    width: 3.1em;
-    height: 3.1em;
-    padding: 0;
-    margin: 0;
-    border-radius: 50%;
-    z-index: 2;
-    background: linear-gradient(to right, black 50%, #F41F4E 50%);
-    outline: none;
-    border: 3px solid black;
-}
-
-#main{
-    margin: auto;
+#header{
+    height: 30%;
     width: 100%;
-    height: auto;
+    border-radius: 25px 25px 0 0;
+    background-image: url(media/anella-olimpica-barcelona.jpg);
+    background-size: 100% 100%;
 }
 
-header h1{
-    padding-top: 3em;
-    text-transform: uppercase;
-    font-size: 3em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    text-shadow: 3px 3px white;
-}
-
-.inputDiv button, .inputDiv input{
-    margin: .3em;
-    border: 2px solid black;
-    border-radius: 5em;
-    text-align: center;
-    font-size: 1em;
-}
-
-.inputDiv{
-    background-color: #FFC2C7;
-    border-radius: 10em;
-    width: 18em;
-    position: relative;
-    margin: auto;
-    padding: .3em;
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-.taskDiv, .completeDiv{
-    background-color: #FFC2C7;
-    border-radius: 10px;
-    position: relative;
-    margin: auto;
-    display: block;
-    width: 30em;
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.taskDiv button, .completeDiv button{
-    margin: .3em;
-    border: 2px solid black;
-    border-radius: 5em;
-    text-align: center;
-    font-size: 1em;
-}
-
-.inputField{
-    width: 15em;
-    margin: .3em;
-    border: 2px solid black;
-    border-radius: 5em;
-    text-align: center;
-    font-size: 1em;
-}
-
-.input{
+#header i{
+    display: flex;
+    float: right;
+    margin: 1em;
+    font-size: 1.5em;
     background-color: white;
-    color: black;
-    margin-bottom: 2em;
-    outline: none;
-}
-
-button:hover, input:hover{
-    transform: scale(1.1);
+    opacity: .7;
+    padding: .25em;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-.completed h1, .pending{
-    padding-top: 1em;
-    text-transform: uppercase;
+#header p{
+    position: relative;
+    bottom: 0;
     font-size: 1.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    text-shadow: 1px 1px white;
-}
-
-.completedTask{
+    transform: translateY(440%);
+    margin: .5em;
     background-color: white;
-    width: 15em;
-    margin: .3em;
-    border-radius: 10em;
-}
-    
-
-.completeDiv input{
-    border-radius: 10px;
-    border: 2px solid black;
-    font-size: 1em;
-    text-decoration-line: line-through;
+    border-radius: 25px;
+    opacity: .7;
+    padding: .25em;
+    width: 60%;
     text-align: center;
-    background-color: rgb(182, 245, 182);
+}
+
+#content-div{
+    height: 70%;
+    width: 100%;
+    background-color: cadetblue;
+    border-radius: 0 0 25px 25px;
+    padding: 1em;
+}
+
+#content-div ul {
+    list-style-type: none;
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    padding: .5em;
+}
+
+#content-div li{
+    margin: 1em;
+}
+.pending{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.material-icons.green{
+    color: green;
+}
+
+.finished, .check{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: green;
+}
+
+.trash{
+    position: relative;
+    float: right;
+    border: none;
+    background-color: transparent;
+    outline: none;
 }
 
 
-@media only screen and (max-width: 550px){
-    .inputField{
-        width: 10em;
-    }
+#content-div i{
+    display: inline;
+    margin: .25em;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#content-div p{
+    display: inline;
+    margin: .25em;
+    font-size: 24px;
+}
+
+#content-div i{
+    padding: .25em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.pending-task{
+    background-color: white;
+    padding: .25em .5em;
+    border-radius: 15px;
+    display: flex;
+}
+
+
+.complete-task{
+    background-color: rgb(209, 209, 209);
+    padding: .25em .5em;
+    border-radius: 15px;
+    display: flex;
+    text-decoration: line-through;
+}
+
+.input{
+    width: 100%;
+    height: 1.5em;
+    font-size: 1.5em;
+    border-radius: 15px;
+    border: none;
+    padding: .25em;
+    outline: none;
+}
+
+.input-div{
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+    transform: translateY(-120%);
+}
+
+#plus{
+    width: 1em;
+    height: 1em;
+    background-color: white;
+    font-size: 2em;
+    border: none;
+    outline: none;
+    line-height: 1.2;
+    cursor: pointer;
 }
