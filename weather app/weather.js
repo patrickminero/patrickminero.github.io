@@ -15,7 +15,7 @@ let wind;
 //api info
 let api = {
     key: 'bb8fffb77c233d3391006cd4611ceda9',
-    baseurl: 'http://api.openweathermap.org/data/2.5/',
+    baseurl: 'https://api.openweathermap.org/data/2.5/',
 };
 //user input data
 searchBox.addEventListener('keypress', (event)=>{
