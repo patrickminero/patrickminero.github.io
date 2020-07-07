@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css" type="text/css">
+    <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>
+    <title>Weather App - Patrick Minero</title>
+</head>
+<body>
+    <div class="location-div">
+        <input type="text" name="city" id="city" placeholder="Enter Location" class="location" autofocus>
+        <div class="icon-div">
+            <i><img src="media/3026240-weather/svg/clear-sky.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
+        </div>
+        
+    </div>
+
+    <div>
+        <h2 class="description">--</h2>
+        <h1 id="title">Current Weather</h1>
+    </div>
+
+    <div class="forecast-div">
+        <div class="temperature-div">
+            <i><img src="media/3026240-weather/svg/temperature.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
+            <h2 class="temperature">Temperature</h2><span id="degrees">--</span><span id="celcius">ºC</span>
+            <h3>Feels like -- ºC</h3>
+        </div>
+
+        <div class="precipitation-div">
+            <i><img src="media/3026240-weather/svg/water.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
+            <h2 class="precipitation">Humidity</h2><span id='humidity'>--</span>
+        </div>
+        <div class="wind-div">
+            <i><img src="media/3026240-weather/svg/024-windy.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
+            <h2 class="wind">Wind Speed</h2><span id="wind-speed">--</span>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJXUS1SMY6joyxVtp-jATqmgKcH7KXsVw&libraries=places"></script>
+    <script src="weather.js"></script>
+</body>
+</html>

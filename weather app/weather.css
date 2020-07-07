@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+    width: 100wh;
+    background: linear-gradient(rgb(98, 163, 216), rgb(87, 151, 236), rgb(51, 70, 180));
+    color: white;
+    font-family: sans-serif;
+}
+@media only screen and (min-width: 1201px){ 
+.location-div{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.location-div input{
+    font-size: 4em;
+    border: none;
+    background-color: transparent;
+    outline: transparent;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.icon{
+    width: 10em;
+    height: 10em;
+}
+
+::placeholder{
+    color: white;
+}
+
+.description{
+    height: 10vh;
+    width: 10em;
+    margin: auto;
+    font-size: 3em;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+.forecast-div{
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.forecast-div h2, .forecast-div span{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.temperature-div i{
+    color: rgb(255, 255, 0);
+}
+
+.precipitation-div i{
+    color: rgb(204, 202, 202)
+}
+
+.wind-div i{
+    color: rgb(201, 233, 243);
+}
+}
+
+@media only screen and (min-width: 300px)and (max-width: 1200px){
+::-webkit-scrollbar{
+    display: none;
+}
+
+    .location-div{
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .location-div input{
+        font-size: 3em;
+        border: none;
+        background-color: transparent;
+        outline: transparent;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    .icon{
+        width: 10em;
+        height: 10em;
+    }
+    
+    ::placeholder{
+        color: white;
+    }
+    
+    .description{
+        height: 10vh;
+        width: 8em;
+        margin: auto;
+        font-size: 3em;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    
+    #title{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        padding-bottom: 1em;
+    }
+    
+    .forecast-div{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        padding-top: 2em;
+    }
+
+    .forecast-div div{
+        padding-bottom: 4em;
+    }
+    
+    .forecast-div h2, .forecast-div span{
+        font-size: 2em;
+        cursor: pointer;
+    }
+    
+    .temperature-div i{
+        color: rgb(255, 255, 0);
+    }
+    
+    .precipitation-div i{
+        color: rgb(204, 202, 202)
+    }
+    
+    .wind-div i{
+        color: rgb(201, 233, 243);
+    }   
+}

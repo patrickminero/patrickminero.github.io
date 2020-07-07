@@ -141,7 +141,7 @@ function createTask(){
         localStorage.setItem("List Items", JSON.stringify(taskList));
         input.value = "";
     }else{
-        alert('You have to write something dude!');
+        alert('Please enter a task');
     }}
 
 addButton.addEventListener('click', createTask);
@@ -161,7 +161,7 @@ addButton.addEventListener('click', createTask);
             new recreateTask(element.name);
             taskList.push(element);
         })}else{
-            alert('Nothing in your list yet Champ!')
+            alert('Cogratulations! You have completed all your tasks!')
         };
         }
     
