@@ -12,6 +12,8 @@ let forecastDiv = document.querySelector('.forecast-div');
 let units = document.querySelector('#celcius');
 let wind;
 
+console.log()
+
 //api info
 let api = {
     key: 'bb8fffb77c233d3391006cd4611ceda9',
@@ -22,7 +24,7 @@ searchBox.addEventListener('keypress', (event)=>{
     if(event.keyCode == 13){
         getInfo(searchBox.value);
         searchBox.value = '';
-        units.innerHTML = ' ºC'
+        units.innerHTML = 'ºC'
     }
 })
 //data fetch from open weather
@@ -37,10 +39,10 @@ let getInfo = (city) =>{
 let displayWeatherInfo = (object) =>{
     temperature.innerHTML = Math.floor(object.main.temp);
     celciusTemp = Math.floor(object.main.temp);
-    feelsLike.innerHTML = 'Feels like ' + Math.floor(object.main.feels_like) + ' ºC';
+    feelsLike.innerHTML = 'Feels like ' + Math.floor(object.main.feels_like) + 'ºC';
     feelsLikeTemp = Math.floor(object.main.feels_like)
     description.innerHTML  = object.weather[0].description;
-    humidity.innerHTML = object.main.humidity + ' %';
+    humidity.innerHTML = object.main.humidity + '%';
     windSpeed.innerHTML = object.wind.speed + ' KM/H';
     wind = object.wind.speed;
     title.innerHTML = `${object.name}, ${object.sys.country}`;
