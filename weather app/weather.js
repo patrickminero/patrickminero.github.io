@@ -22,6 +22,7 @@ searchBox.addEventListener('keypress', (event)=>{
     if(event.keyCode == 13){
         getInfo(searchBox.value);
         searchBox.value = '';
+        units.innerHTML = ' ºC'
     }
 })
 //data fetch from open weather
@@ -103,8 +104,3 @@ let changeUnits = () =>{
 }
 
 forecastDiv.addEventListener('click', changeUnits);
-
-let googleApi = {
-    base: 'https://maps.googleapis.com/maps/api/place/findplacefromtext/',
-    key: 'AIzaSyCJXUS1SMY6joyxVtp-jATqmgKcH7KXsVw',
-}
