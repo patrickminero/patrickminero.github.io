@@ -55,8 +55,6 @@ let getLocationWeather = (object) =>{
 
 //data display
 let displayWeatherInfo = (object) =>{
-
-    console.log(object)
     temperature.innerHTML = Math.floor(object.list[0].main.temp);
     celciusTemp = Math.floor(object.list[0].main.temp);
     feelsLike.innerHTML = 'Feels like ' + Math.floor(object.list[0].main.feels_like) + 'ºC';
@@ -130,12 +128,7 @@ let changeUnits = () =>{
 forecastDiv.addEventListener('click', changeUnits);
 
 function geolocation(){
-    navigator.geolocation.getCurrentPosition(x)
     navigator.geolocation.getCurrentPosition(getLocationWeather)
 }
 
 window.addEventListener('load', geolocation)
-
-function x(position){
-    console.log(position)
-}
