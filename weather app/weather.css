@@ -11,6 +11,11 @@ body{
     color: white;
     font-family: sans-serif;
 }
+
+.hot-weather{
+    background: linear-gradient(rgba(255, 255, 0, 0.849), rgb(255, 217, 0), orange, red);
+}
+
 @media only screen and (min-width: 1201px){ 
 .location-div{
     height: 40vh;

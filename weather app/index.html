@@ -7,9 +7,9 @@
     <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>
     <title>Weather App - Patrick Minero</title>
 </head>
-<body>
+<body id="body">
     <div class="location-div">
-        <input type="text" name="city" id="city" placeholder="Enter Location" class="location" autofocus>
+        <input type="text" name="city" id="autocomplete" placeholder="Enter Location" class="location" autofocus>
         <div class="icon-div">
             <i><img src="media/3026240-weather/svg/clear-sky.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
         </div>
@@ -38,5 +38,6 @@
         </div>
     </div>
     <script src="weather.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFB6mfKfN0BcDIqg-xhz2E3SHSrUW4eUM&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const searchBox = document.querySelector('#city');
+const inputField = document.querySelector('#autocomplete');
 let tempDivIcon = document.querySelector('.icon-div i img');
 let description = document.querySelector('.description')
 let temperature = document.querySelector('#degrees');
@@ -12,7 +12,14 @@ let forecastDiv = document.querySelector('.forecast-div');
 let units = document.querySelector('#celcius');
 let wind;
 
-console.log()
+//google autocomplete
+let autocomplete;
+function initAutocomplete(){
+    autocomplete = new google.maps.places.Autocomplete(
+        document.getElementById('autocomplete')
+    )
+};
+
 
 //api info
 let api = {
@@ -20,43 +27,58 @@ let api = {
     baseurl: 'https://api.openweathermap.org/data/2.5/',
 };
 //user input data
-searchBox.addEventListener('keypress', (event)=>{
-    if(event.keyCode == 13){
-        getInfo(searchBox.value);
-        searchBox.value = '';
+inputField.addEventListener('keypress', (event)=>{
+    if(event.keyCode === 13){
+        getInfo(inputField.value);
+        inputField.value = '';
         units.innerHTML = 'ºC'
     }
 })
 //data fetch from open weather
-let getInfo = (city) =>{
-    fetch(`${api.baseurl}weather?q=${city}&units=metric&appid=${api.key}`)
+let getInfo = (autocomplete) =>{
+    fetch(`${api.baseurl}forecast?q=${autocomplete}&units=metric&appid=${api.key}`)
+        
         .then(weatherInfo =>{
             return weatherInfo.json();
         })
         .then(displayWeatherInfo);
 }
+
+let getLocationWeather = (object) =>{    
+    fetch(`${api.baseurl}forecast?lat=${object.coords.latitude}&lon=${object.coords.longitude}&units=metric&appid=${api.key}`)
+        .then(weatherInfo =>{
+            return weatherInfo.json();
+        })
+        .then(displayWeatherInfo);
+}
+
+
 //data display
 let displayWeatherInfo = (object) =>{
-    temperature.innerHTML = Math.floor(object.main.temp);
-    celciusTemp = Math.floor(object.main.temp);
-    feelsLike.innerHTML = 'Feels like ' + Math.floor(object.main.feels_like) + 'ºC';
-    feelsLikeTemp = Math.floor(object.main.feels_like)
-    description.innerHTML  = object.weather[0].description;
-    humidity.innerHTML = object.main.humidity + '%';
-    windSpeed.innerHTML = object.wind.speed + ' KM/H';
-    wind = object.wind.speed;
-    title.innerHTML = `${object.name}, ${object.sys.country}`;
+
+    console.log(object)
+    temperature.innerHTML = Math.floor(object.list[0].main.temp);
+    celciusTemp = Math.floor(object.list[0].main.temp);
+    feelsLike.innerHTML = 'Feels like ' + Math.floor(object.list[0].main.feels_like) + 'ºC';
+    feelsLikeTemp = Math.floor(object.list[0].main.feels_like)
+    description.innerHTML  = object.list[0].weather[0].description;
+    humidity.innerHTML = object.list[0].main.humidity + '%';
+    windSpeed.innerHTML = object.list[0].wind.speed + ' KM/H';
+    wind = object.list[0].wind.speed;
+    title.innerHTML = `${object.city.name}, ${object.city.country}`;
 
     let temperatureIcon = document.querySelector('.temperature-div i img');
-    if(object.main.temp > 20){
+    if(object.list[0].main.temp > 23){
         temperatureIcon.src = 'media/3026240-weather/svg/021-hot temperature.svg';
         tempDivIcon.title = 'Icons by Vitaly Gorbachev - Flaticon.com';
+        document.getElementById('body').classList.add('hot-weather');
     }else{
         temperatureIcon.src = 'media/3026240-weather/svg/048-low temperatures.svg';
         tempDivIcon.title = 'Icons by Vitaly Gorbachev - Flaticon.com';
+        document.getElementById('body').classList.remove('hot-weather');
     };
 
-    let desc =  object.weather[0].main;
+    let desc =  object.list[0].weather[0].main;
     switch(desc){
         case 'Clouds':
             tempDivIcon.src = 'media/3026240-weather/svg/cloudy.svg'
@@ -88,7 +110,7 @@ let displayWeatherInfo = (object) =>{
             tempDivIcon.title = 'Icons by Vitaly Gorbachev - Flaticon.com';
             tempDivIcon.alt = "Icon of thunderstorm cloud"
             break;
-    };    
+    };
 }
 //unit change on click
 let changeUnits = () =>{
@@ -106,3 +128,14 @@ let changeUnits = () =>{
 }
 
 forecastDiv.addEventListener('click', changeUnits);
+
+function geolocation(){
+    navigator.geolocation.getCurrentPosition(x)
+    navigator.geolocation.getCurrentPosition(getLocationWeather)
+}
+
+window.addEventListener('load', geolocation)
+
+function x(position){
+    console.log(position)
+}
