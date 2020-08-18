@@ -78,7 +78,7 @@ async function getCity(lat, lon){
 //display data 
 let currentWeatherInfo = (object) =>{
     let current = object.current;
-    currentImage.src = `http://openweathermap.org/img/wn/${current.weather[0].icon}@4x.png`;
+    currentImage.src = `https://openweathermap.org/img/wn/${current.weather[0].icon}@4x.png`;
     currentDescription.innerHTML = current.weather[0].description;
     currentTemp.innerHTML = current.temp + ' ºc';
     currentFeelsLike.innerHTML = current.feels_like + ' ºc';
@@ -94,7 +94,7 @@ let forecastWeatherInfo = (object) =>{
     let dateStamp1 = dayOne.dt;
     let date1 = new Date(dateStamp1 * 1000);
     firstDayTitle.innerHTML = days[date1.getDay()];
-    firstDayImage.src = `http://openweathermap.org/img/wn/${dayOne.weather[0].icon}@4x.png`
+    firstDayImage.src = `https://openweathermap.org/img/wn/${dayOne.weather[0].icon}@4x.png`
     firstDayDescription.innerHTML = dayOne.weather[0].description;
     firstDayTemp.innerHTML = 'Min: ' + dayOne.temp.min + ' ºc / Max: ' + dayOne.temp.max + ' ºc';
     firstDayFeelsLike.innerHTML = dayOne.feels_like.day + ' ºc';
@@ -105,7 +105,7 @@ let forecastWeatherInfo = (object) =>{
     let dateStamp2 = dayTwo.dt;
     let date2 = new Date(dateStamp2 * 1000);
     secondDayTitle.innerHTML = days[date2.getDay()];
-    secondDayImage.src = `http://openweathermap.org/img/wn/${dayTwo.weather[0].icon}@4x.png`
+    secondDayImage.src = `https://openweathermap.org/img/wn/${dayTwo.weather[0].icon}@4x.png`
     secondDayDescription.innerHTML = dayTwo.weather[0].description;
     secondDayTemp.innerHTML = 'Min: ' + dayTwo.temp.min + ' ºc / Max: ' + dayTwo.temp.max + ' ºc';
     secondDayFeelsLike.innerHTML = dayTwo.feels_like.day + ' ºc';
@@ -116,7 +116,7 @@ let forecastWeatherInfo = (object) =>{
     let dateStamp3 = dayThree.dt;
     let date3 = new Date(dateStamp3 * 1000);
     thirdDayTitle.innerHTML = days[date3.getDay()];
-    thirdDayImage.src = `http://openweathermap.org/img/wn/${dayThree.weather[0].icon}@4x.png`
+    thirdDayImage.src = `https://openweathermap.org/img/wn/${dayThree.weather[0].icon}@4x.png`
     thirdDayDescription.innerHTML = dayThree.weather[0].description;
     thirdDayTemp.innerHTML = 'Min: ' + dayThree.temp.min + ' ºc / Max: ' + dayThree.temp.max + ' ºc';
     thirdDayFeelsLike.innerHTML = dayThree.feels_like.day + ' ºc';
@@ -127,7 +127,7 @@ let forecastWeatherInfo = (object) =>{
     let dateStamp4 = dayFour.dt;
     let date4 = new Date(dateStamp4 * 1000);
     fourthDayTitle.innerHTML = days[date4.getDay()];
-    fourthDayImage.src = `http://openweathermap.org/img/wn/${dayFour.weather[0].icon}@4x.png`
+    fourthDayImage.src = `https://openweathermap.org/img/wn/${dayFour.weather[0].icon}@4x.png`
     fourthDayDescription.innerHTML = dayFour.weather[0].description;
     fourthDayTemp.innerHTML = 'Min: ' + dayFour.temp.min + ' ºc / Max: ' + dayFour.temp.max + ' ºc';
     fourthDayFeelsLike.innerHTML = dayFour.feels_like.day + ' ºc';
@@ -138,7 +138,7 @@ let forecastWeatherInfo = (object) =>{
     let dateStamp5 = dayFive.dt;
     let date5 = new Date(dateStamp5 * 1000);
     fifthDayTitle.innerHTML = days[date5.getDay()];
-    fifthDayImage.src = `http://openweathermap.org/img/wn/${dayFive.weather[0].icon}@4x.png`
+    fifthDayImage.src = `https://openweathermap.org/img/wn/${dayFive.weather[0].icon}@4x.png`
     fifthDayDescription.innerHTML = dayFive.weather[0].description;
     fifthDayTemp.innerHTML = 'Min: ' + dayFive.temp.min + ' ºc / Max: ' + dayFive.temp.max + ' ºc';
     fifthDayFeelsLike.innerHTML = dayFive.feels_like.day + ' ºc';
