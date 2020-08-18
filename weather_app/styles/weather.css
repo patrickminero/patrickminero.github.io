@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  background-image: '';
+  background: #7c7c7c88;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (min-width: 300px) {
+  header {
+    width: 100%;
+  }
+  header h1 {
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  #location-div {
+    width: 90%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 48px;
+  }
+  #location-div input {
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.671);
+    font-size: 24px;
+  }
+  #location-div input.placeholder {
+    color: black;
+  }
+  #location-div input:-moz-placeholder {
+    color: black;
+  }
+  #location-div input::-moz-placeholder {
+    color: black;
+  }
+  #location-div input::-webkit-input-placeholder {
+    color: black;
+  }
+  #location-div button {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.671);
+    font-size: 24px;
+  }
+  #unit-button {
+    width: auto;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.671);
+    font-size: 24px;
+    margin-top: 24px;
+  }
+  #current-div {
+    margin-top: 24px;
+  }
+  #current-div h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    width: 90%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  #current-div #current-weather {
+    text-align: center;
+  }
+  #current-div #current-weather img {
+    width: auto;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  #current-div #current-weather h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+  }
+  #current-div #current-weather h3, #current-div #current-weather p {
+    display: inline;
+    font-size: 18px;
+  }
+  #show-forecast {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 16px;
+    z-index: 5;
+    padding-bottom: 32px;
+  }
+  #forecast-div {
+    display: none;
+    margin-top: 250px;
+    padding-bottom: 32px;
+  }
+  #forecast-div #show-forecast-title {
+    display: block;
+    font-size: 32px;
+    text-transform: uppercase;
+    width: auto;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  #forecast-div #forecast {
+    width: 100%;
+  }
+  #forecast-div #forecast div {
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  #forecast-div #forecast div img {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+  #forecast-div #forecast div h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+  }
+  #forecast-div #forecast div h3, #forecast-div #forecast div p {
+    display: inline;
+    font-size: 18px;
+  }
+  footer {
+    width: 100%;
+    height: 32px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #000000d2;
+    position: fixed;
+    bottom: 0;
+  }
+  footer p a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  header h1 {
+    font-size: 36px;
+  }
+  #current-div h2 {
+    font-size: 32px;
+  }
+  #current-div #current-weather h2 {
+    font-size: 32px;
+  }
+  #current-div #current-weather h3, #current-div #current-weather p {
+    font-size: 24px;
+  }
+  #forecast-div #forecast div h3, #forecast-div #forecast div p {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 750px) and (min-height: 750px) {
+  header {
+    padding: 24px;
+  }
+  header h1 {
+    font-size: 56px;
+  }
+  #location-div input, #location-div button {
+    font-size: 36px;
+  }
+  #unit-button {
+    font-size: 36px;
+  }
+  #current-div h2 {
+    font-size: 36px;
+  }
+  #current-div #current-weather img {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  #current-div #current-weather h2 {
+    font-size: 36px;
+  }
+  #current-div #current-weather h3, #current-div #current-weather p {
+    font-size: 32px;
+  }
+  #forecast-div #show-forecast-title {
+    display: block;
+    font-size: 36px;
+    width: auto;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  #forecast-div #forecast div img {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  #forecast-div #forecast div h2 {
+    font-size: 36px;
+  }
+  #forecast-div #forecast div h3, #forecast-div #forecast div p {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  header {
+    padding: 24px;
+  }
+  header h1 {
+    margin-top: 0;
+  }
+  #location-div {
+    margin-top: 20px;
+  }
+  #location-div input {
+    width: 50%;
+  }
+  #forecast-div {
+    margin-top: 64px;
+  }
+  #forecast-div #show-forecast-title {
+    font-size: 64px;
+  }
+  #forecast-div #forecast {
+    padding: 32px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'area1 area2' 'area3 area4' 'area5 area5';
+    grid-gap: 10px;
+  }
+  #forecast-div #forecast #first-day {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: area1;
+  }
+  #forecast-div #forecast #second-day {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: area2;
+  }
+  #forecast-div #forecast #third-day {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: area3;
+  }
+  #forecast-div #forecast #fourth-day {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: area4;
+  }
+  #forecast-div #forecast #fifth-day {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: area5;
+  }
+  #forecast-div #forecast div h3, #forecast-div #forecast div p {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  header h1 {
+    width: 70%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 64px;
+  }
+  #current-div h2 {
+    font-size: 40px;
+  }
+  #current-div #title {
+    font-size: 64px;
+  }
+  #show-forecast {
+    display: none;
+  }
+  #forecast-div {
+    display: block;
+  }
+  #forecast-div #forecast div h3, #forecast-div #forecast div p {
+    font-size: 36px;
+  }
+}
+/*# sourceMappingURL=weather.css.map */

@@ -3,41 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="weather.css" type="text/css">
+    <link rel="stylesheet" href="styles/weather.css" type="text/css">
     <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>
     <title>Weather App - Patrick Minero</title>
 </head>
-<body id="body">
-    <div class="location-div">
-        <input type="text" name="city" id="autocomplete" placeholder="Enter Location" class="location" autofocus>
-        <div class="icon-div">
-            <i><img src="media/3026240-weather/svg/clear-sky.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
+<body>
+    <header>
+        <h1>Current Weather and Five Day Forecast</h1>
+    </header>
+    <div id="location-div">
+        <input type="text" name="city" id="autocomplete" placeholder="Enter Location..." autofocus>
+        <button type="submit" id="submit-location">Search</button>     
+    </div>
+    <button type="submit" id="unit-button">Celsius</button>
+    <div id="current-div">
+        <h2 id="title">Current Local Weather</h2>
+        <h2 id="location"></h2>
+        <h2 id="local-time"></h2>
+        <div id="current-weather">
+            <img src="" alt="" srcset=""id="current-image">
+            <h2 id="current-description"></h2>
+            <h3>Temperature: </h3><p id="current-temp"></p></br>
+            <h3>Feels like: </h3><p id="current-feels-like"></p><br>
+            <h3>Humidity: </h3><p id="current-humidity"></p><br>
+            <h3>Wind Speed:</h3><p id="current-wind"></p><br>
         </div>
-        
     </div>
 
-    <div>
-        <h2 class="description">--</h2>
-        <h1 id="title">Current Weather</h1>
-    </div>
+    <button type="submit" id="show-forecast">
+        <i class="fas fa-chevron-down fa-5x"></i>
+    </button>
 
-    <div class="forecast-div">
-        <div class="temperature-div">
-            <i><img src="media/3026240-weather/svg/temperature.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
-            <h2 class="temperature">Temperature</h2><span id="degrees">--</span><span id="celcius">ºC</span>
-            <h3>Feels like -- ºC</h3>
-        </div>
-
-        <div class="precipitation-div">
-            <i><img src="media/3026240-weather/svg/water.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
-            <h2 class="precipitation">Humidity</h2><span id='humidity'>--</span>
-        </div>
-        <div class="wind-div">
-            <i><img src="media/3026240-weather/svg/024-windy.svg" alt="" class="icon" title="Icons by Vitaly Gorbachev - Flaticon.com"></i>
-            <h2 class="wind">Wind Speed</h2><span id="wind-speed">--</span>
+    <div id="forecast-div">
+        <h2 id="show-forecast-title">Five Day Weather Forecast</h2>
+        <div id="forecast">
+            <div id="first-day">
+                <img src="" alt="" srcset=""id="first-day-image">
+                <h2 id="first-day-title"></h2>
+                <h2 id="first-day-description"></h2>
+                <h3>Temperature: </h3><p id="first-day-temp"></p><br>
+                <h3>Feels like: </h3><p id="first-day-feels-like"></p><br>
+                <h3>Humidity: </h3><p id="first-day-humidity"></p><br>
+                <h3>Wind Speed: </h3><p id="first-day-wind"></p><br>
+            </div>
+            <div id="second-day">
+                <img src="" alt="" srcset=""id="second-day-image">
+                <h2 id="second-day-title"></h2>
+                <h2 id="second-day-description"></h2>
+                <h3>Temperature: </h3><p id="second-day-temp"></p><br>
+                <h3>Feels like: </h3><p id="second-day-feels-like"></p><br>
+                <h3>Humidity: </h3><p id="second-day-humidity"></p><br>
+                <h3>Wind Speed: </h3><p id="secon-day-wind"></p><br>
+            </div>
+            <div id="thrid-day">
+                <img src="" alt="" srcset=""id="third-day-image">
+                <h2 id="third-day-title"></h2>
+                <h2 id="third-day-description"></h2>
+                <h3>Temperature: </h3><p id="third-day-temp"></p><br>
+                <h3>Feels like: </h3><p id="third-day-feels-like"></p><br>
+                <h3>Humidity: </h3><p id="third-day-humidity"></p><br>
+                <h3>Wind Speed: </h3><p id="third-day-wind"></p><br>
+            </div>
+            <div id="fourth-day">
+                <img src="" alt="" srcset=""id="fourth-day-image">
+                <h2 id="fourth-day-title"></h2>
+                <h2 id="fourth-day-description"></h2>
+                <h3>Temperature: </h3><p id="fourth-day-temp"></p><br>
+                <h3>Feels like: </h3><p id="fourth-day-feels-like"></p><br>
+                <h3>Humidity: </h3><p id="fourth-day-humidity"></p><br>
+                <h3>Wind Speed: </h3><p id="fourth-day-wind"></p><br>
+            </div>
+            <div id="fifth-day">
+                <img src="" alt="" srcset=""id="fifth-day-image">                
+                <h2 id="fifth-day-title"></h2>
+                <h2 id="fifth-day-description"></h2>
+                <h3>Temperature: </h3><p id="fifth-day-temp"></p><br>
+                <h3>Feels like: </h3><p id="fifth-day-feels-like"></p><br>
+                <h3>Humidity: </h3><p id="fifth-day-humidity"></p><br>
+                <h3>Wind Speed: </h3><p id="fifth-day-wind"></p><br>
+            </div>
         </div>
     </div>
-    <script src="weather.js"></script>
+    <footer>
+        <p><a href="https://www.vecteezy.com/free-vector/nature-landscape">Background Vectors by Vecteezy</a></p>
+    </footer>
+
+    <script src="scripts/variables.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/jquery-3.5.1.js"></script>
+    <script src="scripts/script.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFB6mfKfN0BcDIqg-xhz2E3SHSrUW4eUM&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 </html>

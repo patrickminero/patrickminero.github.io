@@ -1,0 +1,195 @@
+$white: rgba(255, 255, 255, 0.671)
+@import 'mixins'
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body, html
+    background-image: ''
+    background: #7c7c7c88
+    background-blend-mode: overlay
+    background-size: cover
+    background-position: center 
+    font-family: sans-serif
+    width: 100%
+    height: auto
+    scroll-behavior: smooth
+@media only screen and (min-width: 300px)
+    header
+        width: 100%
+        h1
+            @include center-item(100%)
+            text-transform: uppercase
+            text-align: center
+    #location-div
+        @include center-item(90%)
+        justify-content: center
+        margin-top: 48px
+        input
+            width: 70%
+            @include border($white)
+            font-size: 24px
+            @include placeholder{color: black}
+        button
+            @include border($white)
+            font-size: 24px
+    #unit-button
+        @include center-item(auto)
+        @include border ($white)
+        font-size: 24px
+        margin-top: 24px
+    #current-div
+        margin-top: 24px
+        h2
+            font-size: 24px
+            text-transform: uppercase
+            @include center-item(90%)
+        #current-weather
+            text-align: center
+            img
+                @include center-item(auto)
+            h2
+                text-transform: uppercase
+                font-size: 32px
+            h3, p
+                display: inline
+                font-size: 18px
+    #show-forecast
+        @include border(transparent)
+        @include center-item(50%)
+        margin-top: 16px
+        z-index: 5
+        padding-bottom: 32px
+    #forecast-div
+        display: none
+        margin-top: 250px
+        padding-bottom: 32px
+        #show-forecast-title
+            display: block
+            font-size: 32px
+            text-transform: uppercase
+            @include center-item(auto)
+        #forecast
+            width: 100%
+            div
+                @include center-item(100%)
+                img
+                    transform: translateY(15%)
+                h2
+                    text-transform: uppercase
+                    font-size: 32px
+                h3, p
+                    display: inline
+                    font-size: 18px
+    footer
+        width: 100%
+        height: 32px
+        font-size: 24px
+        text-align: center
+        background-color: #000000d2
+        position: fixed
+        bottom: 0
+        p
+            a
+                text-decoration: none
+                color: white
+@media only screen and (min-width: 560px)
+    header
+        h1
+            font-size: 36px
+    #current-div
+        h2
+            font-size: 32px
+        #current-weather
+            h2 
+                font-size: 32px
+            h3,p
+                font-size: 24px
+    #forecast-div
+        #forecast
+            div
+                h3, p
+                    font-size: 24px
+@media screen and ( min-width: 750px ) and (min-height: 750px)
+    header
+        padding: 24px
+        h1
+            font-size: 56px
+    #location-div
+        input, button
+            font-size: 36px
+    #unit-button
+        font-size: 36px
+    #current-div
+        h2
+            font-size: 36px
+        #current-weather
+            img
+                transform: scale(2)
+            h2
+                font-size: 36px
+            h3, p
+                font-size: 32px        
+    #forecast-div  
+        #show-forecast-title
+            display: block
+            font-size: 36px
+            @include center-item(auto)
+        #forecast
+            div
+                img
+                    transform: scale(2)
+                h2
+                    font-size: 36px
+                h3, p
+                    font-size: 32px 
+@media screen and ( min-width: 1250px)           
+    header
+        padding: 24px
+        h1
+            margin-top: 0
+    #location-div
+        margin-top: 20px
+        input
+            width: 50%
+    #forecast-div
+        margin-top: 64px
+        #show-forecast-title
+            font-size: 64px
+        #forecast
+            padding: 32px
+            display: grid
+            grid-template-areas: 'area1 area2' 'area3 area4' 'area5 area5'
+            grid-gap: 10px
+            #first-day
+                grid-area: area1
+            #second-day
+                grid-area: area2
+            #third-day
+                grid-area: area3
+            #fourth-day
+                grid-area: area4
+            #fifth-day
+                grid-area: area5
+            div
+                h3,p
+                    font-size: 24px
+@media screen and (min-width: 1450px)
+    header
+        h1
+            @include center-item(70%)
+            font-size: 64px
+    #current-div
+        h2
+            font-size: 40px
+        #title
+            font-size: 64px
+    #show-forecast
+        display: none
+    #forecast-div
+        display: block
+        #forecast
+            div
+                h3,p
+                    font-size: 36px
+    
