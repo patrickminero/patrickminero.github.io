@@ -1,0 +1,489 @@
+@import "mixins"
+@import "variables"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+html, body
+    @include w-n-h(100%, auto)
+    scroll-behavior: smooth
+    font-family: $roboto
+    background: $background
+    color: $primary
+@media screen and ( min-width: 300px )
+    header
+        #menu-button
+            @include w-n-h(72px, 72px)
+            background-color: #000000a1
+            @include border(none)
+            position: fixed
+            bottom: 0
+            right: 0
+            z-index: 5
+            display: block
+            .close
+                background-color: $secondary
+                height: 10%
+                @include center-item(75%)
+                margin: 10px
+                transition: 1s
+            .open1
+                transform: rotate(45deg) translate(12px, 13px)
+                background-color: $terciary
+            .open2
+                opacity: 0
+            .open3
+                transform: rotate(-45deg) translate(12px, -13px)
+                background-color: $terciary
+        nav
+            display: none
+            @include w-n-h(100vw, auto)
+            position: fixed
+            bottom: 0
+            right: 0
+            background: $secondary
+            z-index: 4
+            ul
+                list-style-type: none
+                li
+                    text-align: center
+                    margin: 16px
+                    img
+                        @include w-n-h(2em, 2em)
+                        margin: 0 1em
+                        cursor: pointer
+                    a
+                        color: $background
+                        text-decoration: none
+                        font-size: 32px
+                        cursor: pointer
+                #flags-big
+                    display: none
+            h3
+                color: $primary
+                @include center-item(80%)
+                a
+                    color: $primary
+                    text-decoration: none
+                    cursor: pointer
+    #main
+        background: url('../media/san_francisco_from_berkeley.jpg') #00000048 center
+        background-attachment: fixed
+        background-blend-mode: overlay
+        @include w-n-h(100vw, 100vh)
+        #blur
+            @include w-n-h(90%, 220px)
+            @include center-item(90%)
+            border: solid $secondary 5px
+            transform: translatey(130%)
+            padding: 36px 8px
+            font-size: 24px
+            background-color: #000000a8
+            backdrop-filter: blur(20px)
+            display: none
+            h1,h2
+                color: $secondary
+    #about
+        @include w-n-h(100vw, auto)
+        padding: 32px 8px
+        div
+            text-align: left
+            .description
+                font-size: 24px
+                color: $primary
+                display: block
+                width: 100%
+                margin-left: 0px
+                text-align: center
+            .description.to-right
+                font-size: 24px
+                color: $primary
+                margin-left: 8px
+                text-align: left
+                transition: 1s
+            .description.inline
+                width: 65%
+                display: inline-block
+                transition: 1s
+            .portrait
+                display: none
+                @include center-item(150px)
+                width: 0%
+                height: 0%
+                border-radius: 50%
+                opacity: 0
+                transition: 1s
+            .portrait.show
+                opacity: 1
+                width: 150px
+                height: 150px
+                transition: 1s
+            .portrait.move
+                transform: translateX(-100px)
+                transition: 1s
+            .portrait.side
+                transform: translateX(0px)
+                @include w-n-h(110px, 110px)
+                border-radius: 0px
+                opacity: 1
+                transition: 1s
+                display: inline-block
+            p 
+                font-size: 20px
+                padding-top: 16px
+                color: $primary
+                ul
+                    text-align: center
+                    padding-top: 16px
+            #journey
+                width: 100%
+                padding-top: 16px
+            #parallax
+                width: 100%
+                height: 600px
+                background-image: url('../media/farmer-rougiers-france.jpg')
+                background-attachment: fixed
+                background-position: center center
+                background-size: cover
+            #skills
+                div
+                    display: inline-block
+                    padding: 8px
+                    width: 48%
+                    ul
+                        list-style-type: none
+                        li
+                            font-size: 24px
+                            text-align: center
+    #projects
+        @include w-n-h(100vw, auto)
+        padding-bottom: 16px
+        h2
+            text-align: center
+            color: $primary
+            text-transform: uppercase
+        .hidden
+            @include center-item(350px)
+            @include w-n-h(350px, 275px)
+            margin: auto
+            border: 1px solid $secondary
+            box-shadow: 0px 5px 5px 
+            background-color: $background
+            color: $primary
+            text-align: center
+            opacity: 0
+            transform: translateY(20%)
+            display: block
+            transition: 2s
+            margin-top: 32px
+            h2
+                text-transform: uppercase
+                font-size: 24px
+                @include center-item(90%)
+                padding: 16px 0
+                color: $primary
+            img
+                    @include w-n-h(100%, 200px)
+            div
+                padding: 32px
+                background-color: $background
+                @include w-n-h(348px, 275px)
+                position: absolute
+                transform: translate(0%, -95%)
+                display: none
+                p
+                    font-size: 24px
+                    margin: 16px
+                    color: $primary
+                a
+                    font-size: 24px
+                    text-decoration: none
+                    color: $background
+                    background-color: $terciary
+                    border: 1px solid $primary
+                    box-shadow: 3px 3px 3px black
+                    border-radius: 5px
+                    padding: 5px
+        .fadein
+            opacity: 1
+            transform: translateY(0)
+    #references
+        padding: 16px
+        @include w-n-h(100vw, 200px)
+        overflow-y: hidden
+        background: $background
+        div
+            text-align: left
+            h2
+                font-size: 24px
+                text-align: center
+                color: $primary
+                text-transform: uppercase
+            div 
+                p 
+                    font-size: 20px
+                    margin-top: 20px
+                h3
+                    text-align: right
+                    margin: 16px 0
+        button
+            position: relative
+            float: right
+            background-color: $terciary
+            border: 1px solid $primary
+            outline: none
+            font-size: 16px
+            border-radius: 5px
+            color: $background
+            @include w-n-h(auto, auto)
+            padding: 5px
+            box-shadow: 3px 3px 3px black
+            &:active
+                    background-color: $background
+                    color: $terciary
+                    outline: none
+        #reference2, #reference3
+            display: none                
+    #contact
+        @include w-n-h(100vw, auto)
+        padding-top: 32px
+        z-index: 3
+        background: $background
+        color: $primary
+        @include center-item(auto)
+        h2 
+            text-transform: uppercase
+        div
+            @include center-item(90%)
+            input, textarea
+                @include center-item(100%)
+                font-size: 16px
+                outline: none
+                text-align: left
+                outline: none
+                border: 1px solid $primary
+                margin: 16px 0
+                border-radius: 5px
+                box-shadow: 3px 3px 3px black
+                padding: 8px
+                font-family: $roboto
+                background-color: $secondary
+                @include placeholder{color: $background}
+                &:focus
+                    background-color: $background
+                    color: $primary
+            #send
+                @include center-item(50%)
+                font-size: 16px
+                background-color: $terciary
+                border-radius: 5px
+                font-family: $roboto
+                color: $background
+                &:active
+                    background-color: $background
+                    color: $primary
+                    outline: none
+        footer
+            height: auto
+            padding-top: 16px
+            a
+                text-decoration: none
+                color: $terciary
+                i
+                    margin: 0 16px
+            h2
+                color: $secondary
+            h3
+                display: none
+@media screen and ( min-width: 600px )
+    header
+        nav
+            ul
+                li
+                    img
+                        @include w-n-h(4em, 4em)
+                    a
+                        font-size: 42px
+            h3
+                font-size: 32px
+    #main
+        #blur
+            font-size: 36px
+            @include w-n-h(90%, 280px)
+            transform: translatey(100%)
+    #about
+        padding: 16px
+        div
+            .description
+                font-size: 38px
+            .description.to-right
+                font-size: 32px
+            .description.inline
+                width: 60%
+            .portrait.show
+                @include w-n-h(200px, 200px)
+            .portrait.move
+                transform: translateX(-185px)
+            .portrait.side
+                @include w-n-h(140px, 140px)
+                transform: translateX(0)
+            p
+                font-size: 32px
+            #parallax
+                height: 800px
+            #journey
+                font-size: 38px
+            #skills
+                div
+                    padding: 16px
+                    width: 48%
+                    ul
+                        list-style-type: none
+                        li
+                            font-size: 32px
+                            text-align: center
+    #projects
+        h2
+            font-size: 48px
+        .hidden
+            @include w-n-h(450px, 375px)
+            h2
+                font-size: 36px
+            img
+                @include w-n-h(100%, 300px)
+            div
+                @include w-n-h(448px, 375px)
+                transform: translate(0%, -100%)
+                p
+                    font-size: 32px
+                a
+                    font-size: 32px
+    #references
+        padding: 32px
+        @include w-n-h(100vw, 350px)
+        div
+            h2
+                font-size: 48px
+            div
+                p
+                    font-size: 32px
+                h3
+                    font-size: 28px
+        button
+            font-size: 24px
+    #contact
+        h2 
+            font-size: 48px
+        div
+            @include center-item(80%)
+            input, textarea
+                font-size: 32px
+            #send
+                font-size: 32px
+        footer
+            a
+                i
+                    transform: scale(2)
+                    margin: 32px
+            h2
+                font-size: 32px
+                text-transform: capitalize
+@media screen and ( min-width: 768px )
+    header
+        #menu-button
+            display: none
+        nav
+            display: block
+            position: fixed
+            height: 50px
+            width: 100%
+            background-color: #00000080
+            top: 0
+            left: 0
+            ul
+                display: flex
+                justify-content: space-around
+                #flags
+                    display: none
+                #flags-big
+                    display: inline-block
+                    padding: 5px
+                    img
+                        @include w-n-h(32px, 32px)
+                li
+                    display: inline-block 
+                    margin: 4px
+                    a
+                        font-size: 32px
+                        color: $background
+                        &:hover
+                            color: $terciary
+            h3
+                display: none
+    #main
+        @include w-n-h(100%, 100vh)
+        #blur
+            @include w-n-h(80%, 350px)
+            font-size: 40px
+    #about
+        div
+            .portrait.move
+                transform: translateX(-285px)
+            .portrait.side
+                transform: translateX(0)
+    #projects
+        @include center-item(99%)
+        .hidden
+            @include w-n-h(360px, auto)
+            display: inline-block
+            margin: 4px
+            img
+                @include w-n-h(100%, 185px)
+            h2
+                font-size: 30px
+            div
+                @include w-n-h(358px, 100%)
+                padding: auto
+                p
+                    font-size: 24px
+                    margin: 8px
+                a
+                    font-size: 24px
+    #contact
+        footer
+            div
+                h3
+                    display: block
+                    font-size: 26px
+@media only screen and ( min-width: 1024px )
+    header
+        nav
+            ul
+                li
+                    a
+    #main
+        #blur
+            @include w-n-h(70%, 350px)
+            font-size: 48px
+    #references, #about
+        @include center-item(80%)
+    #contact
+        @include center-item(99%)
+        #contact-form-div, footer
+            display: inline-block
+            width: 45%
+            margin: 16px
+        div
+            input, textarea
+                font-size: 24px
+        footer
+            transform: translateY(-60%)
+
+
+    
+    
+            
+
+
+    
