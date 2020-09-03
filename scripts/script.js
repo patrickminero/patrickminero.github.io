@@ -48,6 +48,12 @@ function englishText(){
     $('#project3 img').attr('alt', english.projects.projectThree.alt)
     $('#project3 p').text(english.projects.projectThree.description)
 
+    $('#project4 h2').text(english.projects.projectFour.title)
+    $('#project4 img').attr('src', english.projects.projectFour.image)
+    $('#project4 a').attr('href', english.projects.projectFour.url)
+    $('#project4 img').attr('alt', english.projects.projectThree.alt)
+    $('#project4 p').text(english.projects.projectFour.description)
+
     $('#references h2').text(english.references.title)
     $("#reference1 p").text(english.references.initial)
     $("#reference2 p").text(english.references.equator)
@@ -149,6 +155,9 @@ $('#project2').click(function(){
 })
 $('#project3').click(function(){
     $('#project3 div').slideToggle(700)
+});
+$('#project4').click(function(){
+    $('#project4 div').slideToggle(700)
 });
 
 let controller =  new ScrollMagic.Controller();

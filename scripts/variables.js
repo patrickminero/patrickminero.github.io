@@ -31,12 +31,19 @@ let english = {
             description: 'Simple, responsive and efficient to-do list web application created with Vue.js, Sass',
         },
         projectThree: {
-            title: 'Responsive Gallery',
-            url: '#',
-            image: 'media/image-gallery.jpg',
-            alt: 'Image gallery thumbnail',
-            description: 'Image gallery with filter, responsive and efficent dense layout with lightbox full screen view.',
-        }
+            title: 'Personal Portfolio',
+            url: 'https://patrickminero.github.io/projects/materialize-portfolio/',
+            image: 'media/materialize.jpg',
+            alt: 'Portfolio thumbnail',
+            description: 'Personal portfolio created with Materialize CSS. Requires minimal Javascript',
+        },
+        projectFour: {
+            title: 'Form Validation',
+            url: 'https://patrickminero.github.io/projects/user_authentication_form',
+            image: 'media/form-validation.jpg',
+            alt: 'Form Validation thumbnail',
+            description: 'Form validation project with checkpoints in every input field and guidance.',
+        },
     },
     references:{
         title: 'Employer Feedback',
