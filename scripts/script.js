@@ -106,6 +106,12 @@ function spanishText(){
     $('#project3 img').attr('alt', spanish.projects.projectThree.alt)
     $('#project3 p').text(spanish.projects.projectThree.description)
 
+    $('#project4 h2').text(spanish.projects.projectFour.title)
+    $('#project4 img').attr('src', spanish.projects.projectFour.image)
+    $('#project4 a').attr('href', spanish.projects.projectFour.url)
+    $('#project4 img').attr('alt', spanish.projects.projectFour.alt)
+    $('#project4 p').text(spanish.projects.projectFour.description)
+
     $('#references h2').text(spanish.references.title)
     $("#reference1").text(spanish.references.equator)
     $("#reference2").text(spanish.references.beerworks)
@@ -125,6 +131,13 @@ $('#spanish').click(function(){
     spanishText();
 })
 $('#english').click(function(){
+    englishText();
+})
+
+$('#spanish2').click(function(){
+    spanishText();
+})
+$('#english2').click(function(){
     englishText();
 })
 
@@ -186,5 +199,5 @@ let scene5 = new $.ScrollMagic.Scene({
 }).setClassToggle('.description', 'inline').addTo(controller);
 
 let scene6 = new $.ScrollMagic.Scene({
-    triggerElement: '#skills ul li',
+    triggerElement: '#skills',
 }).setClassToggle('.hidden', 'fadein').addTo(controller);

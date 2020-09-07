@@ -211,17 +211,12 @@ html, body {
     background-position: center center;
     background-size: cover;
   }
-  #about div #skills div {
-    display: inline-block;
-    padding: 8px;
-    width: 48%;
-  }
-  #about div #skills div ul {
-    list-style-type: none;
-  }
-  #about div #skills div ul li {
-    font-size: 24px;
+  #about div #skills {
     text-align: center;
+  }
+  #about div #skills .iconify {
+    width: 6em;
+    height: 6em;
   }
   #projects {
     width: 100vw;
