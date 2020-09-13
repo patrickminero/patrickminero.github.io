@@ -1,203 +1,466 @@
-
-$('#menu-button').click(function(){
-    $('#nav-bar').slideToggle('slow');
-    $('#top').toggleClass('open1')
-    $('#middle').toggleClass('open2')
-    $('#bottom').toggleClass('open3')
-    //$('menu-button').toggleClass('red')
+window.addEventListener('load', ()=>{
+    let preload = document.getElementById('preload');
+    preload.style.display = 'none';
+    let body = document.querySelector('body');
+    body.style.overflow = 'scroll'
 })
 
-$('document').ready(function(){
-    $('#blur').fadeIn(1500)
-    englishText();
-})
+// side nav animation
+let menuBtn = document.getElementById('menu-button');
+let sideNav = document.getElementById('side-nav');
 
-function englishText(){
-    $('#home-button a').text(english.header.listItems[0]);
-    $('#about-button a').text(english.header.listItems[1]);
-    $('#projects-button a').text(english.header.listItems[2]);
-    $('#contact-button a').text(english.header.listItems[3]);
-    $('#nav-bar h3').html(english.header.listItems[4])
-
-    $('#blur div h2').text(english.main.mainTitle);
-
-    $("#description-div h2").text(english.about.title)
-    $("#para1").text(english.about.paragraph1)
-    $("#para2").text(english.about.paragraph2)
-    $("#para3").text(english.about.paragraph3)
-    $('#journey').text(english.about.journey)
-    $("#para4").html(english.about.paragraph4)
-    $("#para5").html(english.about.paragraph5)
-
-    $('#projects h2').text(english.projects.title)
-    $('#project1 h2').text(english.projects.projectOne.title)
-    $('#project1 img').attr('src', english.projects.projectOne.image)
-    $('#project1 a').attr('href', english.projects.projectOne.url)
-    $('#project1 img').attr('alt', english.projects.projectOne.alt)
-    $('#project1 p').text(english.projects.projectOne.description)
-
-    $('#project2 h2').text(english.projects.projectTwo.title)
-    $('#project2 img').attr('src', english.projects.projectTwo.image)
-    $('#project2 a').attr('href', english.projects.projectTwo.url)
-    $('#project2 img').attr('alt', english.projects.projectTwo.alt)
-    $('#project2 p').text(english.projects.projectTwo.description)
-
-    $('#project3 h2').text(english.projects.projectThree.title)
-    $('#project3 img').attr('src', english.projects.projectThree.image)
-    $('#project3 a').attr('href', english.projects.projectThree.url)
-    $('#project3 img').attr('alt', english.projects.projectThree.alt)
-    $('#project3 p').text(english.projects.projectThree.description)
-
-    $('#project4 h2').text(english.projects.projectFour.title)
-    $('#project4 img').attr('src', english.projects.projectFour.image)
-    $('#project4 a').attr('href', english.projects.projectFour.url)
-    $('#project4 img').attr('alt', english.projects.projectThree.alt)
-    $('#project4 p').text(english.projects.projectFour.description)
-
-    $('#references h2').text(english.references.title)
-    $("#reference1 p").text(english.references.initial)
-    $("#reference2 p").text(english.references.equator)
-    $("#reference3 p").text(english.references.beerworks)
-
-    $('#contact h2').text(english.contact.title)
-    $('#name').attr('placeholder', english.contact.name)
-    $('#email').attr('placeholder', english.contact.email)
-    $('#message').attr('placeholder', english.contact.message)
-    $('#send').attr('value', english.contact.submit)
-    $('#contact h2').text(english.contact.title)
-
-    $('#social-media h2').text(english.contact.footer.h2)
-    $('#social-media h3').html(english.contact.footer.h3)
-
-}
-
-function spanishText(){
-    $('#home-button a').text(spanish.header.listItems[0]);
-    $('#about-button a').text(spanish.header.listItems[1]);
-    $('#projects-button a').text(spanish.header.listItems[2]);
-    $('#contact-button a').text(spanish.header.listItems[3]);
-    $('#nav-bar h3').html(spanish.header.listItems[4])
-
-    $('#blur div h2').text(spanish.main.mainTitle);
-
-    $("#description-div h2").text(spanish.about.title)
-    $("#para1").text(spanish.about.paragraph1)
-    $("#para2").text(spanish.about.paragraph2)
-    $("#para3").text(spanish.about.paragraph3)
-    $("#para4").html(spanish.about.paragraph4)
-    $("#para5").html(spanish.about.paragraph5)
-
-    $('#projects h2').text(spanish.projects.title)
-    $('#project1 h2').text(spanish.projects.projectOne.title)
-    $('#project1 img').attr('src', spanish.projects.projectOne.image)
-    $('#project1 a').attr('href', spanish.projects.projectOne.url)
-    $('#project1 img').attr('alt', spanish.projects.projectOne.alt)
-    $('#project1 p').text(spanish.projects.projectOne.description)
-
-    $('#project2 h2').text(spanish.projects.projectTwo.title)
-    $('#project2 img').attr('src', spanish.projects.projectTwo.image)
-    $('#project2 a').attr('href', spanish.projects.projectTwo.url)
-    $('#project2 img').attr('alt', spanish.projects.projectTwo.alt)
-    $('#project2 p').text(spanish.projects.projectTwo.description)
-
-    $('#project3 h2').text(spanish.projects.projectThree.title)
-    $('#project3 img').attr('src', spanish.projects.projectThree.image)
-    $('#project3 a').attr('href', spanish.projects.projectThree.url)
-    $('#project3 img').attr('alt', spanish.projects.projectThree.alt)
-    $('#project3 p').text(spanish.projects.projectThree.description)
-
-    $('#project4 h2').text(spanish.projects.projectFour.title)
-    $('#project4 img').attr('src', spanish.projects.projectFour.image)
-    $('#project4 a').attr('href', spanish.projects.projectFour.url)
-    $('#project4 img').attr('alt', spanish.projects.projectFour.alt)
-    $('#project4 p').text(spanish.projects.projectFour.description)
-
-    $('#references h2').text(spanish.references.title)
-    $("#reference1").text(spanish.references.equator)
-    $("#reference2").text(spanish.references.beerworks)
-
-    $('#contact h2').text(spanish.contact.title)
-    $('#name').attr('placeholder', spanish.contact.name)
-    $('#email').attr('placeholder', spanish.contact.email)
-    $('#message').attr('placeholder', spanish.contact.message)
-    $('#send').attr('value', spanish.contact.submit)
-    $('#contact h2').text(spanish.contact.title)
-
-    $('#social-media h3').text(spanish.contact.footer.h3)
-
-}
-
-$('#spanish').click(function(){
-    spanishText();
-})
-$('#english').click(function(){
-    englishText();
-})
-
-$('#spanish2').click(function(){
-    spanishText();
-})
-$('#english2').click(function(){
-    englishText();
-})
-
-$('#show-more').click(function(){
-    if($('#show-more').text() === 'Show More'){
-        $('#references').height('auto')
-        $('#show-more').text('Show Less')
-        $('#show-more').css('float', 'left');
-        $('#reference1').hide();
-        $("#reference2").show();        
-        $("#reference3").show();        
+function menuToggle(){
+    if(sideNav.style.display === 'block'){
+        gsap.to('#side-nav', {display: 'none', opacity: 0, width: '0vw', duration: 1, ease: 'power2'})
+        gsap.to('#top', {rotate: -360, y: 0, backgroundColor: 'var(--primary)', duration: 1});
+        gsap.to('#bottom', {rotate: 360, y: 0, backgroundColor: 'var(--primary)', duration: 1}); 
+        gsap.to('#middle', {opacity: 1, duration: 1, backgroundColor: 'var(--primary)'})
+        // gsap.to('#menu-button', {y: 6})
+        gsap.to('body', {overflow: 'initial', duration: 1})
     }else{
-        $('#references').height('auto')
-        $('#show-more').text('Show More')
-        $('#show-more').css('float', 'right');
-        $('#reference1').show();
-        $("#reference1 p").text(english.references.initial);
-        $("#reference2").hide();        
-        $("#reference3").hide();
+        gsap.to('#side-nav', {display: 'block', opacity: 1, width: '85vw', duration: 1, ease: 'power2'})
+        gsap.to('#middle', {opacity: 0, backgroundColor: '#fff', duration: 1});    
+        gsap.to('#top', {rotate: 405, y: 16, backgroundColor: '#fff', duration: 1});    
+        gsap.to('#bottom', {rotate: -405, y: -14, backgroundColor: '#fff', duration: 1});    
+        // gsap.to('#menu-button', {y: -6})
+        gsap.to('body', {overflow: 'hidden', duration: 1})
+        
+    }
+}
+menuBtn.addEventListener('click', menuToggle);
+sideNav.addEventListener('click', menuToggle);
+
+//image parallax
+
+gsap.to('#parallax', {
+    scrollTrigger: {
+        trigger: '#trigger',
+        toggleActions: 'restart pause reverse pause',
+        scrub: true,
+        start: 'center top', 
+        end: 'bottom bottom',
+        endTrigger: "#languages",
+        duration: 1,
+    },
+    backgroundPosition: '0% 0%',
+})
+
+//sticky menu button animation
+ScrollTrigger.create({
+    trigger: '#menu-button',
+    start: 'top bottom',
+    endTrigger: '#mail',
+    end:'=+1200',
+    toggleActions: 'restart pause reverse pause',
+    scrub: true,
+    onUpdate: self => direction(self.direction),
+})
+function direction(element){
+    if(element == 1){
+        gsap.to('#menu-button', { y: '100%', duration: .5})
+    }else{
+        gsap.to('#menu-button', { y: 0, duration: .5})
+    }
+}
+
+gsap.to('#menu-button', {
+    scrollTrigger: {
+        trigger: '#about',
+        toggleActions: 'restart pause reverse pause',
+        scrub: true,
+        start: '180% bottom', 
+        end: '170%',
+    },
+    y: 0, duration: .5,
+})
+
+ScrollTrigger.create({
+    trigger: '#about',
+    start: 'top bottom',
+    endTrigger: '#mail',
+    end:'=+1200',
+    toggleActions: 'restart pause reverse pause',
+    scrub: true,
+    onUpdate: self => direction(self.direction),
+})
+function direction(element){
+    if(element == 1){
+        gsap.to('#top-nav', { y: '-100%', duration: .5, delay: .5})
+    }else{
+        gsap.to('#top-nav', { y: '0%', duration: .5, delay: .5})
+    }
+}
+
+// name color animation
+function scrolling(element){
+    if(element.matches){
+        window.addEventListener('mousemove', mousemove);
+    }else if(!element.media === false){
+        window.addEventListener('scroll', ()=>{
+            let scrollY = window.pageYOffset;
+            gsap.to('#border h1', {color: `rgb(${(255 - scrollY * 2)}, ${255 - (scrollY * 0.8)}, ${255 - (scrollY * 0.4)})`, duration: 1})
+        })
+        
+    }
+}
+
+function mousemove(event){
+    let x = event.pageX;
+    let y = event.pageY;
+    gsap.to('#border h1', {color: `rgb(${x * .25}, ${y * .25}, ${y * .1})`, duration: 1})
+}
+
+let viewportsize = window.matchMedia('(min-width: 1024px)')
+window.addEventListener('scroll', scrolling(viewportsize))
+
+
+
+gsap.to(['#border h1', '#border h2'], {
+    scrollTrigger:{
+        trigger: '#about',
+        toggleActions: 'restart pause reverse pause',
+        scrub: true,
+        start: 'top bottom',
+        endTrigger: '#trigger',
+    },
+    y: 300,
+    duration: 1,
+})
+
+//profile pic animation
+let moveLeft = gsap.timeline({
+    scrollTrigger:{
+        trigger: '#about',
+        scrub: true,
+        start:'top center',
+        end:'+=300',
     }
 })
 
-$('#project1').click(function(){
-    $('#project1 div').slideToggle(700)
+// projects card animations
+
+let cards = gsap.timeline({
+    scrollTrigger:{
+        trigger: '#projects',
+        // scrub: true,
+        start:'bottom top',
+    }
 })
-$('#project2').click(function(){
-    $('#project2 div').slideToggle(700)
-})
-$('#project3').click(function(){
-    $('#project3 div').slideToggle(700)
-});
-$('#project4').click(function(){
-    $('#project4 div').slideToggle(700)
-});
 
-let controller =  new ScrollMagic.Controller();
 
-let scene = new $.ScrollMagic.Scene({
-    triggerElement: '#about'
-}).setClassToggle('.portrait', 'show').addTo(controller);
+let viewport = window.matchMedia('(min-width: 300px)')
+function smallDevice(x){
+    if(x.matches){        
+        cards.to('#project1', {
+            width: '95vw', 
+            height: 300,
+            opacity: 1,
+            duration: .75,
+        })
+        
+        cards.to('#project2', {
+            width: '95vw', 
+            height: 300,
+            opacity: 1,
+            duration: .75,
+        })
+        
+        cards.to('#project3', {
+            width: '95vw', 
+            height: 300,
+            opacity: 1,
+            duration: 1,
+        })
+        
+        cards.to('#project4', {
+            width: '95vw', 
+            height: 300,
+            opacity: 1,
+            duration: 1,
+        })
+    //click animations for card descriptions
+    function reveal1(){
+        if(document.getElementById('description1').style.opacity == 1){
+            gsap.to('#project1', {height: 300})
+            gsap.to('#description1', {opacity: 0, duration: .5, pointerEvents: 'none'})        
+        }else{
+            gsap.to('#project1', {height: 'auto'})
+            gsap.to('#description1', {opacity: 1, duration: .5})
+        }
+    }
+    document.getElementById('project1').addEventListener('click', reveal1);
 
-let scene2 = new $.ScrollMagic.Scene({
-    triggerElement: '#para1',
-    offset: 100
-}).setClassToggle('.portrait', 'move').addTo(controller);
 
-let scene3 = new $.ScrollMagic.Scene({
-    triggerElement: '#para1',
-}).setClassToggle('.description', 'to-right').addTo(controller);
+    function reveal2(){
+        if(document.getElementById('description2').style.opacity == 1){
+            gsap.to('#project2', {height: 300})
+            gsap.to('#description2', {opacity: 0, duration: .5, pointerEvents: 'none'})        
+        }else{
+            gsap.to('#project2', {height: 'auto'})
+            gsap.to('#description2', {opacity: 1, duration: .5})
+        }
+    }
+    document.getElementById('project2').addEventListener('click', reveal2);
 
-let scene4 = new $.ScrollMagic.Scene({
-    triggerElement: '#para1',
-    offset: 100
-}).setClassToggle('.portrait', 'side').addTo(controller);
 
-let scene5 = new $.ScrollMagic.Scene({
-    triggerElement: '#para1',
-    offset: 100
-}).setClassToggle('.description', 'inline').addTo(controller);
+    function reveal3(){
+        if(document.getElementById('description3').style.opacity == 1){
+            gsap.to('#project3', {height: 300})
+            gsap.to('#description3', {opacity: 0, duration: .5, pointerEvents: 'none'})        
+        }else{
+            gsap.to('#project3', {height: 'auto'})
+            gsap.to('#description3', {opacity: 1, duration: .5})
+        }
+    }
+    document.getElementById('project3').addEventListener('click', reveal3);
 
-let scene6 = new $.ScrollMagic.Scene({
-    triggerElement: '#skills',
-}).setClassToggle('.hidden', 'fadein').addTo(controller);
+
+    function reveal4(){
+        if(document.getElementById('description4').style.opacity == 1){
+            gsap.to('#project4', {height: 300})
+            gsap.to('#description4', {opacity: 0, duration: .5, pointerEvents: 'none'})        
+        }else{
+            gsap.to('#project4', {height: 'auto'})
+            gsap.to('#description4', {opacity: 1, duration: .5,})
+        }
+    }
+    document.getElementById('project4').addEventListener('click', reveal4);
+}
+}
+smallDevice(viewport);
+
+
+// adjust animations to medium devices
+function mediumDevice(x){
+    if(x.matches){
+        cards.to('#project1', {
+            width: '95vw', 
+            height: 300,
+            opacity: 1,
+            duration: .75,
+        })
+        
+        cards.to('#project2', {
+            width: '95vw', 
+            height: 300,
+            opacity: 1,
+            duration: .75,
+        })
+        
+        cards.to('#project3', {
+            width: '95vw', 
+            height: 300,
+            opacity: 1,
+            duration: 1,
+        })
+        
+        cards.to('#project4', {
+            width: '95vw', 
+            height: 300,
+            opacity: 1,
+            duration: 1,
+        })
+
+        function reveal1(){
+            if(document.getElementById('description1').style.opacity == 1){
+                gsap.to('#project1', {height: 400})
+                gsap.to('#description1', {opacity: 0, duration: .5, pointerEvents: 'none'})        
+            }else{
+                gsap.to('#project1', {height: 'auto'})
+                gsap.to('#description1', {opacity: 1, duration: .5})
+            }
+        }
+        document.getElementById('project1').addEventListener('click', reveal1);
+    
+    
+        function reveal2(){
+            if(document.getElementById('description2').style.opacity == 1){
+                gsap.to('#project2', {height: 400})
+                gsap.to('#description2', {opacity: 0, duration: .5, pointerEvents: 'none'})        
+            }else{
+                gsap.to('#project2', {height: 'auto'})
+                gsap.to('#description2', {opacity: 1, duration: .5})
+            }
+        }
+        document.getElementById('project2').addEventListener('click', reveal2);
+    
+    
+        function reveal3(){
+            if(document.getElementById('description3').style.opacity == 1){
+                gsap.to('#project3', {height: 400})
+                gsap.to('#description3', {opacity: 0, duration: .5, pointerEvents: 'none'})        
+            }else{
+                gsap.to('#project3', {height: 'auto'})
+                gsap.to('#description3', {opacity: 1, duration: .5})
+            }
+        }
+        document.getElementById('project3').addEventListener('click', reveal3);
+    
+    
+        function reveal4(){
+            if(document.getElementById('description4').style.opacity == 1){
+                gsap.to('#project4', {height: 400})
+                gsap.to('#description4', {opacity: 0, duration: .5, pointerEvents: 'none'})        
+            }else{
+                gsap.to('#project4', {height: 'auto'})
+                gsap.to('#description4', {opacity: 1, duration: .5,})
+            }
+        }
+        document.getElementById('project4').addEventListener('click', reveal4);   
+}}
+let viewportmed = window.matchMedia('(min-width: 600px)')
+mediumDevice(viewportmed);
+
+// adjust animations to large devices
+
+function largeDevice(x){
+    if(x.matches){
+        cards.clear();
+    
+        gsap.to('#project1', {
+            scrollTrigger: {
+                trigger: '#languages',
+                scrub: true,
+                start: 'top top',
+                end: '+=300',
+                toggleActions: 'restart pause reverse pause',
+            }, 
+            x: '100%',
+            duration: 1,
+            ease: 'power1',
+        })
+
+        gsap.from('#description-large1', {
+            scrollTrigger: {
+                trigger: '#languages',
+                scrub: true,
+                start: 'top top',
+                end: '+=300',
+                toggleActions: 'restart pause reverse pause',
+            },
+            opacity: 0,
+            duration: 1.5,
+            ease: 'power1',
+        })
+
+        gsap.to('#project2', {
+            scrollTrigger: {
+                trigger: '#project1',
+                scrub: true,
+                start: 'bottom top',
+                end: '+=300',
+                toggleActions: 'restart pause reverse pause',
+            }, 
+            x: '0%',
+            duration: 1,
+            ease: 'power1',
+        })
+
+        gsap.from('#description-large2', {
+            scrollTrigger: {
+                trigger: '#project1',
+                scrub: true,
+                start: 'bottom top',
+                end: '+=300',
+                toggleActions: 'restart pause reverse pause',
+            }, 
+            opacity: 0,
+            duration: 1.5,
+            ease: 'power1',
+        })
+
+        gsap.to('#project3', {
+            scrollTrigger: {
+                trigger: '#project2',
+                scrub: true,
+                start: 'bottom top',
+                end: '+=200',
+                toggleActions: 'restart pause reverse pause',
+            }, 
+            x: '100%',
+            duration: 1,
+            ease: 'power1',
+        })
+
+        gsap.from('#description-large3', {
+            scrollTrigger: {
+                trigger: '#project2',
+                scrub: true,
+                start: 'bottom top',
+                end: '+=200',
+                toggleActions: 'restart pause reverse pause',
+            }, 
+            opacity: 0,
+            duration: 1.5,
+            ease: 'power1',
+        })
+
+        gsap.to('#project4', {
+            scrollTrigger: {
+                trigger: '#project3',
+                scrub: true,
+                start: 'bottom top',
+                end: '+=200',
+                toggleActions: 'restart pause reverse pause',
+            }, 
+            x: '0%',
+            duration: 1,
+            ease: 'power1',
+        })
+
+        gsap.from('#description-large4', {
+            scrollTrigger: {
+                trigger: '#project3',
+                scrub: true,
+                start: 'bottom top',
+                end: '+=200',
+                toggleActions: 'restart pause reverse pause',
+            }, 
+            opacity: 0,
+            duration: 1,
+            ease: 'power1',
+        })
+}}
+let viewportLarge = window.matchMedia('(min-width: 750px)')
+largeDevice(viewportLarge);
+
+
+function XtraLargeDevice(x){
+    if(x.matches){
+
+    }
+}
+
+let viewportXtraLarge = window.matchMedia('(min-width: 1024px)');
+XtraLargeDevice(viewportXtraLarge);
+
+if(viewportXtraLarge.matches){
+    let caption = document.getElementById('caption');
+    caption.innerHTML = '<span>Photo by <a href="https://unsplash.com/@corneschi?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Daniel Corneschi</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
+    moveLeft.to('#profile-pic', {
+        width: 250, 
+        height: 250,
+        duration: 1,
+    })
+    
+    moveLeft.to('#profile-pic', {
+        float: 'right',
+        marginRight: '15vw',
+        borderRadius: 0, 
+        duration: 1,
+    })    
+
+}else{
+    moveLeft.to('#profile-pic', {
+        width: 150, 
+        height: 150,
+        duration: 1,
+    })
+    
+    moveLeft.to('#profile-pic', {
+        float: 'right',
+        marginRight: 4,
+        borderRadius: 0, 
+        duration: 1,
+    })    
+}

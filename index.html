@@ -1,158 +1,198 @@
-<!DOCTYPE php>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick Minero - Customer Service Professional and Computer Programming Student</title>
-    <meta name="description" content="After many years in the service industry I decided to travel the world. Now 2 year later I am learning Computer Programming and looking for a new challenge in beautiful barcelona">
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Patrick Minero - Self Taught Web Developer</title>
+    <meta name="description" content="Patrick is a web developer based in Barcelona, Spain who started learning computer programming with Codecademy, w3schools and tutorials. Now created websites and progresive web applications">
+    <meta name="robots" content="noidex">
+    <link rel="icon" href="media/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js" defer></script>
 </head>
-<body>
-    <header>
-        <button id="menu-button">
-            <div id="top" class="close"></div>
-            <div id="middle" class="close"></div>
-            <div id="bottom" class="close"></div>
-        </button>
-        <nav id="nav-bar">
+<body id="body">
+    <div id="preload">
+        <div id="back"></div>
+        <h1>Thanks for waiting!</h1>
+    </div>
+    <header id="header">
+        <nav id="top-nav">         
             <ul>
-                <li id="flags">
-                    <img id="english" src="media/united-kingdom.svg" alt="" srcset="">
-                    <img id="spanish" src="media/spain.svg" alt="">
+                <li>
+                    <a class="homebtn" href="#">Home</a>
                 </li>
-                <li id="home-button">
-                    <a href="#main"></a>
+                <li>
+                    <a class="aboutbtn" href="#about">About</a>
                 </li>
-                <li id="about-button">
-                    <a href="#about"></a>
+                <li>
+                    <a class="projectbtn" href="#projects">Projects</a>
                 </li>
-                <li id="projects-button">
-                    <a href="#projects"></a>
-                </li>
-                <li id="contact-button">
-                    <a href="#contact"></a>
-                </li>
-                <li id="flags-big">
-                    <img id="english2" src="media/united-kingdom.svg" alt="" srcset="">
-                    <img id="spanish2" src="media/spain.svg" alt="">
+                <li>
+                    <a class="contactbtn" href="#contact">Contact</a>
                 </li>
             </ul>
-            <h3></h3>
         </nav>
+        <button id="menu-button">
+            <div id="top"></div>
+            <div id="middle"></div>
+            <div id="bottom"></div>
+        </button>
+        <nav id="side-nav">
+            <ul>
+                <li>
+                    <a href="#header">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="border">
+            <h1>I'm Patrick Minero, </h1>
+            <h2>a self-taught web developer based in Barcelona.</h2>
+        </div>
+        <div id="social-icons">
+            <a href="https://github.com/patrickminero" target="_blank"><span class="iconify" data-icon="la:github" data-inline="false" style="color: var(--text);"></span></a>
+            <a href="https://codepen.io/patrickminero" target="_blank"><span class="iconify" data-icon="la:codepen" data-inline="false" style="color: var(--text)"></span></a>
+            <a href="http://www.linkedin.com/in/patrick-minero-valencia" target="_blank"><span class="iconify" data-icon="ant-design:linkedin-outlined" data-inline="false" style="color: var(--text);"></span></a>
+            <a href="mailto:patrickminerovalencia@gmail.com" target="_blank"><span class="iconify" data-icon="mdi:gmail" data-inline="false" style="color: var(--text);"></span></a>
+        </div>
     </header>
-    <section id="main">
-        <div id="blur">
+    <main id="main">
+        <section id="about">
             <div>
-                <h1>Patrick Minero</h1>
-                <h2></h2>
+                <img id="profile-pic" src="media/Patrick_minero.jpg" alt="profile picture">
+                <h3>About me</h3>
+                <p id="trigger">Back in the late 2000s, I studied Law in college but never practiced, I was a year short of graduating when I decided to move to the California Bay Area where I would spend the next 11 years of my life. After burning my self out in food-service management, working two jobs to pay the bills, I felt the need for a change in my lifestyle and wanted to improve my career options and hopefully have a better life quality. After weeks of research, I set up a plan, worked extra hours, saved as much money as I could, and a year later I embarked on an open-ended trip around 4 continents and 25 countries volunteering in small family farms and businesses. It changed my life and helped me realize that change is possible when you set your mind to it.</p>
+                <div id="parallax"></div>
+                <figcaption id="caption"><span>Photo by <a href="https://unsplash.com/@alfonstaekema?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Alfons Taekema</a> on <a href="https://unsplash.com/s/photos/barcelona?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption>
+                <p>Eighteen months later and back in the routine, I moved to Barcelona, Spain, and while I was waiting to get my paperwork through local authorities, I started to learn how to web development. I started my research and out of the thousands of options, I came across Codecademy. I decided to try out their “How to build websites with HTML, CSS, and Github Pages” skill path since it was free and wanted to make sure I liked computer programming as a career choice. </p>
+                <p>A few weeks later I was hooked, it was easier than what I expected it to be, very clear and straight forward but captivating enough to spark my curiosity. When I finished the skill path I decided to upgrade to Codecademy PRO to learn more complex skills, I also researched popular coding tools and resources to start creating small projects and web pages.</p>
+                <p>Almost a year has gone by since I started my web development journey, and I could not be happier about all the knowledge and experience I have acquired since then.</p>
             </div>
-        </div>
-    </section>
-    <section id="about">
-        <div id="description-div">
-            <img src="media/Patrick_minero.jpg" alt="" id="portrait" class="portrait">
-            <h2 id="description" class="description"></h2>
-            <p id=para1></p>
-            <p id=para2></p>            
-            <p id=para3></p>
-            <div id="parallax"></div>
-            <h2 id="journey"></h2>
-            <p id=para4></p>
-            <p id=para5></p>
-            <div id="skills">
+        </section>
+        <section id="knowledge">
+            <div id="languages">
+                <h3>Languages and Frameworks</h3>
                 <span class="iconify" data-icon="logos:html-5" data-inline="false"></span>
-                <span class="iconify" data-icon="logos:css-3" data-inline="false"></span>
                 <span class="iconify" data-icon="logos:bootstrap" data-inline="false"></span>
-                <span class="iconify" data-icon="logos-materializecss" data-inline="false"></span>
-                <span class="iconify" data-icon="logos:sass" data-inline="false"></span>
+                <span class="iconify" data-icon="logos:css-3" data-inline="false"></span>
+                <span class="iconify" data-icon="vscode-icons:file-type-scss2" data-inline="false"></span>
+                <span class="iconify" data-icon="logos:materializecss" data-inline="false"></span>
                 <span class="iconify" data-icon="logos:javascript" data-inline="false"></span>
-                <span class="iconify" data-icon="logos:jquery" data-inline="false"></span>
+                <span class="iconify" data-icon="bx:bxl-jquery" data-inline="false" style="color: navy;"></span>
                 <span class="iconify" data-icon="logos:vue" data-inline="false"></span>
+                <span class="iconify" data-icon="logos:react" data-inline="false"></span>
+                <span class="iconify" data-icon="logos:ruby" data-inline="false"></span>
+                <span class="iconify" data-icon="logos:nodejs" data-inline="false"></span>
+                <span class="iconify" data-icon="logos:angular-icon" data-inline="false"></span>
+                <span id="trigger2" class="iconify" data-icon="cib:greensock" data-inline="false" style="color: white;"></span>
+            </div>
+            <div id="tools">
+                <h3>Tools and resources</h3>
+                <span class="iconify" data-icon="logos:codepen" data-inline="false"></span>
+                <span class="iconify" data-icon="openmoji:github" data-inline="false"></span>
+                <span class="iconify" data-icon="logos:netlify" data-inline="false"></span>
+                <span class="iconify" data-icon="fa:stack-overflow" data-inline="false"></span>
+                <span class="iconify" data-icon="cib:codecademy" data-inline="false" style="color: navy;"></span>
+                <span class="iconify" data-icon="vscode-icons:file-type-vscode" data-inline="false"></span>
                 <span class="iconify" data-icon="logos:git" data-inline="false"></span>
-                <span class="iconify" data-icon="logos:github-icon" data-inline="false"></span>
+                <span class="iconify" data-icon="cib:unsplash" data-inline="false"></span>
+                <span class="iconify" data-icon="logos:figma" data-inline="false"></span>
+                <span class="iconify" data-icon="simple-icons:fontawesome" data-inline="false" style="color: lightblue;"></span>
             </div>
-        </div>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div id="project1" class="hidden">
-            <img src="" alt="">
-            <h2></h2>
-            <div id="pdiv">
-                <p></p>
-                <a href="https://patrickminero.github.io/weather_app/" target="_blank">Check it out!</a>
-            </div>
-        </div>
-        <div id="project2" class="hidden">
-            <img src="" alt="">
-            <h2></h2>
+        </section>
+        <section id="projects">
+            <h3>Projects</h3>
             <div>
-                <p></p>
-                <a href="https://patrickminero.github.io/to-do-app/" target="_blank">Check it out!</a>
+                <div class="card" id="project1">
+                    <img src="media/form-validation.jpg" alt="">
+                    <h2>Form Validation</h2>
+                    <div id="description1" class="projects-description">
+                        <p>Simple Form with multiple checkpoits and guidance for information accuracy</p>
+                        <a href="https://github.com/patrickminero/projects/tree/master/user_authentication_form" target="_blank"><span class="iconify" data-icon="logos:github-icon" data-inline="false"></span> Source</a>
+                        <a href="https://patrickminero.github.io/projects/user_authentication_form/" target="_blank"><span class="iconify" data-icon="clarity:world-line" data-inline="false" style="color: black;"></span> Live</a>
+                    </div>
+                </div>
+                <div id="description-large1" class="projects-description-large">
+                    <p>Simple Form with multiple checkpoits and guidance for information accuracy</p>
+                    <a href="https://github.com/patrickminero/projects/tree/master/materialize-portfolio" target="_blank"><span class="iconify" data-icon="la:github" data-inline="false" style="color: var(--text);"></span> Source</a>
+                    <a href="https://patrickminero.github.io/projects/materialize-portfolio/" target="_blank"><span class="iconify" data-icon="clarity:world-line" data-inline="false" style="color: var(--text)"></span> Live</a>
+                </div>
+                <div class="card" id="project2">
+                    <img src="media/materialize.jpg" alt="" srcset="">
+                    <h2>Materialize Portfolio</h2>
+                    <div id="description2" class="projects-description">
+                        <p>Personal portfolio created with Materialize CSS with minimal javascript</p>
+                        <a href="https://github.com/patrickminero/projects/tree/master/materialize-portfolio" target="_blank"><span class="iconify" data-icon="logos:github-icon" data-inline="false"></span> Source</a>
+                        <a href="https://patrickminero.github.io/projects/materialize-portfolio/" target="_blank"><span class="iconify" data-icon="clarity:world-line" data-inline="false" style="color: black;"></span> Live</a>
+                    </div>
+                </div>
+                <div id="description-large2" class="projects-description-large">
+                    <p>Personal portfolio created with Materialize CSS with minimal javascript</p>
+                    <a href="https://github.com/patrickminero/projects/tree/master/materialize-portfolio" target="_blank"><span class="iconify" data-icon="la:github" data-inline="false" style="color: var(--text);"></span> Source</a>
+                    <a href="https://patrickminero.github.io/projects/materialize-portfolio/" target="_blank"><span class="iconify" data-icon="clarity:world-line" data-inline="false" style="color: var(--text)"></span> Live</a>
+                </div>
+
+                <div class="card" id="project3">
+                    <img src="media/to-do-app.jpg" alt="">
+                    <h2>To Do List PWA</h2>
+                    <div id="description3" class="projects-description">
+                        <p>Simple To Do list created with Vue.js and styled with Sass optimized as a PWA</p>
+                        <a href="https://github.com/patrickminero/patrickminero.github.io/tree/master/to-do-app" target="_blank"><span class="iconify" data-icon="logos:github-icon" data-inline="false"></span> Source</a>
+                        <a href="https://patrickminero.github.io/to-do-app/" target="_blank"><span class="iconify" data-icon="clarity:world-line" data-inline="false" style="color: black;"></span> Live</a>
+                    </div>
+                </div>
+                <div id="description-large3" class="projects-description-large">
+                    <p>Simple To Do list created with Vue.js and styled with Sass optimized as a PWA</p>
+                    <a href="https://github.com/patrickminero/projects/tree/master/materialize-portfolio" target="_blank"><span class="iconify" data-icon="la:github" data-inline="false" style="color: var(--text);"></span> Source</a>
+                    <a href="https://patrickminero.github.io/projects/materialize-portfolio/" target="_blank"><span class="iconify" data-icon="clarity:world-line" data-inline="false" style="color: var(--text);"></span> Live</a>
+                </div>
+                <div class="card" id="project4">
+                    <img src="media/weather-app.jpg" alt="">
+                    <h2>Weather and Forecast PWA</h2>
+                    <div id="description4" class="projects-description">
+                        <p>Current and 5 day forecast PWA fetches asyncronous data from 3 APIs</p>
+                        <a href="https://github.com/patrickminero/patrickminero.github.io/tree/master/weather_app" target="_blank"><span class="iconify" data-icon="logos:github-icon" data-inline="false"></span> Source</a>
+                        <a href="https://patrickminero.github.io/weather_app/" target="_blank"><span class="iconify" data-icon="clarity:world-line" data-inline="false" style="color: black;"></span> Live</a>
+                    </div>
+                </div>
+                <div id="description-large4" class="projects-description-large">
+                    <p>Current and 5 day forecast PWA fetches asyncronous data from 3 APIs</p>
+                    <a href="https://github.com/patrickminero/projects/tree/master/materialize-portfolio" target="_blank"><span class="iconify" data-icon="la:github" data-inline="false" style="color: var(--text);"></span> Source</a>
+                    <a href="https://patrickminero.github.io/projects/materialize-portfolio/" target="_blank"><span class="iconify" data-icon="clarity:world-line" data-inline="false" style="color: var(--text);"></span> Live</a>
+                </div>
             </div>
-        </div>
-        <div id="project3" class="hidden">
-            <img src="" alt="">
-            <h2></h2>
-            <div>
-                <p></p>
-                <a href="#" target="_blank">Check it out!</a>
-            </div>
-        </div>
-        <div id="project4" class="hidden">
-            <img src="" alt="">
-            <h2></h2>
-            <div>
-                <p></p>
-                <a href="#" target="_blank">Check it out!</a>
-            </div>
-        </div>
-    </section>
-    <section id="references">   
-        <div>
-            <h2></h2>
-            <div id="reference1">
-                <p></p>
-            </div>
-            <div id="reference2">
-                <p></p>
-                <h3>Helen Russell, CEO, Equator Coffees</h3>
-            </div>
-            <div id="reference3">
-                <p ></p>
-                <h3>Yella Catalana, Owner, Mill Valley Beerworks, Joinery Sausalito</h3>
-            </div>
-            <button id="show-more" type="submit">Show More</button>
-        </div>
-        
-    </section>
-    <section id="contact">
-        <h2></h2>
-        <div id="contact-form-div">
-            <form name="contact" method="POST" id="contact-form" data-netlify="true">
-                <input type="text" name="name" id="name" required>
-                <input type="email" id="email" name="email" required>
-                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-                <input type="submit" id="send" value=""></input>
+        </section>
+    </main>
+    <footer id="footer">
+        <div id="contact">
+            <h3>Get in touch</h3>
+            <form action="/">
+                <input type="text" name="name" id="name" placeholder="Your name..." autocomplete="off" required minlength="4">
+                <input type="email" name="email" id="email" placeholder="Your email..." autocomplete="off" required>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Brief message..." autocomplete="off" minlength="10"></textarea>
+                <input id="send" type="submit" value="Send Message">
             </form>
         </div>
-        <footer>
-            <div id="social-media">
-                <a href="https://github.com/patrickminero" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/patrick-minero-valencia" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                <h2></h2>
-                <h3></h3>
-            </div>
-        </footer>
-    </section>
-
-    <script src="scripts/variables.js"></script>
-    <script src="scripts/jquery-3.5.1.js"></script>
-    <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
-    <script src="js/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js"></script>
-    <script src="scripts/script.js"></script>
+        <div id="social">
+            <a href="https://github.com/patrickminero" target="_blank"><span class="iconify" data-icon="la:github" data-inline="false" style="color: white;"></span></a>
+            <a href="https://codepen.io/patrickminero" target="_blank"><span class="iconify" data-icon="la:codepen" data-inline="false" style="color: white;"></span></a>
+            <a href="http://www.linkedin.com/in/patrick-minero-valencia" target="_blank"><span class="iconify" data-icon="ant-design:linkedin-outlined" data-inline="false" style="color: white;"></span></a>
+            <a id="mail" href="mailto:patrickminerovalencia@gmail.com" target="_blank"><span class="iconify" data-icon="mdi:gmail" data-inline="false" style="color: white;"></span></a>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

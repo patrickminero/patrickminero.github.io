@@ -1,0 +1,530 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --background: #000000;
+    --text: #ffffff;
+    --primary: #4886e4;
+    --seconday: #26da26;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: var(--background);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (min-width: 300px){
+    #preload{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        background-color: var(--background);
+        z-index: 10;
+        color: var(--text);
+        text-align: center;
+    }
+
+    #preload h1{
+        position: relative;
+        top: 50vh;
+    }
+
+    #back{
+        content: '';
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border-top: 30px solid red;
+        border-right: 30px solid blue;
+        border-bottom: 30px solid yellow;
+        border-left: 30px solid green;
+        animation: spin 1s linear  infinite;
+        position: relative;
+        top: calc(50vh - 100px);
+        left: calc(50vw - 100px);
+    }
+@keyframes spin {
+    0%{transform: rotateZ(0deg)}
+    100%{transform: rotateZ(360deg)}
+}
+    header{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--background);
+    }
+    #top-nav{
+        display: none;
+    }
+    
+    #menu-button{
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+        right: 7px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        z-index: 5;
+    }
+
+    #menu-button div{
+        content: '';
+        width: 45px;
+        height: 10px;
+        background-color: var(--primary);
+        margin: 5px auto
+    }
+
+    #side-nav{
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 85vw;
+        height: 100vh;
+        background-color: var(--text);
+        padding: 16px;
+        z-index: 4;
+    }
+
+    #side-nav ul{
+        position: absolute;
+        bottom: 0;
+        right: 16px;
+    }
+
+    #side-nav li{
+    display: block;
+    margin: 16px auto;
+    list-style-type: none;
+    text-align: right;
+    top: 300px
+    }
+    
+    #side-nav li a{
+        font-size: 32px;
+        color: var(--background);
+        text-decoration: none;
+    }
+
+    #border{
+        width: 95vw;
+        height: 95vh;
+        margin: auto;
+        transform: translateY(2.5vh);
+        border: 3px solid var(--text)
+    }
+
+    #border h1, #border h2{
+        color: var(--text);
+        position: relative;
+        top: 40%;
+        left: 1vh;
+    }
+
+    #border h1{
+        font-size: 38px;
+    }
+
+    #border h2{
+        font-size: 32px;
+    }
+
+    #social-icons{
+        background-color: var(--background);
+        position: absolute;
+        top: 0;
+        width: 210px;  
+        left: calc(50vw - 105px);
+    }
+
+    #social-icons .iconify, footer div .iconify{
+        width: 49px;
+        height: 49px;
+    }
+
+    #about, #knowledge, #projects{
+        background-color: var(--background);
+        color: var(--text);
+        margin: 16px auto 0 auto
+    }
+
+    #languages, #tools{
+        width: 95vw;
+        display: block;
+        margin: auto;
+    }
+
+    #about img{
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        margin: auto;
+        display: block;
+        
+    }
+
+    #about div h3{
+        font-size: 32px;
+        color: var(--primary);
+        width: 100%;
+        margin: auto;
+        z-index: 5;
+    }
+
+    #knowledge div h3, #projects h3, #contact h3{
+        font-size: 32px;
+        color: var(--primary);
+        width: 100%;
+        margin: 32px auto;
+        z-index: 5;
+    }
+
+    #about div p{
+        font-size: 24px;
+        width: 90vw;
+        margin: 32px auto 0 auto
+    }
+
+    #about #parallax{
+        width: 100%;
+        height: 70vh;
+        background-image: url('media/alfons-taekema-unsplash.jpg');
+        background-size: 120% 120%;
+        background-position: 50% 50%;
+        margin-top: 16px;
+    }
+
+    #about div figcaption a{
+        color: var(--text);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #knowledge div .iconify{
+        width: 65px;
+        height: 65px;
+        margin: 8px;
+    }
+
+    #projects{
+        margin-top: 64px;
+    }
+
+    #knowledge div, #knowledge div h3, #projects h3{
+        display: block;
+        width: 100%;
+    }
+
+
+    .card{
+        width: 0vw;
+        height: 0px;
+        opacity: 0;
+        display: block;
+        margin: 32px auto;
+        border: 3px solid var(--text);
+        cursor: pointer;
+    }
+
+    .card img{
+        width: 100%;
+        height: 250px;
+    }
+    .projects-description-large{
+        display: none;
+    }
+    .projects-description{
+        background-color: var(--text);
+        min-height: 100px;
+        opacity: 0;
+    }
+    .projects-description p{
+        font-size: 24px;
+        color: var(--background);        
+    }
+
+    .projects-description a{
+        font-size: 24px;
+        margin: 16px 8px;
+        text-decoration: none;
+        color: var(--background);
+    }
+    
+    footer div{
+        width: 100vw;
+        display: block;
+        margin: auto;
+    }
+
+    footer #contact form input, footer #contact form textarea{
+        width: 90%;
+        display: block;
+        margin: 8px auto;
+        outline: none;
+        background-color: var(--background);
+        color: var(--text);
+        outline: none;
+        border: none;
+        border-bottom: solid 3px var(--text);
+    }
+
+    footer #contact form input::placeholder, footer #contact form textarea::placeholder{
+        color: var(--text)
+    }
+
+    footer #contact form input:focus, footer #contact form textarea:focus{
+        border-bottom: solid 3px var(--primary);
+    }
+
+    footer #contact form input{
+        height: 5vh;
+        font-size: 24px;
+    }
+
+    footer #contact form textarea{
+        height: 30vh;
+        font-size: 24px;
+    }
+
+    footer div form #send{
+        width: 50%;
+    }
+
+    footer #social{
+        width: 60vw;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px){
+#border h2, #border h1{
+    width: 95%;
+    left: 0;
+    margin: auto;
+}
+
+#border h1{
+    font-size: 48px;
+}
+#border h2{
+    font-size: 40px;
+}
+.card img{
+    height: 250px;
+}
+}
+
+@media only screen and (min-width: 750px){
+    body{
+        overflow-x: hidden;
+    }
+    #border h1{
+        font-size: 64px;
+    }
+
+    #border h2{
+        font-size: 48px;
+    }
+
+    #social-icons{
+        background-color: var(--background);
+        position: absolute;
+        top: 0;
+        width: 260px;  
+        left: calc(50vw - 105px);
+    }
+
+    #social-icons .iconify, footer div .iconify{
+        width: 60px;
+        height: 60px;
+    }
+
+    #about div h3, #knowledge div h3, #projects h3, #contact h3{
+        font-size: 48px;
+        width: 95%;
+    }
+
+    #about div p{
+        font-size: 32px;
+    }
+
+    #knowledge div .iconify{
+        width: 80px;
+        height: 80px;
+        margin: 8px;
+    }
+
+    #projects{
+        display: block;
+        width: 100%;
+        margin: 64px auto;
+    }
+
+    #projects > div{
+        width:100%;
+        display: block;
+        margin: auto;
+        justify-items: center;
+    }
+
+    .card{
+        width: 50%;
+        height: auto;
+        margin: 0%;
+        opacity: 1;
+        z-index: 5;
+        font-size: 24px;
+        background-color: var(--background);
+    }
+
+    .card img{
+        height: 250px;
+    }
+
+    .projects-description{
+        display: none;
+    }
+    .projects-description-large{
+        width: 50%;
+        display: block;
+        font-size: 30px;
+        padding: 8px;
+    }
+    .projects-description-large a{
+        text-decoration: none;
+        color: var(--text)
+    }
+
+    #description-large1{
+        transform: translate(0px, -150%);
+    }
+
+    #project2{
+        transform: translate(100%, 0%);
+    }
+    #description-large2{
+        transform: translate(100%, -150%);
+    }
+    #project3{
+        transform: translate(0%, 0%);
+    }
+    #description-large3{
+        transform: translate(0px, -150%);
+    }
+    #project4{
+        transform: translate(100%, 0%);
+    }
+    #description-large4{
+        transform: translate(100%, -150%);
+    }
+
+    footer #contact form input{
+        font-size: 32px;
+    }
+
+    footer #contact form textarea{
+        font-size: 32px;
+    }
+
+    footer #social .iconify{
+    width: 60px;
+    height: 60px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #top-nav{
+        display: block;
+        position: fixed;
+        width: 100%;
+        margin: auto;
+        height: 5vh;
+        background-color: var(--background);
+        z-index: 5; 
+        top: 0;
+        left: 0;
+    }
+
+    #top-nav ul{
+        position: relative;
+        float: right;
+        right: 2vw;
+    }
+    
+    #top-nav ul li{
+    display: inline;
+    margin: 8px 32px;
+    list-style-type: none;
+    }
+    
+    #top-nav li a{
+        font-size: 24px;
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    #menu-button{
+        display: none;
+    }
+
+    #border{
+        width: 95vw;
+        height: 90vh;
+        transform: translateY(5vh);
+    }
+
+    #social-icons{
+        top: calc(50vh - 105px);
+        left: unset;
+        right: 1vw;
+        width: 60px;
+        z-index: 0;
+    }
+
+    #about div p, #knowledge, #projects, #about div h3{
+        width: 80vw;
+    }
+
+    #about #parallax{
+        height: 90vh;
+        background-image: url('media/daniel-corneschi-unsplash.jpg');
+        background-size: 130% 130%;
+    }
+
+    .card{
+        pointer-events: none;
+    }
+
+    footer{
+        width: 90vw;
+        display: block;
+        margin: auto;
+    }
+    footer div, footer #social{
+        width: 50vw;
+    }
+}
+@media only screen and (min-width: 1250px){
+    #knowledge, #projects, #about div p, #about div h3{
+        width: 70vw;
+    }
+
+    .card img{
+        height: 300px;
+    }
+}
