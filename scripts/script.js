@@ -347,7 +347,7 @@ function largeDevice(x){
             scrollTrigger: {
                 trigger: '#project1',
                 scrub: true,
-                start: 'bottom top',
+                start: 'center top',
                 end: '+=300',
                 toggleActions: 'restart pause reverse pause',
             }, 
@@ -373,7 +373,7 @@ function largeDevice(x){
             scrollTrigger: {
                 trigger: '#project2',
                 scrub: true,
-                start: 'bottom top',
+                start: 'center top',
                 end: '+=200',
                 toggleActions: 'restart pause reverse pause',
             }, 
@@ -397,7 +397,7 @@ function largeDevice(x){
 
         gsap.to('#project4', {
             scrollTrigger: {
-                trigger: '#project3',
+                trigger: '#description-large2',
                 scrub: true,
                 start: 'bottom top',
                 end: '+=200',
@@ -410,7 +410,7 @@ function largeDevice(x){
 
         gsap.from('#description-large4', {
             scrollTrigger: {
-                trigger: '#project3',
+                trigger: '#description-large2',
                 scrub: true,
                 start: 'bottom top',
                 end: '+=200',
