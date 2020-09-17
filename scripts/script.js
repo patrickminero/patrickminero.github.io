@@ -46,18 +46,7 @@ gsap.to('#parallax', {
 })
 
 //sticky menu button animation
-ScrollTrigger.create({
-    trigger: '#about',
-    start: 'top bottom',
-    endTrigger: '#mail',
-    end:'=+1200',
-    markers: true,
-    toggleActions: 'restart pause reverse pause',
-    scrub: true,
-    onUpdate: self => direction(self.direction),
-})
-function direction(element){
-    console.log(element)
+function directionBtn(element){
     if(element === 1){
         gsap.to('#menu-button', { y: '100%', duration: .5})
     }else{
@@ -65,17 +54,15 @@ function direction(element){
     }
 }
 
-// gsap.to('#menu-button', {
-//     scrollTrigger: {
-//         trigger: '#about',
-//         toggleActions: 'restart pause reverse pause',
-//         scrub: true,
-//         markers: true,
-//         start: 'top bottom', 
-//         end: '170%',
-//     },
-//     y: 0, duration: .5,
-// })
+ScrollTrigger.create({
+    trigger: '#about',
+    start: 'top bottom',
+    endTrigger: '#mail',
+    end:'=+1200',
+    toggleActions: 'restart pause reverse pause',
+    scrub: true,
+    onUpdate: self => directionBtn(self.direction),
+})
 
 ScrollTrigger.create({
     trigger: '#about',
