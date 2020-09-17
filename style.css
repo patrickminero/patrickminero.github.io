@@ -268,9 +268,9 @@ html, body{
         display: block;
         margin: auto;
     }
-    /* footer #contact{
+    footer #contact{
         display: none;
-    } */
+    }
     footer #contact form input, footer #contact form textarea{
         width: 90%;
         display: block;
