@@ -47,32 +47,35 @@ gsap.to('#parallax', {
 
 //sticky menu button animation
 ScrollTrigger.create({
-    trigger: '#menu-button',
+    trigger: '#about',
     start: 'top bottom',
     endTrigger: '#mail',
     end:'=+1200',
+    markers: true,
     toggleActions: 'restart pause reverse pause',
     scrub: true,
     onUpdate: self => direction(self.direction),
 })
 function direction(element){
-    if(element == 1){
+    console.log(element)
+    if(element === 1){
         gsap.to('#menu-button', { y: '100%', duration: .5})
     }else{
         gsap.to('#menu-button', { y: 0, duration: .5})
     }
 }
 
-gsap.to('#menu-button', {
-    scrollTrigger: {
-        trigger: '#about',
-        toggleActions: 'restart pause reverse pause',
-        scrub: true,
-        start: '180% bottom', 
-        end: '170%',
-    },
-    y: 0, duration: .5,
-})
+// gsap.to('#menu-button', {
+//     scrollTrigger: {
+//         trigger: '#about',
+//         toggleActions: 'restart pause reverse pause',
+//         scrub: true,
+//         markers: true,
+//         start: 'top bottom', 
+//         end: '170%',
+//     },
+//     y: 0, duration: .5,
+// })
 
 ScrollTrigger.create({
     trigger: '#about',
@@ -142,8 +145,10 @@ let moveLeft = gsap.timeline({
 let cards = gsap.timeline({
     scrollTrigger:{
         trigger: '#projects',
-        // scrub: true,
+        scrub: true,
+        // markers: true,
         start:'bottom top',
+        end: '+=800',
     }
 })
 
