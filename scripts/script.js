@@ -37,10 +37,10 @@ gsap.to('#parallax', {
         trigger: '#trigger',
         toggleActions: 'restart pause reverse pause',
         scrub: true,
-        start: 'center top', 
+        start: 'bottom top', 
         end: 'bottom bottom',
         endTrigger: "#languages",
-        duration: 1,
+        duration: 3,
     },
     backgroundPosition: '0% 0%',
 })
