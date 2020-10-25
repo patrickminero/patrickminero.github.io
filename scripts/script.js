@@ -39,10 +39,10 @@ gsap.to('#parallax', {
         scrub: true,
         start: 'bottom top', 
         end: 'bottom bottom',
-        endTrigger: "#languages",
-        duration: 3,
+        endTrigger: "#trigger2",
+        duration: 5,
     },
-    backgroundPosition: '0% 0%',
+    backgroundPosition: '0% 100%',
 })
 
 //sticky menu button animation
