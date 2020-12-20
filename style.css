@@ -1,7 +1,8 @@
 :root {
-    --bg-color: rgba(0, 0, 0, 0.85);
-    --tx-color: rgba(255, 255, 255, 0.7);
-    --span-color: rgba(241, 231, 137, 0.9);
+    --bg-color: rgba(0, 0, 0, 0.851);
+    --tx-color: rgba(255, 255, 255, 0.702);
+    --span-color: rgba(241, 231, 136, 0.902);
+    
   }
 
 * {
@@ -18,7 +19,7 @@
         background-color: var(--bg-color)
     }
     p{
-        font-size: 16px;
+        font-size: 18px;
     }
     h1{
         font-size: 3.1rem;
@@ -35,6 +36,16 @@
         font-size: 1.3rem;
         display: inline;
     }
+    .darkMode{
+        position: relative;
+        font-size: 36px;
+    }
+    .darkMode i{
+        position: absolute;
+        top: 20px;
+        right: 20px
+    }
+
     .nav-bar{
         position: fixed;
         bottom: 0;
@@ -53,7 +64,7 @@
     }
     .nav-bar div a{
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         text-align: center;
         text-decoration: none;
         font-size: 12px;
@@ -68,27 +79,20 @@
     /*home section styling*/
     #home{
         height: 100vh;
-        background: url(./media/ferenc-almasi-L8KQIPCODV8-unsplash.jpg), rgba(0, 0, 0, 0.8);
+        background: url(./media/ferenc-almasi-L8KQIPCODV8-unsplash.jpg), var(--bg-color);
         background-position: center;
         background-blend-mode: overlay;
         background-size: cover;
-        width: 100vw;
+        width: 100%;
         overflow: hidden;
     }
-    #home > div{
+    .header{
         width: 90%;
         margin: auto;
         transform: translateY(20vh);
     }
-
-    .header{
-        font-size: 1.8rem;
-    }
-    .header h2{
-        font-size: 2.4rem;
-    }
     .header h3 {
-        font-size: 1.8rem;
+        
         font-weight: normal;
     }
     .contact{
@@ -139,7 +143,7 @@
         font-style: italic;
         color: var(--span-color)
     }
-
+    /*projects section*/
     .card{
         margin: 1em 0;
         padding: 0;
@@ -171,6 +175,62 @@
     #projects{
         margin-bottom: 3em;
     }
+    .hide-form {
+        opacity: 0;
+        width: 0vw;
+        height: 0vh;
+        display: none;
+    }
+    .display-form{
+        display: flex;
+        opacity: 1;
+        transition: all 1s linear;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .overflow-hidden{
+        overflow: hidden;
+    }
+    #contact > div{
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+    }
+    #contact input, #contact textarea{
+        display: block;
+        width: 100%;
+        margin: 1em 0;
+        border-radius: 10px;
+        padding: 1em;
+        height: 3em;
+    }
+    #contact textarea{
+        height: 12em;
+    }
+    #contact form button{
+        border: none;
+        width: 60%;
+        margin: 1em auto;
+        display: block;
+        outline: none;
+        background-color: transparent;
+    }
+    #closeButton{
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin-top: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    #closeButton i {
+        font-size: 20px;
+        line-height: 2;
+    }
 }   
 
 @media only screen and (min-width: 600px){
@@ -179,7 +239,83 @@
         transform: translateY(30vh);
     }
 
+    #about div, #skills div, #projects > div, #contact > div{
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    #home > div{
+        width: 70%;
+        transform: translateY(30vh);
+    }
+
     #about div, #skills div, #projects > div{
         width: 70%;
     }
+    .codecademy img{
+        height: 7em;
+    }
+
+    .card-container{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 49%;
+    }
+   .card img {
+       height: 60%;
+   }
+   .card-links {
+       align-items: baseline;
+   }
+}   
+@media only screen and (min-width: 992px){
+    .nav-bar{
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 2em;
+    }
+    .nav-bar div{
+        margin-left: 2em;
+    }
+    .nav-bar div a{
+        flex-direction: row;
+        align-items: baseline;
+        font-size: 16px;
+        
+    }
+    .nav-bar div a i {
+        margin-right: .5em;
+    }
+    #home > div{
+        width: 50%;
+        transform: translateY(30vh);
+    }
+    .img-div img, .lewagon img{
+        width: 15em;
+        height: 15em;
+    }
+    .codecademy img{
+        width: 50%;
+        margin: auto;
+    }
+    .card-container{
+        justify-content: space-around;
+    }
+    .card{
+        width: 40%;
+    }
+   .card img {
+       height: 70%;
+   }
+   #contact > div{
+       width: 50%;
+   }
 }

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick Minero - Self Taught Web Developer</title>
-    <meta name="description" content="Patrick is a web developer based in Barcelona, Spain who started learning computer programming with Codecademy, w3schools and tutorials. Now created websites and progresive web applications">
+    <title>Patrick Minero - Ruby | Javascript Developer</title>
+    <meta name="description" content="Ruby / Javascript developer, Le wagon alumni">
     <meta name="robots" content="noidex">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="media/logo2.png" type="image/x-icon">
+    <link rel="icon" href="media/terminal-solid 1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>      
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js" defer></script>
@@ -20,18 +20,34 @@
             <div><a href="#about"><i class="fas fa-user"></i><p>About</p></a></div>
             <div><a href="#skills"><i class="fas fa-code"></i><p>Skills</p></a></div>
             <div><a href="#projects"><i class="fas fa-folder-open"></i><p>Projects</p></a></div>
+            <div><a id="contactButton" href="#contact"><i class="fas fa-envelope"></i><p>Contact</p></a></div>
         </nav>
+        <div id="contact" class="hide-form">
+            <div>
+                <h3>Get in touch</h3>
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="text" name="name" placeholder="Your name..."/>   
+                    <input type="email" name="email" placeholder="Your email..."/>
+                    <textarea name="message" placeholder="Brief message..."></textarea></label>
+                    <button type="submit"><h4>Send Message <i class="fas fa-paper-plane"></i></h4></button>
+                </form>
+                <div id="closeButton" type="submit"><i class="fas fa-times"></i><h4>Close</h4></div>
+            </div>
+        </div>
         <div>
             <section id="home">
-                <div>
-                    <div class="header">
+                <div class="darkMode">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="header">
+                    <div >
                         <h3>I'm </h3><h1>Patrick Minero,</h1> <h3>a</h3> <h2>Javascript / Ruby </h2><h3>developer.</h3>
                     </div>
                     <div class="contact">
-                        <a href="#"><span class="iconify" data-icon="cib:gmail" data-inline="false"></span></a>
-                        <a href="#"><span class="iconify" data-icon="ant-design:github-filled" data-inline="false"></span></a>
-                        <a href="#"><span class="iconify" data-icon="ant-design:linkedin-filled" data-inline="false"></span></a>
-                        <a href="#"><span class="iconify" data-icon="ant-design:codepen-circle-filled" data-inline="false"></span></span></a>
+                        <a href="mailto:patrickminerovalencia@gmail.com" target="_blank"><span class="iconify" data-icon="cib:gmail" data-inline="false"></span></a>
+                        <a href="https://github.com/patrickminero" target="_blank"><span class="iconify" data-icon="ant-design:github-filled" data-inline="false"></span></a>
+                        <a href="https://www.linkedin.com/in/patrick-minero-valencia" target="_blank"><span class="iconify" data-icon="ant-design:linkedin-filled" data-inline="false"></span></a>
+                        <a href="https://twitter.com/minero_patrick" target="_blank"><span class="iconify" data-icon="ant-design:twitter-circle-filled" data-inline="false"></span></span></a>
                     </div> 
                 </div>
 
@@ -52,10 +68,10 @@
                     <p>Eighteen months later and back in the routine, I moved to Barcelona, Spain, and while waiting to get my paperwork through local authorities, I started to learn web development.</p>
                     <p>I started my research and out of the thousands of options, I came across Codecademy. I decided to try out their “How to build websites with HTML, CSS, and Github Pages” skill path since it was free and wanted to make sure I liked computer programming as a career choice.</p>
                     <p>A few weeks later I was hooked, it was easier than what I expected it to be, very clear and straight forward but captivating enough to spark my curiosity.</p>
-                    <p>When I finished the skill path I decided to upgrade to Codecademy PRO to learn more complex skills, I also researched popular coding tools and resources to start creating small projects and web pages.</p>
                     <div class="lewagon">
                         <img src="https://uikit.lewagon.com/assets/logo-0c157df32d93155001ae8d8b1b7740b3082e698b4ad0cc91792e8725deb68d85.png" alt="" srcset="">
                     </div>
+                    <p>When I finished the skill path I decided to upgrade to Codecademy PRO to learn more complex skills, I also researched popular coding tools and resources to start creating small projects and web pages.</p>
                     <p>After a few months of practice I felt like Codecademy, online resources and tutorials were not enough, I wanted real job experiences so I enrolled at Le Wagon were I learned technical and personals skills that developers use everyday.</p>
                 </div>
             </section>
@@ -64,7 +80,7 @@
                     <h3>Lanaguages, frameworks and resources</h3>
                     <p>I started creating static websites with<span>HTML</span> and <span>CSS</span> to later move into using <span>Bootstrap</span> and <span>Materialize</span> for front end design and UI.</p>
                     <p>I spent a few months learning vanilla <span>Javascript</span> and once I felt confident I started to create projects with frameworks like <span>Jquery</span> and <span>Vue</span>.</p>
-                    <p>I recently started to create full stack applications using <span>MongoDB, Express, React</span> and <span>NodeJS</span>.</p>
+                    <p>I recently started to create full stack applications using <span>MongoDB, ExpressJS, ReactJS</span> and <span>NodeJS</span>.</p>
                     <p>At Le Wagon I learned and created fullstack applications using <span>Ruby, Rails</span> and <span>PostgreSQL</span>.</p>
                     <p>I also have experience with tools like <span>Git, Figma, Gsap, Heroku</span> and <span>Cloudinary</span>.</p>
                 </div>
@@ -72,6 +88,19 @@
             <section id="projects">
                 <div>
                     <h3>Projects</h3>
+                </div>
+                
+                <div class="card-container">
+                    <div class="card">
+                        <img src="media/matchmapp.jpg" alt="website thumbnail">
+                        <div class="card-content">
+                            <p>MatchMapp, find local bars screening your favorite sports events</p>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://www.matchmapp.live/" target="_blank"><i class="fas fa-globe-europe"></i> Visit Page</a>
+                            <a href="https://github.com/patrickminero/matchmapp" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
                     <div class="card">
                         <img src="media/mern_blog_project.jpg" alt="website thumbnail">
                         <div class="card-content">
@@ -79,32 +108,20 @@
                         </div>
                         <div class="card-links">
                             <a href=""><i class="fas fa-globe-europe"></i> Visit Page</a>
-                            <a href=""><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/patrickminero/mern-blog-project"><i class="fab fa-github"></i> View Code</a>
                         </div>
                     </div>
 
                     <div class="card">
                         <img src="media/to-do-app.jpg" alt="website thumbnail">
                         <div class="card-content">
-                            <p>Progressive web to do app.</p>
+                            <p>Progressive web to do app built with VueJS.</p>
                         </div>
                         <div class="card-links">
                             <a href=""><i class="fas fa-globe-europe"></i> Visit Page</a>
                             <a href=""><i class="fab fa-github"></i> View Code</a>
                         </div>
                     </div>
-
-                    <div class="card">
-                        <img src="media/weather_pwa.jpg" alt="website thumbnail">
-                        <div class="card-content">
-                            <p>Progressive weather tracker web app.</p>
-                        </div>
-                        <div class="card-links">
-                            <a href=""><i class="fas fa-globe-europe"></i> Visit Page</a>
-                            <a href=""><i class="fab fa-github"></i> View Code</a>
-                        </div>
-                    </div>
-
                     <div class="card">
                         <img src="media/buffer.jpg" alt="website thumbnail">
                         <div class="card-content">
@@ -115,18 +132,16 @@
                             <a href=""><i class="fab fa-github"></i> View Code</a>
                         </div>
                     </div>
-
                     <div class="card">
-                        <img src="media/matchmapp.jpg" alt="website thumbnail">
+                        <img src="media/weather_pwa.jpg" alt="website thumbnail">
                         <div class="card-content">
-                            <p>Single page app to find last minute available spots at bars screening sport events</p>
+                            <p>Progressive weather tracker web app.</p>
                         </div>
                         <div class="card-links">
                             <a href=""><i class="fas fa-globe-europe"></i> Visit Page</a>
                             <a href=""><i class="fab fa-github"></i> View Code</a>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
