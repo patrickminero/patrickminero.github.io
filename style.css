@@ -1,7 +1,7 @@
 :root {
-    --bg-color: rgba(0, 0, 0, 0.851);
-    --tx-color: rgba(255, 255, 255, 0.702);
-    --span-color: rgba(241, 231, 136, 0.902);
+    --bg-color: rgba(0, 0, 0, 0.8);
+    --tx-color: rgba(255, 255, 255, 0.7);
+    --span-color: rgba(241, 231, 136, 0.9);
     
   }
 
@@ -234,7 +234,10 @@
 }   
 
 @media only screen and (min-width: 600px){
-    #home > div{
+    #home{
+        position: relative;
+    }
+    .header{
         width: 70%;
         transform: translateY(30vh);
     }
@@ -245,20 +248,20 @@
 }
 
 @media only screen and (min-width: 768px){
-    #home > div{
+    .header{
         width: 70%;
         transform: translateY(30vh);
     }
 
     #about div, #skills div, #projects > div{
-        width: 70%;
+        width: 60%;
     }
     .codecademy img{
         height: 7em;
     }
 
     .card-container{
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -274,6 +277,10 @@
    }
 }   
 @media only screen and (min-width: 992px){
+    .darkMode{
+        top: 40px;
+        right: 20px;
+    }
     .nav-bar{
         top: 0;
         left: 0;
@@ -294,7 +301,7 @@
     .nav-bar div a i {
         margin-right: .5em;
     }
-    #home > div{
+    .header{
         width: 50%;
         transform: translateY(30vh);
     }
@@ -307,7 +314,7 @@
         margin: auto;
     }
     .card-container{
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .card{
         width: 40%;

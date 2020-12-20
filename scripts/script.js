@@ -16,6 +16,7 @@ closeButton.addEventListener('click', () =>{
   document.querySelector('body').classList.remove('overflow-hidden')
 })
 
+//dark mode toggle
 darkMode.addEventListener('click', () => {
   if(isDark){
     darkMode.innerHTML = '<i class="fas fa-sun"></i>';
