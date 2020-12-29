@@ -17,18 +17,18 @@ closeButton.addEventListener('click', () =>{
 })
 
 //dark mode toggle
-darkMode.addEventListener('click', () => {
-  if(isDark){
-    darkMode.innerHTML = '<i class="fas fa-sun"></i>';
-    root.style.setProperty('--bg-color', 'rgba(255, 255, 255, 0.7)');
-    root.style.setProperty('--tx-color', 'rgba(0, 0, 0, 0.8)');
-    root.style.setProperty('--span-color', 'rgb(39, 85, 149, 0.9)');
-    isDark = false
-  }else{
-    darkMode.innerHTML = '<i class="fas fa-moon"></i>'
-    root.style.setProperty('--bg-color', 'rgba(0, 0, 0, 0.8)');
-    root.style.setProperty('--tx-color', 'rgba(255, 255, 255, 0.7)');
-    root.style.setProperty('--span-color', 'rgba(241, 231, 136, 0.9)');
-    isDark = true
-  }
-})
+// darkMode.addEventListener('click', () => {
+//   if(isDark){
+//     darkMode.innerHTML = '<i class="fas fa-sun"></i>';
+//     root.style.setProperty('--bg-color', 'rgba(255, 255, 255, 0.7)');
+//     root.style.setProperty('--tx-color', 'rgba(0, 0, 0, 0.8)');
+//     root.style.setProperty('--span-color', 'rgb(39, 85, 149, 0.9)');
+//     isDark = false
+//   }else{
+//     darkMode.innerHTML = '<i class="fas fa-moon"></i>'
+//     root.style.setProperty('--bg-color', 'rgba(0, 0, 0, 0.8)');
+//     root.style.setProperty('--tx-color', 'rgba(255, 255, 255, 0.7)');
+//     root.style.setProperty('--span-color', 'rgba(241, 231, 136, 0.9)');
+//     isDark = true
+//   }
+// })

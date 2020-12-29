@@ -162,9 +162,8 @@
 
     }
     .card-links{
-        padding: .5em 0;
         border-top: 1px solid var(--tx-color);
-        padding: .5em 1em;      
+        padding: .5em;  
     }
 
     .card-links a{
@@ -254,7 +253,7 @@
     }
 
     #about div, #skills div, #projects > div{
-        width: 60%;
+        width: 80%;
     }
     .codecademy img{
         height: 7em;
@@ -274,12 +273,16 @@
    }
    .card-links {
        align-items: baseline;
+       
    }
 }   
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 1100px){
     .darkMode{
         top: 40px;
         right: 20px;
+    }
+    #about div, #skills div, #projects > div{
+        width: 70%;
     }
     .nav-bar{
         top: 0;
@@ -311,13 +314,23 @@
     }
     .codecademy img{
         width: 50%;
+        height: auto;
         margin: auto;
+    }
+    #skills div h3{
+        margin: 1em 0;
+        display: block;
+    }
+    #skills div p{
+        margin: 0;
+        display: inline;
     }
     .card-container{
         justify-content: space-between;
     }
     .card{
-        width: 40%;
+        width: 47%;
+        height: fit-content;
     }
    .card img {
        height: 70%;
