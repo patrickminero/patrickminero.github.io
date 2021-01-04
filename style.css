@@ -273,6 +273,7 @@
    }
    .card-links {
        align-items: baseline;
+       padding: 10px 20px;
        
    }
 }   
