@@ -10,159 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="media/terminal-solid 1.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>      
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js" defer></script>
 </head>
-<body id="body">
-    <div>
-        <nav class="nav-bar">
-            <div><a href="#home"><i class="fas fa-home"></i><p>Home</p></a></div>
-            <div><a href="#about"><i class="fas fa-user"></i><p>About</p></a></div>
-            <div><a href="#skills"><i class="fas fa-code"></i><p>Skills</p></a></div>
-            <div><a href="#projects"><i class="fas fa-folder-open"></i><p>Projects</p></a></div>
-            <div><a id="contactButton" href="#contact"><i class="fas fa-envelope"></i><p>Contact</p></a></div>
-        </nav>
-        <div id="contact" class="hide-form">
-            <div>
-                <h3>Get in touch</h3>
-                <form name="contact" method="POST" data-netlify="true">
-                    <input type="text" name="name" placeholder="Your name..."/>   
-                    <input type="email" name="email" placeholder="Your email..."/>
-                    <textarea name="message" placeholder="Brief message..."></textarea></label>
-                    <button type="submit"><h4>Send Message <i class="fas fa-paper-plane"></i></h4></button>
-                </form>
-                <div id="closeButton" type="submit"><i class="fas fa-times"></i><h4>Close</h4></div>
-            </div>
-        </div>
-        <div>
-            <section id="home">
-                <!-- <div class="darkMode">
-                    <i class="fas fa-moon"></i>
-                </div> -->
-                <div class="header">
-                    <div >
-                        <h3>I'm </h3><h1>Patrick Minero,</h1> <h3>a</h3> <h2>Javascript / Ruby </h2><h3>developer.</h3>
-                    </div>
-                    <div class="contact">
-                        <a href="mailto:patrickminerovalencia@gmail.com" target="_blank"><span class="iconify" data-icon="cib:gmail" data-inline="false"></span></a>
-                        <a href="https://github.com/patrickminero" target="_blank"><span class="iconify" data-icon="ant-design:github-filled" data-inline="false"></span></a>
-                        <a href="https://www.linkedin.com/in/patrick-minero-valencia" target="_blank"><span class="iconify" data-icon="ant-design:linkedin-filled" data-inline="false"></span></a>
-                        <a href="https://twitter.com/minero_patrick" target="_blank"><span class="iconify" data-icon="ant-design:twitter-circle-filled" data-inline="false"></span></span></a>
-                    </div> 
-                </div>
-
-                
-            </section>
-            <section id="about">
-                <div>
-                    <div class="img-div">
-                        <img src="./media/Patrick_minero.jpg" alt="">
-                    </div>
-                    <h3>My Programming Journey</h3>
-                    <p>Back in the late 2000s, I studied Law in college then I decided to move to the California Bay Area where I would spend the next 11 years of my life.</p>
-                    <p>After burning my self out in food-service management, working two jobs, I felt the need for a change in my lifestyle and wanted to improve my career options and hopefully have a better life quality.</p>
-                    <p>After weeks of research, I set up a plan, worked extra hours, saved as much money as I could, and embarked on an open-ended trip around 4 continents and 25 countries volunteering in small family farms and businesses.</p>
-                    <div class="codecademy">
-                        <img src="./media/logo_white.png" alt="" srcset="">
-                    </div>
-                    <p>Eighteen months later and back in the routine, I moved to Barcelona, Spain, and while waiting to get my paperwork through local authorities, I started to learn web development.</p>
-                    <p>I started my research and out of the thousands of options, I came across Codecademy. I decided to try out their “How to build websites with HTML, CSS, and Github Pages” skill path since it was free and wanted to make sure I liked computer programming as a career choice.</p>
-                    <p>A few weeks later I was hooked, it was easier than what I expected it to be, very clear and straight forward but captivating enough to spark my curiosity.</p>
-                    <div class="lewagon">
-                        <img src="https://uikit.lewagon.com/assets/logo-0c157df32d93155001ae8d8b1b7740b3082e698b4ad0cc91792e8725deb68d85.png" alt="" srcset="">
-                    </div>
-                    <p>When I finished the skill path I decided to upgrade to Codecademy PRO to learn more complex skills, I also researched popular coding tools and resources to start creating small projects and web pages.</p>
-                    <p>After a few months of practice I felt like Codecademy, online resources and tutorials were not enough, I wanted real job experiences so I enrolled at Le Wagon were I learned technical and personals skills that developers use everyday.</p>
-                </div>
-            </section>
-            <section id="skills">
-                <div>
-                    <h3>Lanaguages, frameworks and resources</h3>
-                    <p>I started creating static websites with<span>HTML</span> and <span>CSS</span> to later move into using <span>Bootstrap</span> and <span>Materialize</span> for front end design and UI.</p>
-                    <p>I spent a few months learning vanilla <span>Javascript</span> and once I felt confident I started to create projects with frameworks like <span>Jquery</span> and <span>Vue</span>.</p>
-                    <p>I recently started to create full stack applications using <span>MongoDB, ExpressJS, ReactJS</span> and <span>NodeJS</span>.</p>
-                    <p>At Le Wagon I learned and created fullstack applications using <span>Ruby, Rails</span> and <span>PostgreSQL</span>.</p>
-                    <p>I also have experience with tools like <span>Git, Figma, Gsap, Heroku</span> and <span>Cloudinary</span>.</p>
-                </div>
-             </section>
-            <section id="projects">
-                <div>
-                    <h3>Projects</h3>
-                </div>
-                
-                <div class="card-container">
-                    <div class="card">
-                        <img src="media/savanna.jpg" alt="website thumbnail">
-                        <div class="card-content">
-                            <p>Savanna, a social media web application for your pets.</p>
-                        </div>
-                        <div class="card-links">
-                            <a href="#" target="_blank"><i class="fas fa-globe-europe"></i> Comming soon</a>
-                            <a href="https://github.com/patrickminero/savanna" target="_blank"><i class="fab fa-github"></i> Github repo</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="media/matchmapp.jpg" alt="website thumbnail">
-                        <div class="card-content">
-                            <p>MatchMapp, find venues screening your favorite sports.</p>
-                        </div>
-                        <div class="card-links">
-                            <a href="https://www.matchmapp.live/" target="_blank"><i class="fas fa-globe-europe"></i> Visit Page</a>
-                            <a href="https://github.com/patrickminero/matchmapp" target="_blank"><i class="fab fa-github"></i> Github repo</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="media/mern_blog_project.jpg" alt="website thumbnail">
-                        <div class="card-content">
-                            <p>A blog application to share my volunteering experices.</p>
-                        </div>
-                        <div class="card-links">
-                            <a href=""><i class="fas fa-globe-europe"></i> Visit Page</a>
-                            <a href="https://github.com/patrickminero/mern-blog-project"><i class="fab fa-github"></i> Github repo</a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="media/to-do-app.jpg" alt="website thumbnail">
-                        <div class="card-content">
-                            <p>Progressive web application for a simple to do list</p>
-                        </div>
-                        <div class="card-links">
-                            <a href=""><i class="fas fa-globe-europe"></i> Visit Page</a>
-                            <a href=""><i class="fab fa-github"></i> Github repo</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="media/buffer.jpg" alt="website thumbnail">
-                        <div class="card-content">
-                            <p>Buffer, an Airbnb clone for party chaperone services</p>
-                        </div>
-                        <div class="card-links">
-                            <a href=""><i class="fas fa-globe-europe"></i> Visit Page</a>
-                            <a href=""><i class="fab fa-github"></i> Github repo</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="media/weather_pwa.jpg" alt="website thumbnail">
-                        <div class="card-content">
-                            <p>Progressive web application for a simple weather tracker.</p>
-                        </div>
-                        <div class="card-links">
-                            <a href=""><i class="fas fa-globe-europe"></i> Visit Page</a>
-                            <a href=""><i class="fab fa-github"></i> Github repo</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+<body>
+  <section id="home">
+    <div class="fixed-action-btn">
+      <a class="btn-floating pulse btn-large blue darken-4">
+        <i class="large material-icons">menu</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating blue darken-4" href="contact.html"><i class="material-icons">contact_page</i></a>Contact</li>
+        <li><a class="btn-floating blue darken-4" href="projects.html"><i class="material-icons">folder</i></a>Projects</li>
+        <li><a class="btn-floating blue darken-4" href="skills.html"><i class="material-icons">assessment</i></a>Skills</li>
+        <li><a class="btn-floating blue darken-4" href="about.html"><i class="material-icons">person</i></a>About</li>
+        <li><a class="btn-floating blue darken-4" href="/"><i class="material-icons">house</i></a>Home</li>
+      </ul>
     </div>
     
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <script src="./scripts/script.js"></script>
+    <div class="header">
+        <div >
+            <h3>I'm </h3><h1>Patrick Minero,</h1> <h3>a</h3> <h2>Javascript / Ruby </h2><h3>developer.</h3>
+        </div>
+        <div class="contact">
+            <a href="mailto:patrickminerovalencia@gmail.com" target="_blank"><span class="iconify" data-icon="cib:gmail" data-inline="false"></span></a>
+            <a href="https://github.com/patrickminero" target="_blank"><span class="iconify" data-icon="ant-design:github-filled" data-inline="false"></span></a>
+            <a href="https://www.linkedin.com/in/patrick-minero-valencia" target="_blank"><span class="iconify" data-icon="ant-design:linkedin-filled" data-inline="false"></span></a>
+            <a href="https://twitter.com/minero_patrick" target="_blank"><span class="iconify" data-icon="ant-design:twitter-circle-filled" data-inline="false"></span></span></a>
+        </div> 
+    </div>               
+  </section>
+          
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

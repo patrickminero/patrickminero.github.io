@@ -1,3 +1,5 @@
+
+
 :root {
     --bg-color: rgba(0, 0, 0, 0.8);
     --tx-color: rgba(255, 255, 255, 0.7);
@@ -36,15 +38,7 @@
         font-size: 1.3rem;
         display: inline;
     }
-    .darkMode{
-        position: relative;
-        font-size: 36px;
-    }
-    .darkMode i{
-        position: absolute;
-        top: 20px;
-        right: 20px
-    }
+
 
     .nav-bar{
         position: fixed;
@@ -104,8 +98,51 @@
         text-align: center;
     }
 
+    #projects{
+        height: 100vh;
+        margin-bottom: 0 !important;
+        padding-top: 20px;
+    }
+    .projects-title{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .projects-title h1{
+        margin: 0;
+        font-size: 30px;
+    }
+    .carousel{
+        width: 100% !important;
+        height: 80% !important;
+        position: relative;
+    }
+
+    .carousel-item{
+        height: 90% !important;
+        width: 80% !important;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .project-description{
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .project-description h1{
+        margin-top: 0;
+        font-size: 24px;
+    }
+    .project-description h2{
+        font-size: 20px;
+    }
+
     /*about page styling*/
-    #about div, #skills div, #projects > div{
+    #about div, #skills div{
         width: 90%;
         margin: auto;
         padding: 1em 0;
@@ -192,43 +229,18 @@
     .overflow-hidden{
         overflow: hidden;
     }
-    #contact > div{
-        width: 90%;
-        margin: 0 auto;
-        height: auto;
+
+    #contact{
+        height: 100vh;
+        padding-top: 50px;
     }
-    #contact input, #contact textarea{
-        display: block;
-        width: 100%;
-        margin: 1em 0;
-        border-radius: 10px;
-        padding: 1em;
-        height: 3em;
+
+    #contact .container form{
+        transform: translateY(100px);
     }
-    #contact textarea{
-        height: 12em;
-    }
+
     #contact form button{
-        border: none;
-        width: 60%;
-        margin: 1em auto;
-        display: block;
-        outline: none;
-        background-color: transparent;
-    }
-    #closeButton{
-        background-color: transparent;
-        outline: none;
-        border: none;
-        margin-top: 5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    #closeButton i {
-        font-size: 20px;
-        line-height: 2;
+        width: 100%;
     }
 }   
 
@@ -278,10 +290,10 @@
    }
 }   
 @media only screen and (min-width: 1100px){
-    .darkMode{
+    /* .darkMode{
         top: 40px;
         right: 20px;
-    }
+    } */
     #about div, #skills div, #projects > div{
         width: 70%;
     }

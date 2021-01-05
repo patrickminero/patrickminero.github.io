@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Patrick Minero</title>
+    <meta name="description" content="Ruby / Javascript developer, Le wagon alumni">
+    <meta name="robots" content="noidex">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/terminal-solid 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>      
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js" defer></script>
+</head>
+<body>
+    <div class="fixed-action-btn">
+        <a class="btn-floating pulse btn-large blue darken-4">
+          <i class="large material-icons">menu</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating blue darken-4" href="contact.html"><i class="material-icons">contact_page</i></a>Contact</li>
+          <li><a class="btn-floating blue darken-4" href="projects.html"><i class="material-icons">folder</i></a>Projects</li>
+          <li><a class="btn-floating blue darken-4" href="skills.html"><i class="material-icons">assessment</i></a>Skills</li>
+          <li><a class="btn-floating blue darken-4" href="about.html"><i class="material-icons">person</i></a>About</li>
+          <li><a class="btn-floating blue darken-4" href="/"><i class="material-icons">house</i></a>Home</li>
+        </ul>
+      </div>
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <h3>Get in touch</h3>
+        <form name="contact" class="col s12 m8 l6" method="POST" data-netlify="true">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix indigo-text darken-2">account_circle</i>
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix indigo-text darken-2">email</i>
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix indigo-text darken-2">mode_edit</i>
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Message</label>
+            </div>
+          </div>
+
+          <button class="btn btn-large waves-effect waves-light indigo darken-2" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+
+        </form>
+      </div>   
+    </div>
+  </section>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
