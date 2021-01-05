@@ -1,10 +1,7 @@
-
-
 :root {
     --bg-color: rgba(0, 0, 0, 0.8);
     --tx-color: rgba(255, 255, 255, 0.7);
-    --span-color: rgba(241, 231, 136, 0.9);
-    
+    --span-color: rgba(241, 231, 136, 0.9); 
   }
 
 * {
@@ -38,43 +35,15 @@
         font-size: 1.3rem;
         display: inline;
     }
-
-
-    .nav-bar{
-        position: fixed;
-        bottom: 0;
-        width: 100vw;
-        height: 55px;
-        display: flex;
-        justify-content: space-around;
-        background-color: var(--bg-color);
-        z-index: 5;
-        
-    };
-    .nav-bar div{
-        display: inline;
-        text-align: center;
-        
-    }
-    .nav-bar div a{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        text-decoration: none;
-        font-size: 12px;
-        line-height: 0;
-    }
-    .nav-bar div a i {
-        font-size: 20px;
-        line-height: 2;
-        height: auto;
+    section{
+        min-height: 100vh;
     }
 
     /*home section styling*/
     #home{
         height: 100vh;
-        background: url(./media/ferenc-almasi-L8KQIPCODV8-unsplash.jpg), var(--bg-color);
-        background-position: center;
+        background: url(./media/code_background.jpg), rgba(0, 0, 0, 0.7);
+        background-position: center left;
         background-blend-mode: overlay;
         background-size: cover;
         width: 100%;
@@ -83,11 +52,14 @@
     .header{
         width: 90%;
         margin: auto;
-        transform: translateY(20vh);
+        transform: translateY(15vh);
     }
     .header h3 {
-        
         font-weight: normal;
+    }
+    .header h1 {
+        margin: 0;
+        font-weight: 600;
     }
     .contact{
         font-size: 48px;
@@ -122,6 +94,7 @@
         width: 80% !important;
         background-size: 100% 100%;
         background-repeat: no-repeat;
+        border-radius: 15px;
     }
 
     .project-description{
@@ -131,6 +104,8 @@
         bottom: 0;
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.8);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 
     .project-description h1{
@@ -142,13 +117,13 @@
     }
 
     /*about page styling*/
-    #about div, #skills div{
+    #about div{
         width: 90%;
         margin: auto;
         padding: 1em 0;
     }
 
-    #about div p, #skills div p{
+    #about div p{
         margin: 1em 0;
     }
 
@@ -167,67 +142,29 @@
     .codecademy img{
         width: 100%;
         margin: auto;
-        height: 4em;
+        
     }
     .lewagon img{
-        width: 7em;
-        height: 7em;
+        width: 10em;
+        height: 10em;
         margin: auto;
     }
-    #skills div p span{
-        font-size: 1.3rem;
-        font-weight: bold;
-        font-style: italic;
-        color: var(--span-color)
+    .skills-title{
+        width: 90%;
+        margin: auto;
+        padding-top: 50px;
     }
-    /*projects section*/
-    .card{
-        margin: 1em 0;
-        padding: 0;
-        border: 1px solid var(--tx-color);
-        border-radius: 10px;
+    .collapsible-container{
+        width: 90%;
+        margin: auto;
+        transform: translateY(50px);
     }
-    
-    .card img{
-        width: 100%;
-        height: 70%;
-        border-radius: 10px 10px 0 0;
+    .collapsible-header{
+        background-color: transparent !important;
     }
-
-    .card-content{
-        padding: .5em 1em;
-
-    }
-    .card-links{
-        border-top: 1px solid var(--tx-color);
-        padding: .5em;  
-    }
-
-    .card-links a{
-        margin-right: .5em;
-        text-decoration: none;  
-    }
-
-    #projects{
-        margin-bottom: 3em;
-    }
-    .hide-form {
-        opacity: 0;
-        width: 0vw;
-        height: 0vh;
-        display: none;
-    }
-    .display-form{
-        display: flex;
-        opacity: 1;
-        transition: all 1s linear;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    .overflow-hidden{
-        overflow: hidden;
+    .collapsible-header i{
+        font-size: 1.6em !important;
+        line-height: 2;
     }
 
     #contact{
@@ -235,7 +172,7 @@
         padding-top: 50px;
     }
 
-    #contact .container form{
+    #contact .row form{
         transform: translateY(100px);
     }
 
@@ -243,18 +180,26 @@
         width: 100%;
     }
 }   
-
-@media only screen and (min-width: 600px){
-    #home{
-        position: relative;
+@media only screen and (min-width: 451px){
+    .carousel-item{
+        width: 350px !important;
     }
     .header{
-        width: 70%;
-        transform: translateY(30vh);
+        transform: translateY(25vh);
     }
-
-    #about div, #skills div, #projects > div, #contact > div{
+}
+@media only screen and (min-width: 600px){
+    #about div{
         width: 70%;
+        margin: auto;
+        padding: 1em 0;
+    }
+    .collapsible-container{
+        width: 80%;
+        transform: translateY(100px);
+    }
+    .skills-title{
+        width: 80%;
     }
 }
 
@@ -263,92 +208,32 @@
         width: 70%;
         transform: translateY(30vh);
     }
-
-    #about div, #skills div, #projects > div{
-        width: 80%;
-    }
-    .codecademy img{
-        height: 7em;
-    }
-
-    .card-container{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .card{
-        width: 49%;
-    }
-   .card img {
-       height: 60%;
-   }
-   .card-links {
-       align-items: baseline;
-       padding: 10px 20px;
-       
-   }
-}   
-@media only screen and (min-width: 1100px){
-    /* .darkMode{
-        top: 40px;
-        right: 20px;
-    } */
-    #about div, #skills div, #projects > div{
+    #about div{
+        width: 70%;
+    }    
+    
+    #contact > div{
         width: 70%;
     }
-    .nav-bar{
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 2em;
-    }
-    .nav-bar div{
-        margin-left: 2em;
-    }
-    .nav-bar div a{
-        flex-direction: row;
-        align-items: baseline;
-        font-size: 16px;
-        
-    }
-    .nav-bar div a i {
-        margin-right: .5em;
-    }
-    .header{
-        width: 50%;
-        transform: translateY(30vh);
-    }
-    .img-div img, .lewagon img{
+    .lewagon img, .img-div img{
         width: 15em;
         height: 15em;
-    }
-    .codecademy img{
-        width: 50%;
-        height: auto;
         margin: auto;
     }
-    #skills div h3{
-        margin: 1em 0;
-        display: block;
+}   
+@media only screen and (min-width: 1100px){
+    .lewagon img, .img-div img{
+        width: 20em;
+        height: 20em;
+        margin: auto;
     }
-    #skills div p{
-        margin: 0;
-        display: inline;
+
+    .skills-title{
+        width: 60%;
     }
-    .card-container{
-        justify-content: space-between;
+
+    .collapsible-container{
+        width: 60%;
+        transform: translateY(100px);
     }
-    .card{
-        width: 47%;
-        height: fit-content;
-    }
-   .card img {
-       height: 70%;
-   }
-   #contact > div{
-       width: 50%;
-   }
 }
