@@ -52,7 +52,9 @@
     .header{
         width: 90%;
         margin: auto;
+        height: 50vh;
         transform: translateY(15vh);
+        position: relative;
     }
     .header h3 {
         font-weight: normal;
@@ -61,13 +63,28 @@
         margin: 0;
         font-weight: 600;
     }
+    .cta{
+        position: absolute;
+        bottom: 0;
+        border-radius: 10px;
+        padding: 1em 2em;
+        background-color: #0D47A1;
+    }
+    .cta h4{
+        margin: 0;
+        font-size: 20px;
+    }
+
     .contact{
         font-size: 48px;
-        width: 80%;
-        display: flex;
-        justify-content: space-between;
-        margin: 1em auto;
-        text-align: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: fit-content;
+    }
+
+    .contact a{
+        display: block;
     }
 
     #projects{
@@ -110,10 +127,21 @@
 
     .project-description h1{
         margin-top: 0;
-        font-size: 24px;
+        font-size: 1.7rem;
     }
     .project-description h2{
-        font-size: 20px;
+        font-size: 1.3rem;
+        display: block;
+    }
+    .project-description h3{
+        font-size: 1.3rem;
+    }
+    .project-links{
+        padding-top: 1em;
+        font-size: 1.3rem;
+        line-height: inherit;
+        display: flex;
+        justify-content: space-between;
     }
 
     /*about page styling*/
@@ -187,6 +215,9 @@
     .header{
         transform: translateY(25vh);
     }
+    .contact{
+        top: 10vh;
+    }
 }
 @media only screen and (min-width: 600px){
     #about div{
@@ -200,6 +231,9 @@
     }
     .skills-title{
         width: 80%;
+    }
+    .cta{
+        bottom: 100px;
     }
 }
 
@@ -219,6 +253,9 @@
         width: 15em;
         height: 15em;
         margin: auto;
+    }
+    .contact{
+        top: 20vh;
     }
 }   
 @media only screen and (min-width: 1100px){
